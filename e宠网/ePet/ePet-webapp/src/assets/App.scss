@@ -1,0 +1,16 @@
+@function vw($px){
+  @return ($px / 750) * 100vw
+}
+
+.App{
+  height: 100vw;
+}
+
+.bottomDiv{
+  height: vw(90);
+}
+
+// .tabbar_container{
+//   height: vw(60);
+//   background-color: pink;
+// }
