@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 200px;
+				height: 100px;
+				background: red;
+				position: absolute;/*绝对定位*/
+				top: 100px;/*距离浏览器顶部100px*/
+				left:200px;/*距离浏览器左边200px*/
+				right:200px;/*距离浏览器右边200px*/
+				bottom:200px;/*距离浏览器底部200px*/
+			}
+			.txt{
+				height: 150px;
+				 background: gold;
+			}
+			.box2{
+				width: 400px;
+				height: 400px;
+				margin: 100px;
+				background: pink;
+			}
+			.box3{
+				width: 50px;
+				height: 50px;
+				background: blue;
+				position: absolute;
+				top: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--<div class="box">绝对定位absolute</div>-->
+		<div class="box2">
+			<div class="box3">
+				<p style="height: 80px;background: red;"></p>
+			</div>
+		</div>
+		<p class="txt">辅助看效果</p>
+	</body>
+</html>

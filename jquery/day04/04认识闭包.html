@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            /*
+                闭包  高级编程的一种用法
+                【注】闭包大家天天都在写。
+
+
+
+                什么叫做闭包？只要满足以下几个特点
+                    1、函数嵌套函数
+                    2、内部函数调用外部函数的形参和变量
+                    3、被引用的形参和变量就常驻内存，不会被【垃圾回收机制所回收】
+
+            */
+
+            function aaa(a){
+                var b = 20;
+                function bbb(){
+                    console.log(a, b);
+                }
+                return bbb;
+            }
+
+            var ccc = aaa(10); //aaa函数已经执行完毕，里面的变量和形参被同时销毁掉
+            // alert(ccc);
+            ccc();
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

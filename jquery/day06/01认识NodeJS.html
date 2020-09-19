@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            /*
+                浏览器内核：
+                    市面上有的浏览器内核：
+                        欧朋、谷歌、火狐、IE内核、safari
+                
+                国内浏览器：
+                    360、猎豹、UC（对上述的浏览器内核进行包装，换了个皮肤。）
+
+
+                浏览器内核，相当于javascript代码运行环境。（鱼离不开的水）
+                计算机的同学，nodejs相当于  java语言的jdk。
+                非计算机的同学，nodejs相当于  浏览器的控制台。
+                【注】nodejs的环境下，我们只能运行javascript代码。
+
+
+
+                以前的项目中，网站构架：
+                    1、前端页面  html + css + javascript
+                    2、后台     后台语言+数据库   （javascript + mysql/mongodb）
+                【注】有了nodejs之后，我们的javascript也可以去开发后台的内容。
+
+                【注】javascript完全全栈。
+
+                nodejs设计之初，用的是chome V8引擎。（现阶段来说，nodejs还是非常有开发价值的）
+                【注】类似于jquery的框架，在我们的nodejs中，我们可以把nodejs当做是一个平台，在这个平台上集成别人开发好的框架，用在咋们的项目中。
+
+            */
+
+
+            /*
+                使用nodejs的步骤
+                1、安装nodejs
+                    下载完安装包以后，直接双击安装到你的电脑(window/mac)上。
+
+                2、开始键 => nodejs文件夹 => node prompt打开
+
+                3、一些命令
+                    node -v 查看当前已经安装的nodejs版本
+                    ctrl + c 终止当前的程序
+                    cls (windows命令 清屏)   (mac/linux  clear)
+
+                    方式一：node + 回车  直接进入nodejs的代码编辑环境(nodejs只能运行js代码)
+                    方式二：直接运行 js代码  后缀是.js的文件
+                        cd 文件路径   进入到当前文件所在的目录
+                            问题：切换盘符  D: + 回车
+                        node 文件名.js  运行该文件
+
+
+                4、nodejs下面的模块（全栈开发的运行环境，实际开发的时候，使用框架比较爽）
+
+                nodejs下所有的代码都遵从模块化开发的规范，这个规范是commonJS规范。
+
+                nodejs下面模块有以下分类：
+                    1、内置模块
+                        安装nodejs的时候，已经安装到你电脑上了，直接引入模块去使用。
+                        <1>查文档  http://nodejs.cn/api/
+                        <2>抄代码  对照文档
+                    【注】nodejs安装的时候，会同时安装一个包管理器 npm（管理咋们第三方模块的）
+                            
+
+                    2、第三方模块
+                        第三方模块需要我们去下载，下载本地以后，commonJS规范引入，再去使用
+                        问题：nodejs第三方模块，都是国外的源。会出现下载失败，或者下载时间过长。
+                        解决：淘宝镜像：使用淘宝源，我们需要将我们下载的源路径，改成淘宝的服务器地址就行。
+                        安装地址：https://developer.aliyun.com/mirror/NPM?from=tnpm
+
+
+                        cnpm -v  查看淘宝源安装的版本
+
+                        npm  下载第三方模块的源路径是国外的源
+                        cnpm 下载第三方模块的源路径的淘宝的源（查文档的时候看到，任何npm开头，换成cnpm）
+
+                        <1>查看第三方模块
+                            https://www.npmjs.com/
+                        <2>初始化
+                                cnpm init
+                            生成package.json的文件, 这个文件用来记录你当前写的项目的配置信息的。
+                        <3>下载第三方模块到本地
+                                cnpm install 模块名字 --save-dev
+                            --save 保存模块到本地并安装，保存在本地一个node_modules文件夹(存放的是第三方模块的安装文件)
+                            -dev   将模块的信息，保存在package.json
+                            【注】mac电脑的同学，命令前面要加sudo，windows电脑的同学不需要。
+                        <4>查文档，抄代码。遵从commonJS规范
+
+                            
+                    3、自定义模块
+                        要求：必须遵从commonJS规范
+
+
+            */
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

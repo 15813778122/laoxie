@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #div1{width: 100px; height: 100px; background-color: red;}
+            #div2{width: 200px; height: 200px; border: 1px solid black;}
+        </style>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                remove()   删除被选中的节点
+                           返回值是被删除的节点对象(JQ对象)
+
+                detach()   删除被选中的节点
+                           返回值是被删除的节点对象(JQ对象)
+                【注】删除的节点，保留之前这个节点的行为。
+
+                【注】上述两个方法功能不一致
+            */
+
+            $(function(){
+                $("#div1").click(function(){
+                    alert(this.id);
+                }).mouseover(function(){
+                    $(this).css("backgroundColor", 'yellow');
+                }).mouseout(function(){
+                    $(this).css("backgroundColor", 'blue');
+                })
+
+                $("button").click(function(){
+                    // var node = $("#div1").remove();
+                    var node = $("#div1").detach();
+
+                    //将删除的节点重新插入到div2中
+                    node.appendTo("#div2");
+                })
+            })
+
+        </script>
+    </head>
+    <body>
+        <div id = 'div1' title = 'hello' class = 'box' name = 'world'></div>
+        <button>删除节点</button>
+        <div id = 'div2'></div>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				/*设置为3D的场景*/
+				transform-style: preserve-3d;
+				/*设置景深 近大远小*/
+				perspective:900px;
+			}
+			.box{
+				width: 400px;
+				height: 400px;
+				margin: 100px auto;
+				background: rgba(0,0,0,0.5);/*背景颜色半透明*/
+				/*设置为3D的场景*/
+				transform-style: preserve-3d;
+				/*设置景深 近大远小*/
+				perspective:900px;
+				/*改变视角*/
+				perspective-origin: right top; 
+				transform: rotateY(60deg);
+			}
+			.box1{
+				width: 100px;
+				height: 200px;
+				background: red;
+				transition: 1s;
+			}
+			.box:hover .box1{
+				transform: translateX(100px) translateY(50px) translateZ(100px);
+			}
+			.box:hover .box1{
+				transform: rotateZ(60deg) rotateY(70deg);
+			}
+			.box:hover .box1{
+				transform: scaleZ(0.7);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box1"></div>
+		</div>
+		<!--
+			2d:在水平方向(x轴) 和 垂直方向(y轴)
+			3d:多了一个z轴
+				z轴就是你对屏幕垂直的视线,靠近屏幕的方向就是正向，远离屏幕的线是反向
+				
+			3D功能函数:
+				3D的位移
+					translateX()
+					translateY()
+					translateZ()
+					
+				3D的旋转
+					rotateX()
+					rotateY()
+					rotateZ()
+					
+				3D的缩放
+					scaleX()
+					scaleY()
+					scaleZ()
+		-->
+		
+	</body>
+</html>

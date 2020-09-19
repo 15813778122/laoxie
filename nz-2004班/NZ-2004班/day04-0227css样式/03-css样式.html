@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			@import url("css/style1.css");
+			div{
+				width: 300px;/*宽度*/
+				height: 50px;/*高度*/
+				background: red;
+			}
+			a{
+				color: red;
+				font-size: 30px;
+			}
+		</style>
+		<link rel="stylesheet" href="yangshi.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style2.css" />
+	</head>
+	<body style="height: 900px;">
+		<!--
+        	样式三种写法:
+        		1:内部样式 存在head标签中
+        		2:内联样式 以属性style的方式添加在标签中
+        		3:外部样式
+        			创建独立的html页面,并在页面head标签中添加
+        				<link rel="stylesheet" href="文件地址">
+        					另一种引入方式:
+        						在style标签第一行添加
+        						@import url(css文件地址)
+        				创建独立的css文件
+        				
+        		样式表权重关系
+        			外部样式 内部样式  < 内联样式
+        				就近原则
+        				
+        		
+        -->
+		<div></div>
+		<p style="color: red;font-size: 30px;">内联样式的写法</p>
+		<span>使用外部样式来控制</span>
+		
+		<h1>使用css文件夹里面的css文件修饰</h1>
+		<h2>用另一种方法应用css样式文件</h2>
+		
+		<a href="#" style="color: pink;font-size: 40px;">对比样式权重</a>
+		
+	</body>
+</html>

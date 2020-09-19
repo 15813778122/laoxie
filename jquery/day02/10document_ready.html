@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                $(函数) 这种形式
+                和 $(document).ready() 事件是完全相同。
+
+                window.onload  当整个窗口都加载完毕以后去执行的事件
+                $(document).ready() 当前document文档对象加载完毕以后去执行的事件。（更快，更有效率）
+            */
+            window.onload = function(){
+                alert("window - onload")
+            }
+
+            $(function(){
+                //相当于 window.onload
+                alert(1);
+            })
+            $(document).ready(function(){
+                alert(2);
+            })
+            
+        </script>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        alert(3);
+    </script>
+</html>

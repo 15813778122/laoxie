@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 50px;
+				height: 50px;
+				border: 2px solid red;
+				margin: 10px;
+				overflow: hidden;/*文本溢出 隐藏*/
+				float: left;
+			}
+			.box1{
+				width: 100px;
+				height: 100px;
+				background: pink;
+				float: left;
+				margin: 10px;
+				overflow: scroll;/*文本溢出 滚动查看*/
+			}
+			.box2{
+				width: 100px;
+				height: 100px;
+				background: yellow;
+				float: left;
+				margin: 10px;
+				overflow: auto;
+			}
+			.box4{
+				width: 500px;
+				height: 400px;
+				background: skyblue;
+				float: left;
+				overflow: hidden;/*超出隐藏*/
+			}
+			.box5{
+				width: 100px;
+				height: 100px;
+				background: pink;
+				overflow: inherit;/*继承 父级设置是怎样，那子级就是怎么样的*/
+			}
+		</style>
+		
+	</head>
+	<body>
+		<!--
+			overflow:文本溢出设置;
+				hidden	超出隐藏
+				scroll	超出时,滚动查看(未超出也会有滚动机制)
+				auto	超出时，滚动查看(自适应，未超出时不会有滚动机制)
+				inherit	继承父级的overflow设置
+		-->
+		<div class="box">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+		<div class="box1">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+			<img src="images/logo.jpg"/>
+		</div>
+		<div class="box2">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+			<img src="images/logo.jpg"/>
+		</div>
+		
+		<div class="box4">
+			<div class="box5">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+		</div>
+		
+		
+	</body>
+</html>

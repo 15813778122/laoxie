@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			表格:
+			thead 	表头
+			tbody	表体(即使不写,浏览器默认加上)
+			tfoot	表尾
+			
+			th		列标题(单元格),文本默认加粗上下左右居中
+			
+			caption	表格标题,默认左右居中
+			
+			colgroup	列分组
+				span="列组数"
+				
+			表格属性:
+				border-spacing:单元格间距;
+				border-collapse:是否合并边框;
+					separate	默认值,不合并
+					collapse	合并
+				empty-cells:无内容时是否显示;	
+					show	显示
+					hide	隐藏
+					
+				table-layout:是否固定宽度;
+					auto	默认值,自由变化
+					fixed	固定宽度，高度还是会变化
+				
+			表单:
+				input
+					type="radio"	单选按钮
+						注意:同一组的单选按钮的name值要一致,进行互斥
+					type="checkbox"	多选按钮
+						注意:同一组的多选按钮的值不一致，不需要进行互斥
+					type="file"	文件上传	
+						
+					disabled="disabled"	禁用
+					checked="checked"	默认选中
+					
+					select > option	下拉列表 > 下拉列表项
+						selected="selected"	默认选中
+					
+					textarea	多行文本输入框
+						cols="宽度"
+						rows="高度"
+						注意:是输入的字符数,不是px为单位
+						可以自由拖拽大小,使用样式resize:none;禁止拖拽大小
+					
+					fieldset > legend	表单字段集 > 表单字段集标题
+						注意:一个fieldset里面只有一个直接的legend,可以有多个fieldset
+						在legend中有属性align="left center right justify"	改变legend的水平位置
+						
+						
+					label	绑定相关的文本和标签
+						<input type="radio" id="name">
+						<label for="name">点击文本</label>
+					
+				bfc概念:
+					bfc是块级格式化上下文,有特殊功能的容器
+					
+					bfc的布局规则:
+						1:bfc内部的元素从上往下排列,一个挨着一个
+						2:元素的左外边距挨着bfc区域的左边框
+						3:垂直摆放的元素边距由margin决定,同属于同一个bfc区域的元素垂直margin会合并
+						4:bfc区域和float元素不会重叠(特殊情况position)
+						5:bfc中的元素不会影响外面的元素
+						6:bfc区域中的浮动元素参与高度计算
+						
+					bfc的触发条件:
+						1:html(根元素)是最大的bfc区域
+						2:position为absolute fixed
+						3:display为
+							inline-block 
+							table-cell	
+							table-caption	
+							flex 
+							inline-flex
+						4:overflow不为visible
+						5:float不为none
+						
+					bfc的应用:
+						1:两列布局,三列布局
+						2:清除高度塌陷
+						3:使垂直方向的外边距不合并(父子关系)
+		-->
+	</body>
+</html>

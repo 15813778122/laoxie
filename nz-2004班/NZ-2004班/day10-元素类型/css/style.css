@@ -1,0 +1,126 @@
+#box{
+	background: pink;
+}
+.main{
+	width: 1442px;
+	margin: 0 auto;
+}
+.fl{float: left;}
+
+/*头部开始*/
+.boxTop{
+	height: 106px;
+	background: skyblue;
+}
+.boxTop .top1{
+	height: 68px;
+	border-bottom: 1px solid #212a33;
+	background: #3a434c;
+}
+/*版心样式*/
+.top1 .top1Con{
+	height: 68px;
+	/*background: yellow;*/
+}
+/*logo区域 开始*/
+.top1Con .logo{
+	margin-left: 232px;
+	width: 304px;
+	height: 68px;
+	background: url("../images/logo.jpg") no-repeat;
+}
+.logo .title{
+	height: 68px;
+	line-height: 68px;
+	color: #66aa26;
+	font-size: 24px;
+	font-weight: normal;
+	text-indent: 194px;
+}
+/*标题旁边的三角形*/
+.title .btn{
+	width: 0;/*元素宽默认为0*/
+	height: 0;/*元素高默认为0*/
+	border:6px solid transparent;/*边框颜色默认透明*/
+	border-top-color: #505a64;/*指定某一方向的颜色显示*/
+	margin-top:34px;
+	float: right;
+}
+/*logo区域 结束*/
+/*搜索区域 开始*/
+.top1Con .search{
+	margin-left: 253px;
+	margin-top: 28px;
+	width: 430px;
+	height: 32px;
+
+}
+/*搜索区域的输入框*/
+.search .searInp{
+	width: 378px;
+	height: 32px;
+	border: none;
+	text-indent: 10px;
+	font-size: 14px;
+	background: #bdc0c3;
+}
+/*搜索区域的放大镜*/
+.search .searBtn{
+	background: #6a0 url("../images/ss_03.jpg") no-repeat center;
+	width: 52px;
+	height: 32px;
+	float: left;
+}
+/*搜索区域 结束*/
+.boxTop .top2{
+	height: 37px;
+	background: #6a0;
+}
+
+
+
+/*版心设置*/
+.top2 .top2Con{
+	height: 37px;
+	background: yellow;
+}
+/*top2的列表区域*/
+.top2Con .top2List{
+	padding: 0px 226px;
+	height: 37px;
+	line-height: 37px;
+	background: pink;
+}
+.top2List li{
+	float: left;
+	height: 24px;
+	/*padding: 0px 14px;*/
+	line-height: 24px;
+	
+	margin-top: 8px;
+}
+.top2List .two,.top2List .four{
+	border-right: 1px solid #000;
+}
+.top2List li a{
+	color: #fff;
+}
+.top2List .four{
+	margin-left: 458px;
+}
+.top2List .lastLi1{
+	float: right;
+}
+.top2List .lastLi2{
+	float: right;
+}
+/*头部结束*/
+
+/*轮播图开始*/
+/*轮播图结束*/
+
+/*内容区开始*/
+/*内容区结束*/
+
+/*底部开始*/
+/*底部结束*/

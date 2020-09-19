@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			*{margin: 0px; padding: 0px}
+			#q{width: 300px; height: 30px; padding: 5px; border: 1px solid #f90; font-size: 16px}
+			#ul1{border: 1px solid #f90; width: 310px; margin: 0px; display: none }
+			#ul1 li{list-style: none}
+			#div1{width: 312px; margin: 100px auto}
+			#ul1 li a{line-height: 30px; padding: 5px; text-decoration: none; color: black; display: block}
+			#ul1 li a:hover{background-color: #f90; color: white}
+		</style>
+		<script>
+			function func(data){
+				// alert(data);
+				var arr = data.s;
+				var oUl = document.getElementById('ul1');
+				//加载新数据之前，清除掉，上一次的结果
+				oUl.innerHTML = '';
+				if(arr.length){
+					oUl.style.display = 'block';
+					for(var i = 0; i < arr.length; i++){
+						var oLi = document.createElement('li');
+						var oA = document.createElement('a');
+						oA.innerHTML = arr[i];
+						oA.href = 'http://www.baidu.com/s?wd=' + arr[i];
+						oA.target = '_blank';
+						oLi.appendChild(oA);
+						oUl.appendChild(oLi);
+					}
+				}else{
+					oUl.style.display = 'none';
+				}
+			}
+
+			window.onload = function(){
+				var oQ = document.getElementById('q');
+				var oUl = document.getElementById('ul1');
+				oQ.onkeyup = function(){
+
+					if(this.value != ''){
+						//加载数据
+						var oScript = document.createElement('script');
+						oScript.src = `http://suggestion.baidu.com/su?wd=${this.value}&cb=func`;
+						document.body.appendChild(oScript);
+					}else{
+						oUl.style.display = 'none';
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id = 'div1'>
+			<input type="text" id = 'q'>
+			<ul id = 'ul1'>
+				<!-- <li><a href="#">百度</a></li>
+				<li><a href="#">百度</a></li>
+				<li><a href="#">百度</a></li> -->
+			</ul>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

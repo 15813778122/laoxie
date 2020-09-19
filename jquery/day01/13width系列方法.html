@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            /* 
+                每一个元素节点，都会有一个盒模型 
+                width height
+                border
+                padding
+                margin
+                【注】实际编程，可能会获取各种的宽。
+            */
+            *{margin: 0px; padding: 0px;}
+            div{width: 100px; height: 100px; background-color: red; border: 1px solid black; padding: 8px; margin: 20px;}
+        </style>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                width()
+                innerWidth()
+                outerWidth()
+                
+
+                height()
+                innerHeight()
+                outerHeight()
+
+                【注】宽为例。
+
+            */
+
+            $(function(){
+                // alert($("div").css("width")); //100px
+                // alert($("div").width()); //使用这个更加方便我们用于计算。
+
+
+                alert($("div").width());      //width
+                alert($("div").innerWidth()); //width + padding
+                alert($("div").outerWidth()); //width + padding + border
+                alert($("div").outerWidth(true));  //width + padding + border + margin
+            })
+
+        </script>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>

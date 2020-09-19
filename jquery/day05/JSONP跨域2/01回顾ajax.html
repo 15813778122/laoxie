@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            window.onload = function(){
+                var oBtn = document.getElementById("btn1");
+                oBtn.onclick = function(){
+                    //通过ajax下载数据
+                    var xhr = new XMLHttpRequest();
+
+                    // xhr.open("get", "1.txt", true);
+                    xhr.open("get", "https://api.asilu.com/weather/?city=%E9%9D%92%E5%B2%9B", true);
+
+                    xhr.send();
+
+                    //等待反馈
+                    xhr.onreadystatechange = function(){
+                        if(xhr.readyState == 4){
+                            alert(xhr.responseText);
+                        }
+                    }
+                }
+            }
+
+            /*
+                ajax方法下载数据，下载的数据源是一个同源的数据源：
+                同源
+                    1、同协议
+                    2、同域名/IP
+                    3、同端口号
+
+                【注】已拦截跨源请求：同源策略禁止读取位于 https://api.asilu.com/weather/?city=%E9%9D%92%E5%B2%9B 的远程资源。（原因：CORS 头缺少 'Access-Control-Allow-Origin'）。
+                【注】 ajax默认遵从同源策略，跨源的资源是会被拦截的，无法请求成功。
+
+
+
+                【注】我们在实际开发的时候，也许需要必要的跨源/跨域。
+                    1、将ajax的请求头中  CORS协议添加 Access-Control-Allow-Origin  跨源的设置。
+                    2、反向代理  间接跨源
+                    3、jsonp跨域 
+
+
+            */
+        </script>
+    </head>
+    <body>
+        <button id = 'btn1'>下载数据</button>
+    </body>
+</html>

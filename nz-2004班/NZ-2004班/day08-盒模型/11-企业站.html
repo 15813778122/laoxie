@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*样式初始化 把默认的样式去掉*/
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+				color: #000000;
+			}
+			#wrap{
+				/*background: pink;*/
+			}
+			/*w_top start*/
+			.w_top{
+				height: 160px;
+				background: #fff;
+			}
+			.logo{
+				height: 100px;
+				background: #fff;
+			}
+			.logoCon{
+				margin:0 auto;
+				width:962px;
+				height: 100px;
+				/*background: pink;*/
+				
+			}
+			.logoCon .logoImg{
+				width: 283px;
+				height: 32px;
+				background: url("img1/logo.jpg") no-repeat;
+				float: left;
+				margin-top: 35px;
+			}
+			.logoCon .sear{
+				width: 228px;
+				height: 28px;
+				background: #F1F1F1;
+				border: 1px solid #e5e5e5;
+				float: right;
+				margin-top: 39px;
+			}
+			.logoCon .sear .inp{
+				width: 182px;
+				height: 28px;
+				border: none;
+				float: left;
+				padding-left: 14px;
+			}
+			.logoCon .sear .searImg{
+				width: 32px;
+				height: 28px;
+				background: url("img1/sear.jpg") no-repeat center;
+				float: left;
+				
+			}
+			.list{
+				height: 60px;
+				background: #313131;
+			}
+			.list .listTxt{
+				width: 962px;
+				height: 60px;
+				margin: 0px auto;
+				/*background: red;*/
+			}
+			.list .listTxt li{
+				width: 119px;
+				height: 60px;
+				border-right: 1px solid #494949;
+				float: left;
+				line-height: 60px;
+				text-align: center;
+				font-size: 12px;
+			}
+			.list .listTxt li a{color: #fff;}
+			list .listTxt .lastli{
+				border-right: none;
+			}
+			/*w_top end*/
+			
+		</style>
+	</head>
+	<body>
+		<!--
+			版心是页面的内容显示区域
+				有具体宽度	width:;
+				左右居中		margin:auto;
+			
+			切图方式:
+			矩形选框工具选中==> ctrl+c ==> ctrl+n ==> ctrl+v ==> ctrl+shift+alt+s存储
+		-->
+		<!--wrap strat-->
+		<div id="wrap">
+			<!--w_top start-->
+			<div class="w_top">
+				<div class="logo">
+					<div class="logoCon">
+						<div class="logoImg"></div>
+						<div class="sear">
+							<input type="text" placeholder="请输入..." class="inp"/>
+							<p class="searImg"></p>
+						</div>
+					</div>
+				</div>
+				<div class="list">
+					<ul class="listTxt">
+						<li><a href="">首页新闻</a></li>
+						<li><a href="">首页新闻</a></li>
+						<li><a href="">首页新闻</a></li>
+						<li><a href="">首页新闻</a></li>
+						<li><a href="">首页新闻</a></li>
+						<li><a href="">首页新闻</a></li>
+						<li><a href="">首页新闻</a></li>
+						<li class="lastli"><a href="">首页新闻</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--w_top end-->
+			
+			<!--banner start-->
+			<div class="banner"></div>
+			<!--banner end-->
+			
+			<!--content start-->
+			<div class="content"></div>
+			<!--content end-->
+			
+			<!--footer start-->
+			<div class="footer"></div>
+			<!--footer end-->
+		</div>
+		<!--wrap end-->
+	</body>
+</html>

@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>淘宝幻灯片上下滑动效果</title>
+    <link href="css.css" rel="stylesheet" type="text/css" />
+    <script src="../jquery-1.10.1.min.js"></script>
+    <script>
+        $(function () {
+            var aBtns = $("#play").find("ol li");
+            var oUl = $("#play").find("ul");
+            var timer = null; //用于记录定时器返回值
+            var iNow = 0; //代表当前图片显示的下标
+
+            aBtns.click(function () {
+                iNow = $(this).index();
+                tab();
+            })
+
+            //自动循环轮播
+            timer = setInterval(function () {
+                iNow++;
+                tab();
+            }, 2000);
+
+            //添加移入移出
+            $("#play").mouseenter(function () {
+                clearInterval(timer);
+            }).mouseleave(function () {
+                timer = setInterval(function () {
+                    iNow++;
+                    tab();
+                }, 2000);
+            })
+
+
+            //切换，单独封装成函数
+            function tab() {
+                aBtns.removeClass("active").eq(iNow).addClass("active");
+
+                //如果是最后一张图片显示，它对应的按钮下标是0
+                if (iNow == aBtns.size()) {
+                    aBtns.eq(0).addClass("active");
+                }
+
+                oUl.animate({
+                    top: -150 * iNow
+                }, 500, function () {
+                    //当最后一张图片动画结束的时候，直接切回下标为0的图片
+                    if (iNow == aBtns.size()) {
+                        iNow = 0;
+                        oUl.css("top", 0);
+                    }
+                });
+            }
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="play" id="play">
+        <ol>
+            <!-- 页面上显示的小按钮，代表显示了第一张图片 -->
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ol>
+        <ul>
+            <!-- 
+                页面上轮播图的图片
+                方法：拷贝第一张图片，放在最后一张图片的后面
+             -->
+            <li><a href="http://www.baidu.com/"><img src="images/1.jpg" alt="广告一" /></a></li>
+            <li><a href="http://www.baidu.com/"><img src="images/2.jpg" alt="广告二" /></a></li>
+            <li><a href="http://www.baidu.com/"><img src="images/3.jpg" alt="广告三" /></a></li>
+            <li><a href="http://www.baidu.com/"><img src="images/4.jpg" alt="广告四" /></a></li>
+            <li><a href="http://www.baidu.com/"><img src="images/5.jpg" alt="广告五" /></a></li>
+            <li><a href="http://www.baidu.com/"><img src="images/1.jpg" alt="广告一" /></a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

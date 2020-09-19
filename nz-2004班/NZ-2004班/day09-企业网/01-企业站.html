@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*样式初始化 把默认的样式去掉*/
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+				color: #000000;
+			}
+			#wrap{
+				/*background: pink;*/
+			}
+			/*w_top start*/
+			.w_top{
+				height: 160px;
+				background: #fff;
+			}
+			.logo{
+				height: 100px;
+				background: #fff;
+			}
+			.logoCon{
+				margin:0 auto;
+				width:962px;
+				height: 100px;
+				/*background: pink;*/
+				
+			}
+			.logoCon .logoImg{
+				width: 283px;
+				height: 32px;
+				background: url("img1/logo.jpg") no-repeat;
+				float: left;
+				margin-top: 35px;
+			}
+			.logoCon .sear{
+				width: 228px;
+				height: 28px;
+				background: #F1F1F1;
+				border: 1px solid #e5e5e5;
+				float: right;
+				margin-top: 39px;
+			}
+			.logoCon .sear .inp{
+				width: 182px;
+				height: 28px;
+				border: none;
+				float: left;
+				padding-left: 14px;
+			}
+			.logoCon .sear .searImg{
+				width: 32px;
+				height: 28px;
+				background: url("img1/sear.jpg") no-repeat center;
+				float: left;
+				
+			}
+			.list{
+				height: 60px;
+				background: #313131;
+			}
+			.list .listTxt{
+				width: 962px;
+				height: 60px;
+				margin: 0px auto;
+				/*background: red;*/
+			}
+			.list .listTxt li{
+				width: 119px;
+				height: 60px;
+				border-right: 1px solid #494949;
+				float: left;
+				line-height: 60px;
+				text-align: center;
+				font-size: 12px;
+			}
+			.list .listTxt li a{color: #fff;}
+			list .listTxt .lastli{
+				border-right: none;
+			}
+			/*w_top end*/
+			
+			/*banner start*/
+			.bannner{
+				height: 465px;
+				/*背景图 背景不重复 背景定位*/
+				background: url("img1/banner.jpg") no-repeat center;
+			}
+			/*banner end*/
+			
+			/*content start*/
+			.cont{
+				margin: 0 auto;/*外边距上下为0，左右居中*/
+				width: 962px;
+				height: 546px;
+				/*background: skyblue;*/
+			}
+			.cont .cont1{
+				height: 240px;
+				/*background:gold;*/
+				
+			}
+			/*内容区域一的 左中右 三部分*/
+			.cont1 .c_left{
+				width: 480px;
+				height: 240px;
+				background: #fff;
+				float: left;/*浮动 让元素在一行显示*/
+			}
+			.c_left .c_listUl{
+				margin-top: 22px;
+			}
+			.c_left .c_listUl li{
+				height: 24px;
+				line-height: 24px;
+				font-size: 12px;
+				
+			}
+			.c_listUl li a{
+				padding-left: 14px;
+				float: left;
+				color:#555;
+				background: url(img1/btn2.jpg) no-repeat 2px 12px;
+			}
+			.c_listUl li span{
+				padding-right: 28px;
+				float: right;
+				color: #bdbdbd;
+			}
+			/*区域一部分的所有标题*/
+			.con1 .c_tit{
+				font-size: 18px;/*文本大小*/
+				font-weight: normal;/*取消加粗*/
+				padding-top:34px;/*顶部的内边距*/
+				
+				
+			}
+			.cont1 .c_center{
+				width: 220px;
+				height: 240px;
+				background: #f1f1f1;
+				float: left;/*浮动 让元素在一行显示*/
+				padding-left: 20px;
+			}
+			.c_center p{
+				font-size: 12px;
+			}
+			.c_center .txt1{
+				margin-top: 32px;/*距离标题的顶部距离*/
+				height:52px;
+				line-height: 26px;
+			}
+			.c_center .txt2{
+				margin-top: 10px;/*第二段文本的上外边距*/
+				height: 48px;/*元素的高度*/
+				line-height: 24px;/*一行文本的垂直居中设置*/
+				color:#979797;
+			}
+			.cont1 .c_right{
+				padding-left: 26px;
+				width: 216px;
+				height: 240px;
+				background: #fbfbfb;
+				float: left;/*浮动 让元素在一行显示*/
+			}
+			.c_right .txt1{
+				margin-top: 20px;
+				height: 48px;
+				line-height: 24px;
+				font-size: 12px;
+			}
+			.c_right .txtCon{
+				padding-top: 20px;
+				height: 92px;
+				background: url(img1/con2.jpg) no-repeat right bottom;
+			}
+			.c_right .txtCon .btnP{
+				width: 66px;
+				height: 19px;
+				background: #ababab;
+				font-size: 12px;/*文本大小*/
+				line-height: 19px;/*行高 文本垂直对齐方式*/
+				text-align: center;/*文本水平居中*/
+				color: #fff;
+			}
+			.cont .cont2{
+				height: 306px;
+				background:green;
+			}
+			.cont2 .tit{
+				font-size: 18px;/*文本大小*/
+				height: 54px;
+				padding-top: 10px;/*顶部内边距*/
+				line-height: 54px;/*文本垂直对齐方式*/
+				font-weight: normal;/*取消加粗*/
+			}
+			/*内容区域二的四小分块*/
+			.cont2 .c2_cont{
+				height: 242px;
+				/*background: yellow;*/
+			}
+			.c2_cont .c2_cont1{
+				width: 210px;
+				height: 242px;
+				float: left;
+				margin-right: 40px;
+			}
+			.c2_cont .c2Last{
+				width: 212px;
+				margin-right: 0px;
+			}
+			.c2_cont1 .c2Img{
+				width: 210px;
+				height: 136px;
+				background: url(img1/con1.jpg);
+				margin-bottom: 12px;/*下方外边距*/
+			}
+			.c2_cont1 .c2Txt{
+				height: 48px;
+				color: #555;
+				line-height: 24px;
+				
+			}
+			/*content end*/
+			
+			/*footer start*/
+			.footer{
+				height: 332px;
+				
+			}
+			/*底部第一部分*/
+			.footer .f_top{
+				height: 250px;
+				background: #e5e5e5;
+			}
+			.f_top .f_con{
+				margin: 0 auto;
+				width: 962px;
+				height: 230px;
+				/*background: gold;*/
+				padding-top: 20px;
+			}
+			/*上部分的三小块*/
+			.f_con .conBox1{
+				width: 454px;
+				height: 230px;
+				float: left;
+				margin-right: 50px;
+			}
+			.conBox1 .box1Con{
+				height: 177px;
+				/*background: pink;*/
+			}
+			.box1Con p{
+				font-size: 12px;/*文本大小*/
+				color: #656565;
+				font-family: "宋体";
+				height: 24px;
+				line-height: 24px;
+			}
+			.box1Con .con1{
+				width: 152px;
+				height: 177px;
+				float: left;
+			}
+			.box1Con .con2{
+				width: 192px;
+				height: 177px;
+				float: left;
+			}
+			.box1Con .con3{
+				width: 110px;
+				height: 177px;
+				float: left;
+			}
+			.f_con .conBox2{
+				width: 152px;
+				height: 230px;
+				float: left;
+				
+			}
+			.f_con .conBox3{
+				width: 256px;
+				height: 230px;
+				float: right;
+				
+			}
+			.conBox3 .box3Con{
+				width: 256px;
+				height: 177px;
+				background: url(img1/map.jpg) no-repeat 33px 0px;
+			}
+			.f_con .f_tit{
+				height: 37px;
+				line-height: 37px;/*行高*/
+				font-size: 14px;/*文本大小*/
+				padding-left: 14px;/*左内边距*/
+				font-weight: normal;/*不加粗*/
+				color:#7d7d7d;
+				border-bottom: 1px solid #7d7d7d;/*下边框线*/
+				margin-bottom: 15px;
+			}
+			/*底部第二部分*/
+			.footer .f_bot{
+				height: 82px;
+				background: #fff;
+			}
+			.f_bot .f_con2{
+				margin: 0 auto;/*元素左右居中 自适应*/
+				width: 962px;/*宽度*/
+				height: 58px;/*高度*/
+				/*background: pink;*/
+				padding-top: 24px;
+				font-size: 12px;
+				color: #c0c0c0;
+			}
+			.f_con2 .txt1{
+				float: left;
+				
+			}
+			.f_con2 .txt2{
+				float: right;
+			}
+			.f_con2 a{
+				color: #c0c0c0;
+			}
+			.f_con2 span{
+				margin-left: 14px;
+			}
+			.f_con2 a img{
+				vertical-align: top;/*vertical是设置垂直居中，vertical：top是顶部对齐*/
+			}
+			/*footer end*/
+		</style>
+	</head>
+	<body>
+		<!--
+			版心是页面的内容显示区域
+				有具体宽度	width:;
+				左右居中		margin:auto;
+			
+			切图方式:
+			矩形选框工具选中==> ctrl+c ==> ctrl+n ==> ctrl+v ==> ctrl+shift+alt+s存储
+			
+			切图方式二:
+				切片工具 ==>选中区域==>ctrl+shift+alt+s进行保存
+		-->
+		<!--wrap strat-->
+		<div id="wrap">
+			<!--w_top start-->
+			<div class="w_top">
+				<div class="logo">
+					<div class="logoCon">
+						<div class="logoImg"></div>
+						<div class="sear">
+							<input type="text" placeholder="请输入..." class="inp"/>
+							<p class="searImg"></p>
+						</div>
+					</div>
+				</div>
+				<div class="list">
+					<ul class="listTxt">
+						<li><a href="">首页新闻</a></li>
+						<li><a href="">首页新闻</a></li>
+						<li><a href="">首页新闻</a></li>
+						<li><a href="">首页新闻</a></li>
+						<li><a href="">首页新闻</a></li>
+						<li><a href="">首页新闻</a></li>
+						<li><a href="">首页新闻</a></li>
+						<li class="lastli"><a href="">首页新闻</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--w_top end-->
+			
+			<!--banner start-->
+			<div class="banner"></div>
+			<!--banner end-->
+			
+			<!--content start-->
+			<div class="content">
+				<div class="cont">
+					<!--内容区域第一部分-->
+					<div class="cont1">
+						<!--一区域的左中右三部分-->
+						<div class="c_left">
+							<h3 class="c_tit">公司新闻</h3>
+							<ul class="c_listUl">
+								<li><a href="">巴拉巴拉巴拉巴拉巴拉吧...</a><span>2020-0304</span></li>
+								<li><a href="">巴拉巴拉巴拉巴拉巴拉吧...</a><span>2020-0304</span></li>
+								<li><a href="">巴拉巴拉巴拉巴拉巴拉吧...</a><span>2020-0304</span></li>
+								<li><a href="">巴拉巴拉巴拉巴拉巴拉吧...</a><span>2020-0304</span></li>
+								<li><a href="">巴拉巴拉巴拉巴拉巴拉吧...</a><span>2020-0304</span></li>
+								<li><a href="">巴拉巴拉巴拉巴拉巴拉吧...</a><span>2020-0304</span></li>
+							</ul>
+						</div>
+						<div class="c_center">
+							<h3 class="c_tit">公司新闻</h3>
+							<p class="txt1">哈哈哈哈哈哈哈哈哈哈,
+								<br>
+											哈哈哈哈哈哈哈哈哈哈
+							</p>
+							<p class="txt2">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+							
+						</div>
+					</div>
+						<div class="c_right">
+							<h3 class="c_tit">公司新闻</h3>
+							<p class="txt1">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+							<div class="txtCon">
+								<p class="btnP">
+									MORE  →
+								</p>
+							</div>
+						</div>
+					</div>
+					
+				<!--内容区域第二部分-->
+				<div class="cont2">
+						<h3 class="tit">公司风采</h3>
+						<!--内容区域二里的四小分块-->
+						<div class="c2_cont">
+							<div class="c2_cont1">
+								<div class="c2Img"></div>
+								<p class="c2Txt">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+							</div>
+							<div class="c2_cont1">
+								<div class="c2Img"></div>
+								<p class="c2Txt">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+							</div>
+							<div class="c2_cont1">
+								<div class="c2Img"></div>
+								<p class="c2Txt">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+							</div>
+							<div class="c2_cont1 c2Last">
+								<div class="c2Img"></div>
+								<p class="c2Txt">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+							</div>
+						</div>
+					</div>
+			</div>
+			<!--content end-->
+			
+			<!--footer start-->
+			<div class="footer">
+				<!--尾部 上 部分-->
+				<div class="f_top">
+					<!--上部分的三小块-->
+					<div class="f_con">
+						<div class="conBox1">
+							<h3 class="f_tit">哈哈哈哈哈哈哈哈哈哈</h3>
+							<div class="box1Con">
+								<div class="con1">
+									<p>&gt; 哈哈哈哈哈哈哈哈哈哈</p>
+									<p>&gt; 哈哈哈哈哈哈哈哈哈哈</p>
+									<p>&gt; 哈哈哈哈哈哈哈哈哈哈</p>
+									<p>&gt; 哈哈哈哈哈哈哈哈哈哈</p>
+									<p>&gt; 哈哈哈哈哈哈哈哈哈哈</p>
+								</div>
+								<div class="con2">
+									<p>&gt; 哈哈哈哈哈哈哈哈哈哈</p>
+									<p>&gt; 哈哈哈哈哈哈</p>
+									<p>&gt; 哈哈哈哈</p>
+									<p>&gt; 哈哈哈</p>
+								</div>
+								<div class="con3">
+									<p>&gt; 哈哈哈哈</p>
+									<p>&gt; 哈哈哈哈</p>
+									<p>&gt; 哈哈哈哈</p>
+									<p>&gt; 哈哈哈</p>
+								</div>
+							</div>
+						</div>
+						<div class="conBox2">
+							<h3 class="f_tit">哈哈哈哈哈哈哈哈哈哈</h3>
+							<div class="box1Con">
+								<p>&gt; 哈哈哈哈</p>
+								<p>&gt; 哈哈哈哈</p>
+								<p>&gt; 哈哈哈哈</p>
+								<p>&gt; 哈哈哈</p>
+							</div>
+						</div>
+						<div class="conBox3">
+							<h3 class="f_tit">哈哈哈哈哈哈哈哈哈哈</h3>
+							<div class="box3Con"></div>
+						</div>
+					</div>
+				</div>
+				<!--尾部 下 部分-->
+				<div class="f_bot">
+					<div class="f_con2">
+						<p class="txt1">
+							<a href="">哈哈哈哈 |</a>
+							<a href="">哈哈哈哈 |</a>
+							<a href="">哈哈哈哈 |</a>
+							<a href="">哈哈哈哈 </a>
+						</p>
+						<p class="txt2">
+							HATSDNS &copy;
+							<a href="">2013哈哈哈和</a>
+							<a href="">哈哈哈和</a>
+							<a href="">哈哈哈和</a>
+							黑呵呵呵
+							
+							<span>分享到:</span>
+							<a href=""><img src="img1/wb.jpg"></a>
+							<a href=""><img src="img1/bk.jpg"></a>
+							<a href=""><img src="img1/dou.jpg"></a>
+							<a href=""><img src="img1/ren.jpg"></a>
+							<a href=""><img src="img1/qq.jpg"></a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--footer end-->
+		</div>
+		<!--wrap end-->
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #div1{width: 100px; height: 100px; background-color: red;}
+            #div2{width: 200px; height: 200px; border: 1px solid black;}
+        </style>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                clone()  根据原来的节点克隆新节点
+
+                clone()      只能克隆节点本身和节点一些属性
+                clone(true)  还能够克隆这个节点上绑定的函数
+            */
+
+            $(function(){
+                $("#div1").click(function(){
+                    alert(this.id);
+                }).mouseover(function(){
+                    $(this).css("backgroundColor", 'yellow');
+                }).mouseout(function(){
+                    $(this).css("backgroundColor", 'blue');
+                })
+
+                $("button").click(function(){
+                    // var node = $("#div1").clone();
+                    var node = $("#div1").clone(true);
+
+                    //将删除的节点重新插入到div2中
+                    node.appendTo("#div2");
+                })
+            })
+
+        </script>
+    </head>
+    <body>
+        <div id = 'div1' title = 'hello' class = 'box' name = 'world'></div>
+        <button>克隆节点</button>
+        <div id = 'div2'></div>
+    </body>
+</html>

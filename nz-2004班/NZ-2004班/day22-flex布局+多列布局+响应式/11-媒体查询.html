@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				
+			}
+			/*媒体查询 判断一下浏览器的宽度是多少 
+			 决定box的背景颜色是什么
+			 700px <= x
+			 @media 设备 and (条件) and (条件){
+			 	选择器{属性:"值";}
+			 }
+			 */
+			@media all and (min-width:700px){
+				.box{
+					background: pink;
+					width: 300px;
+					display: none;
+				}
+			}
+			@media all and (min-width:1000px){
+				.box{
+					background: purple;
+					width: 400px;
+					display: block;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>

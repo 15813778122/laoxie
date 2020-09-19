@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- 
+            必须引入这两个js文件以后，我们才能够进行cookie操作。
+         -->
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script src = 'jquery.cookie.js'></script>
+        <script>
+            /*
+                cookie 本地存储技术
+
+                设置cookie
+                $.cookie(name, value);  //过期时间是当前会话
+                $.cookie(name, value, 对象);  //第三个参数传入cookie的可选项
+                    expires  过期时间
+                    raw    这个属性设置cookie是否进行中文编码  值布尔值
+                        true  不进行中文编码
+                        false 进行中文编码，默认就是false
+                
+                获取cookie
+                $.cookie(name);   如果name不存在，返回null
+
+                删除cookie
+                $.cookie(name, null); //删除cookie操作
+            */
+
+            //小测试
+            $.cookie("超级英雄", "钢铁侠", {
+                expires: 7, //单位是天
+                raw: true
+            });
+            $.cookie("变种人", "X教授", {
+                expires: 30,
+                raw: false
+            });
+            $.cookie("七龙珠", "卡卡罗特", {
+                expires: 1000
+            });
+
+
+            //取值
+            alert($.cookie("超级英雄"));
+            alert($.cookie("变种人"));
+            alert($.cookie("七龙珠"));
+
+
+            $(function(){
+                $("button").click(function(){
+                    $.cookie("变种人", null);
+                    alert($.cookie("变种人"));
+                })
+            })
+
+        </script>
+    </head>
+    <body>
+        <button>删除cookie</button>
+    </body>
+</html>

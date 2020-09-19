@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 200px;
+				height: 200px;
+				border: 1px solid red;
+				white-space: normal;/*默认值*/
+				white-space: pre;/*保留所有格式，且不会被迫换行*/
+				white-space: pre-wrap;/*保留所有格式，但是会被迫换行*/
+				white-space: pre-line;/*保留换行 不保留缩进，多个空格只显示一个空格*/
+				white-space: nowrap;/*强制不换行 干不掉br标签*/
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			white-space:文本空白;
+				normal		默认值
+				pre			保留原格式且不会被迫换行
+				pre-wrap	保留原格式，会被迫换行
+				pre-line	保留换行，不保留缩进和多个空格符
+				nowrap		强制不换行，但是干不掉br标签
+		-->
+		<div class="box">
+			哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+		</div>
+	</body>
+</html>

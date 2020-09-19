@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+        <link rel="stylesheet" href="font/iconfont.css" />
+        <style type="text/css">
+            *{margin: 0;padding: 0;}
+            .header{
+                height: 3.46rem;
+                background: pink url("img2/banner.jpg")no-repeat center/100% 100%;
+                padding-top:0.3rem;
+            }
+            .search{
+                height: 0.62rem;
+                padding:0px 0.3rem;
+                display:flex;
+                justify-content: space-between;
+                align-items:center;
+            }
+            .searBtn{
+                width: 5.9rem;
+                height: 0.6rem;
+                background: rgba(0,0,0,0.5);
+                border-radius:0.3rem;
+                color:#fff;
+                line-height:0.6rem;
+                text-align:center;
+                font-size:0.28rem;
+            } 
+            .searBtn i{
+                display:inline-block;
+                /*width: 0.28rem;
+                height: 0.28rem;*/
+                font-size:0.28rem;
+                margin-right:0.08rem;
+            }
+            .content{padding-bottom:1.1rem;}
+            .conList{
+                display:flex;
+                flex-wrap:wrap;
+                justify-content: space-between;
+                border-bottom:0.3rem solid #f5f5f5;
+                padding-bottom:0.29rem;
+            }
+            .conList li{
+                width: 25%;
+            }
+            .conList li a{
+                display:flex;
+                flex-direction:column;/*垂直方向为主轴*/
+                align-items:center;
+                padding-top:0.28rem;
+                font-size:0.28rem;
+                color:#ababab;
+                 
+            }
+            .conList li a img{
+                width: 0.89rem;
+                height: 0.89rem;
+                margin-bottom:0.16rem;
+            }
+            .conList li a span{
+                margin-bottom:0.08rem;
+            }
+             
+            .con2List{
+                display:flex;
+                flex-wrap:wrap;
+                border-bottom:0.28rem solid #ccc;
+            }
+            .con2List li{
+                width: 2.5rem;
+                height: 0.87rem;
+                border-right:1px solid #ccc;
+                border-bottom:1px solid #ccc;
+                box-sizing:border-box;
+                display:flex;
+                align-items:center;
+            }
+            .con2List li:nth-child(3n){
+                border-right:none;
+            }
+            .con2List li img{
+                width: 0.34rem;
+                height: 0.34rem;
+                margin: 0px 0.16rem 0px 0.22rem;
+            }
+            .title{
+                text-align:center;
+                height: 1.06rem;
+                line-height: 1.06rem;
+                font-size:0.36rem;
+                font-weight:bold;
+            }
+            /*con3List*/
+            .con3List{
+                padding:0px 0.15rem;
+                display:flex;
+                flex-wrap:wrap;
+            }
+            .con3List li{
+                width: 3.3rem;
+                margin: 0px 0.15rem 0.45rem;
+            }
+            .con3List li img{
+                width: 3.3rem;
+                margin-bottom: 0.16rem;
+            }
+            .con3List li p{
+                font-size: 0.3rem;
+                margin-bottom:0.2rem;
+            }
+            .con3List li b{
+                font-size:0.24rem;
+                color:#ff7467;
+            }
+            .con3List li span{
+                font-size:0.2rem;
+                color:#999;
+            }
+            /*内容底部*/
+            .conBottom{
+                height: 1.42rem;
+                background: -webkit-linear-gradient(top,#f5f5f5 95%,#dadada);
+                text-align:center;
+                padding-top:0.5rem;
+                box-sizing:border-box;
+                font-size: 0.2rem;
+            }
+            .conBottom p{
+                color:#a4a8b0;
+                margin-bottom:0.16rem;
+            }
+            .conBottom a{
+                color:#999;
+            }
+            .conBottom a:nth-child(2){
+                color:#ccc;
+            }
+            .footer{
+                position: fixed;
+                width: 100%;
+                bottom:0;
+                left:0;
+                background: #fff;
+            }
+            .footer ul{
+                display:flex;
+                justify-content: space-around;
+            }
+            .footer ul li{
+                text-align:center;
+                padding-top:0.08rem;
+                padding-bottom:0.1rem;
+            }
+            .footer ul li i{
+                display:block;
+                width: 0.42rem;
+                height: 0.4rem;
+                font-size:0.4rem;
+                margin:0px auto 0.14rem;
+            }
+            .footer ul li span{
+                font-size:0.26rem;
+                 
+            }
+            .active{
+                color:#0eb488;
+            }
+             
+             
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="search">
+                <span>
+                    <img src="img2/list.jpg" alt="" />
+                </span>
+                <a href="" class="searBtn"><i class="iconfont icon-fangdajing
+"></i>哈哈哈哈哈哈哈哈哈哈</a>
+            </div>
+        </div>
+        <div class="content">
+            <ul class="conList">
+                <li>
+                    <a href="">
+                        <img src="img2/pic.png" alt="" />
+                        <span>自驾游</span>
+                    </a>
+                </li>
+                <li><a href=""><img src="img2/pic1.png" alt="" /><span>自驾游</span></a></li>
+                <li><a href=""><img src="img2/pic2.png" alt="" /><span>自驾游</span></a></li>
+                <li><a href=""><img src="img2/pic3.png" alt="" /><span>自驾游</span></a></li>
+                <li><a href=""><img src="img2/pic4.png" alt="" /><span>自驾游</span></a></li>
+                <li><a href=""><img src="img2/pic5.png" alt="" /><span>自驾游</span></a></li>
+                <li><a href=""><img src="img2/pic7.png" alt="" /><span>自驾游</span></a></li>
+                <li><a href=""><img src="img2/pic6.png" alt="" /><span>自驾游</span></a></li>
+            </ul>
+            <ul class="con2List">
+                <li>
+                    <img src="img2/list1.png" alt="" />
+                    <span>门票/券票</span>
+                </li>
+                <li>
+                    <img src="img2/list2.png" alt="" />
+                    <span>门票/券票</span>
+                </li>
+                <li>
+                    <img src="img2/list3.png" alt="" />
+                    <span>门票/券票</span>
+                </li>
+                <li>
+                    <img src="img2/list4.png" alt="" />
+                    <span>门票/券票</span>
+                </li>
+                <li>
+                    <img src="img2/list5.png" alt="" />
+                    <span>门票/券票</span>
+                </li>
+                <li>
+                    <img src="img2/list6.png" alt="" />
+                    <span>门票/券票</span>
+                </li>
+            </ul> 
+            <h2 class="title">精选折扣</h2>
+            <ul class="con3List">
+                <li>
+                    <img src="img2/pic1.jpg" alt="" />
+                    <p>哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈哈</p>
+                    <b>3099</b>
+                    <span>元起</span>
+                </li>
+                <li>
+                    <img src="img2/pic2.jpg" alt="" />
+                    <p>哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈哈</p>
+                    <b>3099</b>
+                    <span>元起</span>
+                </li>
+                <li>
+                    <img src="img2/pic3.jpg" alt="" />
+                    <p>哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈哈</p>
+                    <b>3099</b>
+                    <span>元起</span>
+                </li>
+                <li>
+                    <img src="img2/pic3.jpg" alt="" />
+                    <p>哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈哈</p>
+                    <b>3099</b>
+                    <span>元起</span>
+                </li>
+                <li>
+                    <img src="img2/pic3.jpg" alt="" />
+                    <p>哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈哈</p>
+                    <b>3099</b>
+                    <span>元起</span>
+                </li>
+                <li>
+                    <img src="img2/pic3.jpg" alt="" />
+                    <p>哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈哈</p>
+                    <b>3099</b>
+                    <span>元起</span>
+                </li>
+                <li>
+                    <img src="img2/pic3.jpg" alt="" />
+                    <p>哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈哈</p>
+                    <b>3099</b>
+                    <span>元起</span>
+                </li>
+                <li>
+                    <img src="img2/pic3.jpg" alt="" />
+                    <p>哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈哈</p>
+                    <b>3099</b>
+                    <span>元起</span>
+                </li>
+                <li>
+                    <img src="img2/pic3.jpg" alt="" />
+                    <p>哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈哈</p>
+                    <b>3099</b>
+                    <span>元起</span>
+                </li>
+                <li>
+                    <img src="img2/pic3.jpg" alt="" />
+                    <p>哈哈哈哈哈啊哈哈哈哈哈啊哈哈哈哈哈哈</p>
+                    <b>3099</b>
+                    <span>元起</span>
+                </li>
+            </ul>
+            <div class="conBottom">
+                <p>哈哈哈哈哈哈哈哈哈 哈哈哈哈哈 哈哈哈哈</p>
+                <a href="">穷游网</a>
+                <a href="">穷游网</a>
+                <a href="">穷游网</a>
+            </div>
+        </div>
+        <div class="footer">
+            <ul>
+                <li class="active">
+                    <i class="iconfont icon-home"></i>
+                    <span>首页</span>
+                </li>
+                <li>
+                    <i class="iconfont icon-home"></i>
+                    <span>首页</span>
+                </li>
+                <li>
+                    <i class="iconfont icon-home"></i>
+                    <span>首页</span>
+                </li>
+            </ul>
+        </div>
+         
+         
+         
+         
+        <script type="text/javascript" src="js/flexible.js"></script>
+    </body>
+</html>

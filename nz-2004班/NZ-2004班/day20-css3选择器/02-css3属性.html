@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				height: 100px;
+				margin: 100px auto;
+				font-size: 80px;
+				text-shadow: 4px 4px 10px red,4px -4px 10px yellow;
+			}
+			.box1{
+				width: 200px;
+				height: 300px;
+				background: pink;
+				margin: 100px auto;
+				word-wrap: normal;
+				word-wrap: break-word;
+			}
+			.box2{
+				width: 200px;
+				height: 300px;
+				background: pink;
+				margin: 100px auto;
+				word-break: break-all;
+				word-break: keep-all;
+			}
+			/*内部阴影*/
+			.box4{
+				width: 200px;
+				height: 200px;
+				background: pink;
+				margin: 100px auto;
+				box-shadow: 3px 4px 9px 10px red inset;
+			}
+			/*外部阴影*/
+			.box3{
+				width: 200px;
+				height: 200px;
+				background: pink;
+				margin: 100px auto;
+				box-shadow: 3px 4px 9px 10px red,15px 15px 15px 10px yellow;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<!--
+			文本阴影:
+			text-shadow:水平阴影 垂直阴影 模糊度 颜色;
+			多层文本阴影的设置
+			text-shadow:第一层阴影,第二层阴影,第三层阴影;
+			
+			在单词内部换行
+			word-wrap:;
+				normal	默认值,不允许在单词内部换行
+				break-word	允许在单词内部换行
+				
+			word-break:;
+				break-all	允许在单词内部换行(无换行点)
+				keep-all	允许在换行点换行,单词内部不换行(效果跟word-wrap:normal;类似)
+				
+			box-shadow:水平阴影 垂直阴影 模糊度 阴影大小 颜色 内外阴影;
+				默认影子在外面(忽略不写)
+				设置影子在内部( inset )
+			
+			box-shadow:第一层阴影,第二层阴影,第三层阴影;
+		-->
+		<div class="box">哈哈哈哈哈哈哈哈嘿嘿</div>
+		<div class="box1">还好哈哈还好还好哈哈还好</div>
+		<div class="box2">还好哈哈还好还好哈哈还好</div>
+		<div class="box4"></div>
+		<div class="box3"></div>
+		
+	</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			表格相关:
+				thead
+				tbody
+				tfoot
+				th
+				
+				colgroup(数据列分组)
+					span="数字" 多少列为一组
+					
+				caption	表格标题
+				
+			表格属性:添加在table里面
+				border-spacing:合并单元格间距;
+				
+				border-collapse:单元格边框是否合并;
+					separate	默认值,不合并
+					collapse	合并
+					
+				empty-cells:无内容时单元格是否隐藏;
+					show	显示,默认值
+					hide	隐藏
+					
+				table-layout:单元格宽度是否固定;
+					auto	不固定,自适应,默认值
+					fixed	固定宽度
+					
+			表单相关:
+				input
+				checked="checked"默认选中状态
+				disabled="disabled"禁止选中
+					type="radio"单选按钮
+						同一组属性name值必须一致，需要互斥
+					type="checkbox"多选按钮
+					
+					type="file"	文件上传
+					
+					select > option 下拉列表 > 下拉列表项
+						selected="selected"默认选中
+					textarea 多行文本输入框 文本域
+						cols="宽度"
+						rows="高度"
+						自由拖拽大小,resize:none;(css)禁止拖拽
+						注意:不是px单位，是字符宽高
+						
+					fieldset > legend 表单字段集 > 表单字段集标题
+						一个fieldset里只有一个直接的legend
+					label 提示信息标签(点击文字与对应标签相关联)
+						<input type="radio" id="name"></input>
+						<label for="name">点击位置</label>
+						
+				bfc:块级格式化上下文(是一个有特殊功能的容器)	
+				
+				bfc的布局规则:
+					1:内部的box元素会垂直摆放,一个挨着一个
+					2:元素与元素之间的边距用margin控制,元素的左外边距挨着父元素的左边框
+					3:bfc区域不会与浮动元素重叠
+					4:bfc区域内的元素不会影响外面的元素
+					5:同属于同一个bfc区域的元素垂直外边距相遇会重叠
+					6:bfc区域中的浮动元素参与高度计算
+					
+				触发bfc的条件:
+					1:html(根元素)是最大的bfc区域
+					2:position为absolute fixed
+					3:display为
+						inline-block
+						table-cell
+						table-caption
+						flex
+						inline-flex
+					4:overflow 不为visible
+					5:float不为none
+					
+				bfc的应用:
+					1:两栏布局,三栏布局
+					2:清除浮动
+					3:防止margin重叠
+		-->
+	</body>
+</html>

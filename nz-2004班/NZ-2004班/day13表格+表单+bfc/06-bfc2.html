@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box1{
+				width: 200px;
+				height: 100px;
+				background: red;
+				float: left;
+			}
+			.box2{
+				width: 300px;
+				height: 140px;
+				background: skyblue;
+				/*overflow: hidden;将元素触发为bfc区域*/
+				/*display: inline-block;*/
+				position: fixed;/*作用是改变元素在页面中的位置*/
+				top: 10px;
+				left: 10px;
+			}
+			.box3{
+				width: 200px;
+				height: 100px;
+				background: pink;
+				margin-top: 10px;
+				margin-left: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="box2">
+			<div class="box3"></div>
+		</div>
+		<div class="box1"></div>
+	</body>
+</html>

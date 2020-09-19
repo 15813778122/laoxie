@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 500px;
+				height: 500px;
+				background: pink;
+				margin: 100px;
+			}
+			.box1{
+				width: 200px;
+				height: 50px;
+				background: red;
+				transform: 1s;/*过渡*/
+			}
+			.box:hover .box1{
+				transform: rotate(90deg);/*旋转90度*/
+				transform:rotateY(70deg);
+				transform:rotateX(70deg);
+				
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			transform:rotate();旋转是一个度数 deg
+			默认情况 中心点为旋转点
+		-->
+		<div class="box">
+			<div class="box1"></div>
+		</div>
+	</body>
+</html>

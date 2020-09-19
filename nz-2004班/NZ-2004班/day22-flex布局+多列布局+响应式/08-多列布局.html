@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				/*width: 500px;*/
+				height: 600px;
+				background: pink;
+				column-count: 4;/*分列*/
+				column-gap: 50px;/*列间隔*/
+				column-rule:9px solid blue;/*分割线*/
+				column-fill: balance;
+				column-width: 200px;
+				columns: 100px 3;
+			}
+			h2{
+				column-span: all;/*横跨所有列*/
+				text-align: center;/*居中*/
+				
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			多列布局:
+				column-count:;分列
+				column-gap:;列间距
+				column-rule:大小 形态 颜色;分割线
+				column-fill:;列的高度是否统一
+					auto	列高度,自适应内容
+					balance	所有列高度以其中最高的一列统一
+				column-span:是否很横跨所有列
+					none	不跨
+					all		横跨所有列
+				column-width:;列宽	
+				
+				拓展:
+				break-inside: avoid;/*防止断层*/
+		-->
+		<div class="box">
+			<h2>哈哈哈标题</h2>
+			哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈嘿嘿hhh哈哈哈哈哈哈哈
+		</div>
+	</body>
+</html>

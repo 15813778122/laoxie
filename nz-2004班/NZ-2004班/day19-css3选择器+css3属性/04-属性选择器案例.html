@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+				width: 300px;
+				margin: 100px auto;
+				
+			}
+			li{
+				background: pink;
+				height: 30px;
+				line-height: 30px;
+				margin-bottom: 4px;
+			}
+			em{
+				margin-left: 5px;
+				display: inline-block;
+				background: url("img/bg.png") no-repeat;
+				width: 16px;
+				height: 16px;
+			}
+			li[class="word"] em{
+				background-position: 0px 0px;
+				
+			}
+			li[class="home"] em{
+				background-position: 0px -384px;
+			}
+			li[class="pdf"] em{
+				background-position: 0px -125px;
+			}
+			li[class="zip"] em{
+				background-position: 0px -219px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li class="home">home<em></em></li>
+			<li class="word">word文档<em></em></li>
+			<li class="pdf">pdf文档<em></em></li>
+			<li class="word">wordword文档<em></em></li>
+			<li class="zip">zip压缩包<em></em></li>
+			<li class="zip">zip压缩包<em></em></li>
+		</ul>
+	</body>
+</html>

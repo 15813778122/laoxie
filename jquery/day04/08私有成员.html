@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            /*
+                封装一系列函数，这一系列函数操作的内容差不多
+            */
+
+            var moduleA = (function(){
+                var count = 100; //私有变量
+
+                function aaa(){  //私有方法
+                    count += 10;
+                    console.log(count);
+                }
+
+                //只有内部函数才能访问内部变量。
+                function bbb(){  //私有方法
+                    count *= 20;
+                    console.log(count);
+                }
+
+                return {
+                    funcA: aaa,
+                    funcB: bbb
+                }
+            })();
+
+
+            moduleA.funcA();
+            moduleA.funcB();
+
+            // console.log(count);
+            console.log(aaa);
+
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

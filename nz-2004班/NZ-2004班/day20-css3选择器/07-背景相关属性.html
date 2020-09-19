@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background-image: url("img/1-1.png");
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			.box{
+				width: 500px;
+				height: 574px;
+				margin: 100px;
+				padding: 30px;
+				border: 10px dotted #000;
+				background-image: url("img/2.png");
+				background-repeat: no-repeat;
+				background-origin: padding-box;/*背景图起点从内边距开始*/
+				background-origin: border-box;/*背景图起点从边框开始*/
+				background-origin: content-box;
+				
+				background:  url("img/2.png") no-repeat 10px 10px/100px,url("img/a.png");
+				
+				background-size: 100% 100%;/*背景图大小 水平 垂直大小*/
+				background-size: 200px 300px;
+				background-size: 300px;/*宽度,然后高度等比例缩放*/
+				
+			}
+			.box1{
+				width: 220px;
+				height: 165px;
+				margin: 100px;
+				padding: 30px;
+				border: 10px dotted #000;
+				background-image: url("img/1-1.jpg");
+				background-repeat: no-repeat;
+				background-clip: border-box;
+				background-clip: padding-box;
+				background-clip: content-box;
+			}
+			.box2{
+				width: 400px;
+				height: 500px;
+				margin: 100px;
+				padding: 30px;
+				border: 10px dotted #f00;
+				background-image: url("img/1-1.jpg");
+				background-repeat: no-repeat;
+				background-size: cover;
+			}	
+			.box3{
+				width: 400px;
+				height: 500px;
+				margin: 100px;
+				padding: 30px;
+				border: 10px dotted #f00;
+				background: url("img/1-1.jpg") no-repeat,url("img/bg.gif");
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-size: 200px 200px;
+				background-position: 30px 30px;
+			}	
+		</style>
+		
+	</head>
+	<body>
+		<!--
+			background-origin:背景图起点位置;
+				padding-box	背景图起点从内边距开始
+				border-box	背景图起点从边框开始
+				content-box	起点从内容区域开始
+				
+			background-clip:;背景图裁剪	
+				border-box	从边框位置开始裁剪
+				padding-box	从内边距区域开始裁剪
+				content-box	从内容区域开始裁剪
+				
+			background-size:;背景图大小
+				% px
+				第一个值 水平大小
+				第二个值 垂直大小
+				如果只给一个值,宽高等比例缩放
+				cover	等比例缩放,铺满元素
+				contain	等比例缩放,某一个方向铺满元素
+				
+			background:url(),url();	多张背景图效果
+		-->
+		<div class="box"></div>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+	</body>
+</html>

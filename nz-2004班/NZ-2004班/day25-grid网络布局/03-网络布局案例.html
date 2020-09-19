@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 400px;
+				height: 200px;
+				background: pink;
+				margin: 50px;
+				display: grid;/*设为网格布局*/
+				grid-template-rows:repeat (2,1fr);/*两行均分*/
+				grid-template-columns:repeat (4,1fr);/*4列均分*/
+				grid-template-areas:
+				"a1 a1 a2 a2"
+				"a3 a4 a5 a6"
+				 ;
+				 
+				 /*行间距 列间距*/
+				grid-row-gap:10px;
+				grid-column-gap:10px;
+			}
+			.con:nth-child(1){
+				background: red;
+				grid-area:a1;
+			}
+			.con:nth-child(2){
+				grid-area:a2;
+				background: skyblue;
+			}
+			.con:nth-child(3){
+				background: blue;
+				grid-area:a3;
+			}
+			.con:nth-child(4){
+				grid-area:a4;
+				background: green;
+			}
+			.con:nth-child(5){
+				background: yellow;
+				grid-area:a5;
+			}
+			.con:nth-child(6){
+				grid-area:a6;
+				background: purple;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="con"></div>
+			<div class="con"></div>
+			<div class="con"></div>
+			<div class="con"></div>
+			<div class="con"></div>
+			<div class="con"></div>
+		</div>
+	</body>
+</html>

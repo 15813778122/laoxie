@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #div1{width: 100px; height: 100px; background-color: red;}
+            #div2{width: 100px; height: 100px; background-color: blue;}
+        </style>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                animate方法 JQ官方的动画函数
+                参数：
+                    第一个参数：对象，传入要变化的样式和目的值
+                    第二个参数：动画持续时间，如果不传入默认是400毫秒。
+                    第三个参数：运动形态（只支持两种运动形态）
+                        匀速(linear)  慢块慢（默认）(swing)
+                    第四个参数：回调函数
+
+                细节：链式运行，写法上不太一样。
+            */
+            $(function(){
+                $("#div1").click(function(){
+
+                    //匀速
+                    $("#div1").animate({ 
+                        width: 300,
+                        height: 300
+                    }, 4000, "linear")
+
+                    //默认是按照慢快慢的形式运动
+                    $("#div2").animate({
+                        width: 300,
+                        height: 300
+                    }, 4000)
+                })
+            })
+
+        </script>
+    </head>
+    <body>
+        <div id = 'div1'></div>
+        <div id = 'div2'></div>
+    </body>
+</html>

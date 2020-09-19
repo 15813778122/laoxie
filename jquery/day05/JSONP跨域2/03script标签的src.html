@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- 
+            下述的代码会产生两个疑问
+                1、通过script的src，引入的文件的后缀问题
+                    核心：文件的后缀是干嘛。没有什么用，计算机识别该文件用哪个软件打开的快捷方式。
+                    【注】文件存储的本质1和0.
+                2、直接引入数据，是没有办法对这个数据进行后续操作
+
+            【注】思维方式：透过现象看本质。
+            【注】JSONP请求的数据源，格式必须是函数调用一下的格式。
+
+         -->
+        <script>
+            //事先封装好一个同名的函数
+            function show(data){
+                console.log("下载到的数据：" + data);
+            }
+        </script>
+        <script src = '1.txt'></script>
+        <!-- <script src = 'demo.js'></script> -->
+        <script>
+            "I am a String!!!";
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

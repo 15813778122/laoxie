@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.box {
+				width: 600px;
+				height: 600px;
+				background: pink;
+				margin: 50px;
+				display: grid;
+				/*设置为网格布局*/
+				/*行*/
+				/*grid-template-rows:1fr 2fr 3fr;*/
+				/*列*/
+				/*grid-template-columns:200px auto 20%;*/
+				/*重复列 行*/
+				grid-template-rows: repeat(3, 1fr);
+				/*划分为3行,每行均分*/
+				grid-template-columns: repeat(3, 1fr);
+				/*划分3列,每列均分*/
+				grid-template-columns: 1fr 1fr 1fr;
+				/*总共9份  每个人3份*/
+				/*划分区域  必须划分了 行 和 列  合并单元格*/
+				grid-template-areas: "a1 a1 a3" "a1 a1 a3" "a2 a2 a9";
+				/*划分行 列 区域的综合写法*/
+				/*grid-template:分区 分行/分列;*/
+				grid-template: 'a1 a1 a3' 1fr/*第一行分区 第一行高度*/
+				'a2 a2 a3' 1fr/*第二行分区 第二行高度*/
+				/*第三行分区 第三行高度/第一列宽度 第二列宽度 第三列宽度*/
+				'a4 a4 a3' 1fr/1fr 1fr 1fr;
+				/*行间距  列间距*/
+				/*grid-row-gap:10px;
+                grid-column-gap:10px;*/
+				/*综合写法 行间距  列间距*/
+				grid-gap: 10px;
+			}
+			
+			.box div:nth-child(1) {
+				background: red;
+				grid-area: a1;
+			}
+			
+			.box div:nth-child(2) {
+				background: yellow;
+				grid-area: a3;
+			}
+			
+			.box div:nth-child(3) {
+				background: skyblue;
+				grid-area: a2;
+			}
+			
+			.box div:nth-child(4) {
+				background: green;
+				grid-area: a4;
+			}
+			/*.box div:nth-child(4){
+                background: green;
+                grid-area:a4;
+            }*/
+			
+			.box2 {
+				width: 600px;
+				height: 600px;
+				background: pink;
+				margin: 50px;
+				display: grid;
+				/*设置好九宫格*/
+				/*grid-template-rows:repeat(3,1fr);
+                grid-template-columns:repeat(3,1fr);*/
+				grid-template-rows: 100px 50px 200px;
+				grid-template-columns: 100px 100px 100px;
+				/*网格整体的水平位置*/
+				justify-content: start;
+				justify-content: end;
+				justify-content: center;
+				justify-content: stretch;
+				/*网格整体的垂直位置*/
+				align-content: start;
+				/*综合写法 垂直位置  水平位置*/
+				place-content: space-around space-evenly;
+				/*网格的呈现方式*/
+				/*align-items:center;
+                justify-items:start;*/
+				/*综合写法*/
+				/*place-items:stretch stretch;*/
+			}
+			
+			.box2 div {
+				border: 1px solid red;
+			}
+			/*.box2 .con2:nth-child(1){
+                width: 100px;
+                height: 20px;
+                background: green;
+            }*/
+			
+			.box3 {
+				width: 600px;
+				height: 600px;
+				background: pink;
+				margin: 50px;
+				display: grid;
+				/*设置为网格布局*/
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: repeat(3, 1fr);
+				/*grid-template-areas:
+                    'a1 a1 a2'
+                    'a3 a3 a2'
+                    'a3 a3 a4';*/
+			}
+			
+			.box3 .con1 {
+				background: red;
+				/*列线起始位置*/
+				/*grid-column-start:3;
+                grid-column-end:4;*/
+				/*行线位置的网格线起始位置*/
+				/*grid-row-start:1;
+                grid-row-end:2;*/
+				/*占3个网格*/
+				grid-column-end: span 3;
+				grid-row-end: span 2;
+			}
+			
+			.box3 .con2 {
+				background: gold;
+				/*grid-column-start:2;
+                grid-column-end:3;
+                grid-row-start:2;
+                grid-row-end:3;*/
+				/*方式一*/
+				/*grid-area:a3;*/
+				/*方式二*/
+				/*grid-area:2/1/4/3;*/
+				/*行起点/列起点/行结束/列结束*/
+				width: 100px;
+				height: 100px;
+				justify-self: end;
+				align-self: end;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--
+            网格布局设置:
+                display:;
+                    grid
+                    inline-grid
+                     
+            容器(父元素):
+                划分行:
+                grid-template-rows:;
+                    px 
+                    %
+                    fr
+                    重复: repeat(行数,均分fr)
+                     
+                划分列:
+                grid-template-columns:;
+                    px 
+                    %
+                    fr
+                    重复: repeat(列数,均分fr)
+                     
+                划分区域:
+                grid-template-areas:
+                    "区域1 区域2 区域3"
+                    "区域4 区域5 区域6";
+                注意:必须分了行和列,子元素占区域时,需要结合项目属性grid-area:区域名字;
+                 
+                行间距 列间距
+                grid-row-gap:10px;行间距
+                grid-column-gap:4px;列间距
+                综合写法:grid-gap:行间距 列间距;
+                 
+            综合写法:
+            grid-template:"分区" "分区" "分区" 分行/分列;
+             
+            网格整体垂直   水平位置
+            align-content:;
+            justify-content:; 
+                start 起始位置
+                end   结束位置
+                center 居中
+                stretch  默认值,项目没有指定大小,拉伸占据整个网格大小
+                space-around    两端平分
+                space-between   两端对齐
+                space-evenly    平均分配剩余空间
+            综合写法: place-content:垂直  水平; 
+             
+            指定网格的垂直  水平呈现方式
+            align-items:;
+            justify-items:;
+                start 起始位置
+                end   结束位置
+                center 居中
+                stretch  默认值,项目没有指定大小,拉伸占据真个网格大小
+            综合写法: place-items:垂直位置 水平位置;
+             
+             
+             
+            项目(子元素):
+                grid-area:占区域;注意: 需要分区才可以使用
+                    方式一:
+                    grid-area:a1;
+                    方式二:
+                    grid-area:行起点/列起点/行结束/列结束;
+                     
+                grid-column-start:列线开始;
+                grid-column-end:列线结束;
+                grid-row-start:行线开始;
+                grid-row-end:行线结束;
+                 
+                只有end才有span  意思是占几个网格  3指占3个
+                grid-column-end:span 3;
+                grid-row-end:span 2;
+                 
+                单个元素在网格的垂直  水平对齐方式
+                align-self:;
+                justify-self:;
+                    start 起始位置
+                    end   结束位置
+                    center 居中
+                    stretch  默认值,项目没有指定大小,拉伸占据真个网格大小
+                综合写法: place-self:垂直位置 水平位置;
+                 
+             
+        -->
+		<div class="box">
+			<div class="con1"></div>
+			<div class="con2"></div>
+			<div class="con3"></div>
+			<div class="con4"></div>
+			<!--<div class="con5"></div>
+            <div class="con6"></div>
+            <div class="con7"></div>
+            <div class="con8"></div>
+            <div class="con9"></div>-->
+		</div>
+
+		<div class="box2">
+			<div class="con2"></div>
+			<div class="con2">2</div>
+			<div class="con2">3</div>
+			<div class="con2">4</div>
+			<div class="con2">5</div>
+			<div class="con2">6</div>
+			<div class="con2">7</div>
+			<div class="con2">8</div>
+			<div class="con2">9</div>
+		</div>
+
+		<div class="box3">
+			<div class="con1"></div>
+			<div class="con2"></div>
+		</div>
+
+	</body>
+
+</html>

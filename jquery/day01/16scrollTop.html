@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #toTop {
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+        }
+    </style>
+    <script src='jquery-1.10.1.min.js'></script>
+    <script>
+        $(function () {
+            $(document).click(function () {
+                //获取当前窗口的滚动高度 scrollTop()
+
+                // document.documentElement.scrollTop || document.body.scrollTop
+
+                /*
+                    jquery只要大家选择的是1.0系列方法
+                    任何的语法操作都兼容IE8以下
+                    【注】jquery中兼容是不需要大家去做的。
+                */
+                // alert($(window).scrollTop()); 取值
+
+
+            })
+
+            // 赋值
+            $("#toTop").click(function () {
+                $(window).scrollTop(0);
+            })
+        })
+
+    </script>
+</head>
+
+<body style='height: 3000px'>
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+    <h1>hello world</h1>
+    <button id='toTop'>回到顶部</button>
+</body>
+
+</html>

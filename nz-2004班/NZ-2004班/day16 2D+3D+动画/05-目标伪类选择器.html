@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			a{
+				display: block;
+				width: 100px;
+				height: 100px;
+				background: #f00;
+				margin: 10px auto;
+				border-radius:50px;/**/
+			}
+			div{
+				width: 200px;
+				height: 200px;
+				margin: 10px auto;
+				font-size: 30px;
+				color: red;
+			}
+			div:target{/*当a标签被点击时，对应的div背景颜色发生改变*/
+				background: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			选择器:target{}	当元素被点击时的指向,发生样式的改变
+			
+			css样式 圆角:
+			border-radius:;
+				元素是正方形	宽度的一半px	%	正圆
+				元素是长方形	较小值的一半px	半圆
+						50%	椭圆
+		-->
+		<a href="#box1">链接box1</a>
+		<a href="#box2">链接box2</a>
+		<a href="#box3">链接box3</a>
+		<a href="#box4">链接box4</a>
+		
+		<div id="box1">1</div>
+		<div id="box2">2</div>
+		<div id="box3">3</div>
+		<div id="box4">4</div>
+	</body>
+</html>

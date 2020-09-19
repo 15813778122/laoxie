@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				_height:200px;/*ie6-识别*/
+				*height:100px;/*只是ie7识别*/
+				height:200px\9;
+				height:200px\0;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			经典的ie低版本bug(了解)
+			bug1:图片img有超链接时,会产生蓝色边框
+			hack1:img{border:none/0;}
+			
+			bug2:图片下方默认带有大约3px的间距
+			hack1:跟父级元素不换行写
+			hack2:给img添加display:block;
+			
+			bug3:双倍浮动外边距
+				意思是:一个元素左浮动,添加margin-left:20px;,将出现双倍的margin-left:40px;
+			hack:给浮动元素添加display:inline;	
+			
+			bug4:默认高度
+				意思是:当元素的height:;值小于16px左右,低版本id将保持16px
+			hack:font-size:0; / overflow:hidden;
+			
+			
+		常见的bug:
+			bug5:表单元素对齐不一致
+				意思是 表单元素行高对齐方式不一致
+			hack: 给表单元素添加float:left;
+			
+			bug6:表单按钮大小不一致
+			hack1:统一大小
+			hack2:用a标签模拟(结合脚本做功能)
+			hack3:input外面再套一个标签,然后在这个标签里写样式,把input的边框去掉
+			hack4:如果这个是一个图片按钮,直接使用背景图作为按钮的图片即可
+			
+			bug7:鼠标指针
+				cursor:hand;高版本浏览器不支持
+			hack:cursor:pointer;小手 高低版本都认识
+				取值:
+					auto默认
+					crosshair加号
+					text文本
+					wait等待
+					help帮助
+					progress过程
+					inherit继承
+					move移动
+					ne-resize向，上或向右移动
+					pointer手形
+
+
+					
+			bug8:opacity:;让元素透明
+				取值范围:0 - 1
+				opacity:0.5;
+			hack:	让ie识别
+				filter:alpha(opacity=50);取值范围1-100整数
+				
+		过滤器:
+			下划线过滤器:	ie6-识别
+			例: _height:100px;
+			
+			!important过滤器:		ie6-不识别
+			
+			*过滤器:	ie7识别,别的浏览器不识别
+			 
+			\9:IE浏览器识别
+			
+			\0:ie8+识别
+		-->
+	</body>
+</html>

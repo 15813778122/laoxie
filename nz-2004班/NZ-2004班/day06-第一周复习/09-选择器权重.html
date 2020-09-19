@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*div{
+				font-size: 30px;
+				color: red;
+			}
+			#wrap{
+				font-size: 50px;
+				color: yellow;
+			}
+			.box{
+				font-size: 40px;
+				color: green;
+			}
+			div{
+				font-size: 20px;
+				color: blue;
+			}*/
+			.box2 p span{
+				color: blue !important;
+				font-size: 30px;
+				color: purple;
+			}
+			div p span{
+				color: red;
+				font-size: 20px;
+			}
+			#box2 p span{
+				color: gold;
+				font-size: 40px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--
+			选择器权重
+        		id > class >类型选择器
+        		0100   0010   0001
+        		1 2 3比较大小 当个数进行对比
+        		1+2+3	2+3+4  比较大小
+        -->
+		<div id="wrap" class="box">
+			文本内容
+		</div>
+		<div class="box2" id="box2">
+			<p class="txt">
+				<span>包含选择器权重对比1</span>
+			</p>
+		</div>
+		<span>辅助包含选择器权重对比2</span>
+	</body>
+</html>

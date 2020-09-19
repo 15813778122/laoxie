@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                 ev.data 
+            
+                 ev.target(兼容后触发对象)   兼容后的目标对象
+                 var target = e.target || window.event.srcElement;
+                 
+                 ev.type(输出事件类型)
+                    直接输出当前绑定事件的事件类型
+            */
+
+            $(function(){
+
+                //目标对象
+                /*
+                $("ul").click(function(ev){
+                    // alert(ev.target.innerHTML);
+
+                    alert(ev.type);
+                })
+
+                $("ul").mouseover(function(ev){
+                    alert(ev.type);
+                })
+                */
+
+
+                //回顾
+                //用户，只触发点击，系统去执行点击要做的函数
+                /*
+                document.onclick = function(ev){
+                    //我们程序员是否可以给这个函数主动传入参数呢？
+                    //我们程序员没有权利主动传入参数
+                    alert(ev)
+                }
+                */
+
+                // document.onclick("hello");
+                
+
+                //on方法，可以间接的实现事件绑定的函数传参
+                /*
+                    on 方法的第二个参数
+                        变成了对象，对象里写入我们想要传入的参数
+
+                    事件对象.data 可以拿到这个对象
+                    
+                */
+                $(document).on("click", {username: "钢铁侠", age: 18}, function(ev){
+                    console.log(ev.data); //拿到前面传入的第二个参数
+                    alert(ev.data.username);
+                    alert(ev.data.age);
+                })
+
+
+            })
+
+
+
+        </script>
+    </head>
+    <body>
+        <ul>
+            <li>111</li>
+            <li>111</li>
+            <div>222</div>
+            <div>222</div>
+        </ul>
+    </body>
+</html>

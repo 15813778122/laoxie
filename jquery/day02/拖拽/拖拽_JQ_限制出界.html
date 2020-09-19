@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Document</title>
+        <style>
+            div{width: 100px; height: 100px; background-color: red; position: absolute;}
+        </style>
+        <script src = '../jquery-1.10.1.min.js'></script>
+        <script>
+            $(function(){
+                $("div").mousedown(function(ev){
+                    var offsetX = ev.clientX - $(this).offset().left;
+                    var offsetY = ev.clientY - $(this).offset().top;
+
+                    var _this = this;
+
+                    $(document).mousemove(function(ev){
+                        var l = ev.clientX - offsetX;
+                        if(l <= 0){
+                            l = 0;
+                        }
+                        if(l >= $(window).outerWidth() - $(_this).outerWidth()){
+                            l = $(window).outerWidth() - $(_this).outerWidth();
+                        }
+                        var t = ev.clientY - offsetY;
+                        if(t <= 0){
+                            t = 0;
+                        }
+                        if(t >= $(window).outerHeight() - $(_this).outerHeight()){
+                            t = $(window).outerHeight() - $(_this).outerHeight();
+                        }
+
+                        //改变当前按下的物体的位置
+                        $(_this).css({
+                            left: l,
+                            top: t
+                        })
+                    })
+                })
+
+                $(document).mouseup(function(){
+                    $(document).off("mousemove");
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- 引入jquery -->
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                选择网页元素上（获取页面上的元素节点）
+                    1、模拟css选择网页元素(基本上所有获取网页元素的方法都可以在这里用)
+
+                原生JS来说：
+                    document.getElementById();
+                    node.getElementsByClassName();
+                    document.getElementsByName();
+                    node.getElementsByTagName();
+
+                    document.querySelector()
+                    document.querySelectorAll();
+
+                jquery提供了一个非常好用的获取网页元素的方法：
+                $();
+
+                .css("样式属性", "样式属性的值");  设置元素节点的css样式
+
+            */
+
+            window.onload = function(){
+                //id = "#div1"
+                // $("#div1").css("backgroundColor", 'red');
+
+                // class = 'box'
+                // $(".box").css("backgroundColor", 'blue');
+
+                // 标签名 = li
+
+                // $("li").css("backgroundColor", 'orange');
+
+                //name = hello
+                // $("[name=hello]").css("backgroundColor", 'green');
+
+                // $("ol li.box").css("backgroundColor", "pink");
+
+                $("[title=world]").css("backgroundColor", 'red');
+
+
+            }
+        </script>
+    </head>
+    <body>
+        <div id = 'div1' title = 'world'>div1</div>
+        <ul>
+            <li class = 'box' title = 'world'></li>
+            <li></li>
+            <li name = 'hello'></li>
+            <li></li>
+            <li class = 'box'></li>
+        </ul>
+        <ol>
+            <li name = 'hello'></li>
+            <li class = 'box'></li>
+            <li name = 'hello'></li>
+        </ol>
+    </body>
+</html>

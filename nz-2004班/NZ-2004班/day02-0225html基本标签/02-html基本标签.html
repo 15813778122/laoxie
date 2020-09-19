@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+        	b / strong:加粗标签
+        	特征:只占据自己内容位置的大小，strong有强调作用
+        	
+        	u:下划线标签
+        	特征:只占据自己内容位置的大小，给文字添加下划线
+        	
+        	br:换行标签(空标记)
+        	hr:水平线标签(空标记)
+        	
+        	sub:下标标签
+        	sup:上标标签
+        	
+        	p:段落标签
+        	特征:单独占据一行,可以嵌套文本 非单独占据一行的标签 可以插入图片
+        	
+        	span:文本节点标签
+        	特征:只占据自己内容大小的位置，一般结合css体现样式
+        	
+        	特殊符号:
+        	&nbsp; 空格符
+			&lt; 左尖括号
+			&gt; 右尖括号
+			&copy; 版权号
+			注:其他的特殊符号请百度搜索html特殊符号对照表
+			
+			列表标签:
+			 ul > li:无序列表标签
+			 	type="disc默认值实心圆 circle square"通常不用，因为丑还不好控制 去掉小黑圆点list-style:none; 
+        		特征:单独占据一行，一般用来做单导航，列表
+        		
+        		ol > li:有序列表
+        			type="a/A/1/i/I"修饰符号，通常不用，start="3"从第三个开始
+        		
+        		dl > dt + dd:自定义列表标签
+        			特征:单独占据一行，一般用来做双导航，一个dl里面只有一个dt，可以有多个dd
+        
+        		a:超链接标签
+        		特征:实现页面与页面之间的跳转，只占据自己内容大小的位置，默认文本蓝色带有下划线
+        			href="跳转地址"
+        			target="页面打开方式"
+        				_self 在当前页面刷新(默认值)
+        				_blank 在新窗口中打开
+        			title="鼠标移入的提示文本"
+        			拓展:
+        			rel="nofollow"指定当前页面与被链接的页面之间的关系
+        			
+        		图片:
+        			.jpg 普通格式(常见格式)(黄种人)
+        			.gif 动态图(白种人)
+        			.png 透明图片(黑种人)
+        			
+        			img:图片标签
+        				src="图片路径"
+        					相对路径:
+        						相对某一个文件夹
+        						tupian/1.jpg
+        						./longmao.jpg
+        					绝对路径:
+        						从盘符出发的路径
+        						域名地址
+        						
+        					../ 返回上级目录
+        					./ 在当前目录
+        					
+        				alt="文本信息"
+        				title="提示文本"
+        				width="宽度"
+        				height="高度"
+        				注意:只写宽度或者高度，另一边等比例缩放
+        				
+        				div:盒子标签
+        				特征:单独占据一行，用来搭建页面结构
+        				
+        				注释
+        				
+        				table: 表格标签
+        					tr:行
+        					td:单元格
+        					
+        					border="设置边框"
+        					bordercolor="边框颜色"
+        					
+        					cellspacing="单元格边框与边框之间的距离"
+        					cellpadding="单元格与内容之间的距离"
+        					注意:给table添加
+        					
+        					align="表格水平位置"
+        						left 在左边
+        						center 在中间
+        						right 在右边
+        						
+        					width="宽度"
+        					height="高度"
+        					
+        					colspan="合并列" 左右合并
+        					rowspan="合并行" 上下合并
+        					注意:给td添加，合并几个，数字写几
+        					
+        					valign="垂直对齐方式"
+        						top 顶部对齐(默认值)
+        						middle 居中(默认值)
+        						bottom 底部对齐
+        -->
+        <b>湘妹子</b>就是<strong>湖南妹子</strong>，因为湖南有条江叫做湘江，
+        <u>湖南也简称为湘</u>，<br />所以湖南的女孩子也都称为湘妹子。
+        <hr>
+        	
+        O<sub>2</sub> + 2H<sub>2</sub> = 2H<sub>2</sub>0
+        
+        4<sup>2</sup> + 3<sup>3</sup> = 43
+        
+        <p>在</p><strong>找对象</strong>方面，<p>湘妹子</p>哈哈哈</p>耶耶耶
+	
+		<ul type="disc">
+			<li>hmp</li>
+			<li>cxk</li>
+			<li>gwz</li>
+			<li>giao</li>
+		</ul>
+		
+		<ol type="A" start="3">
+			<li>有序列表</li>
+			<li>有序列表</li>
+			<li>有序列表</li>
+			<li>有序列表</li>
+		</ol>
+		
+		<dl>
+			<dt style="color: red;">红楼梦</dt>
+			<dd>红楼梦是中国四大名著之一</dd>
+			<dd>是一部悲伤的爱情故事</dd>
+		</dl>
+		
+		<dl>
+			<dt>西游记</dt>
+			<dd>红楼梦是中国四大名著之一</dd>
+			<dd>是一部神话的取经故事</dd>
+		</dl>
+		
+		<a href="http://www.baidu.com">超链接，能够实现页面与页面之间的跳转</a>
+		<a href="http://www.4399.com" target="_self" title="hehe" rel="nofollow">超链接，能够实现页面与页面之间的跳转</a>
+	
+		<img src="img/1.jpg" alt="龙猫" title="龙马~"/>
+		
+		<div>盒子标签</div>
+		盒子标签
+		<span>文本节点标签</span>
+		
+		<table border="1" width="500" height="300" cellspacing="0" cellpadding="20" bordercolor="red" align="center">
+			<tr>
+				<td>1-1</td>
+				<td>1-2</td>
+				<td colspan="2">1-3</td>
+			</tr>
+			<tr>
+				<td>2-1</td>
+				<td>2-2</td>
+				<td valign="bottom">2-3</td>
+				<td>2-4</td>
+			</tr>
+			<tr valign="top">
+				<td>3-1</td>
+				<td rowspan="2">3-2</td>
+				<td>3-3</td>
+				<td>3-4</td>
+			</tr>
+			<tr>
+				<td>4-1</td>
+				<td>4-3</td>
+				<td>4-4</td>
+			</tr>
+		</table>
+	</body>
+	
+</html>

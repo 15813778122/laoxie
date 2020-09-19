@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+
+            //继续更改，增加一些方法
+            var moduleA = (function(mod){
+                function showC(){
+                    console.log("我是新增的函数showC");
+                }
+                mod.ccc = showC;
+                return mod;
+            })(moduleA || {});
+            
+            var moduleA = (function(mod){
+                var _count = 10;   //私有变量
+
+                function showA(){  //私有函数
+                    _count += 20;
+                    console.log(_count);
+                }
+
+                function showB(){
+                    _count *= 10;
+                    console.log(_count);
+                }
+
+                mod.aaa = showA;
+                mod.bbb = showB;
+                
+                return mod;
+            })(moduleA || {});
+
+
+            
+
+
+            moduleA.aaa();
+            moduleA.bbb();
+            moduleA.ccc();
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

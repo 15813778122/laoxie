@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 300px;
+				height: 100px;
+				background: pink;
+				
+				line-height: normal;/*行高 默认值*/
+				line-height: 20px;/*文本内容垂直对齐方式*/
+				
+				font:italic bold 30px/100px "微软雅黑";
+				
+				text-align: left;/*文本水平对齐方式*/
+				text-align: center;
+				text-align: right;
+				text-align: justify;/*两端对齐*/
+			}
+			#box1{
+				width: 250px;
+				height: 100px;
+				background: gold;
+				text-align: justify;
+			}
+			
+			a{
+				text-decoration: none;/*文本修饰:取消;*/
+			}
+			.txt1{
+				text-decoration: underline;/*添加下划线*/
+			}
+			.txt2{
+				text-decoration: line-through;/*添加中划线*/
+			}
+			.txt3{
+				text-decoration: overline;
+			}
+			#box2,#box3{
+				width: 400px;
+				background: pink;
+				font-size: 30px;
+			}
+			#box2{
+				text-indent: 2em;/*首行缩进 2*30*/
+				letter-spacing:0px;
+			}
+			#box3{
+				text-indent: 2em;
+				word-spacing: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+        	行高:
+        		line-height:文本垂直对齐方式;
+        			行高值 < 高度		偏上
+        			行高值 = 高度		居中
+        			行高值 > 高度		偏下
+        			
+        	综合写法:
+        		font:倾斜 加粗 文本大小/行高 字体类型;
+        		注:有顺序要求
+        		
+        	文本水平对齐方式:
+        		text-align:;
+        			left	左对齐
+        			center	水平居中
+        			right	右对齐
+        			justify	两端对齐
+        		
+        	文本修饰:
+        		text-decoration:;
+        			none			没有修饰
+        			overline		上划线
+        			line-through	中划线
+        			underline		下划线
+        			
+        	首行缩进:
+        		text-indent:;
+        			px
+        			em
+        		
+        	字符间距:
+        		letter-spacing:;
+        	词间距
+        		word-spacing:;
+        -->
+		<div id="box">文本内容!</div>
+		<div id="box1>哈哈哈哈哈哈哈哈哈哈哈hahahaha</div>
+		<a href="#">超链接自带下划线</a>
+		<p class="txt1">惊爆价</p>
+		<p class="txt2">原价</p>
+		<p class="txt3">不知道什么价</p>
+		
+		<div id="box2">
+			但是，湘妹子自己还是很自信的，即使在全国排不上第一，
+			前几名还是有戏的。皮肤是没有说的，三湘四水把湘妹子的皮肤养得白嫩白嫩。
+			个子不高也是小巧玲珑，更有风味。湘妹子也越来越会打扮，一位去过长沙的外地人说，
+			天哪，长沙女孩子穿得真时髦，大胆，而且还不俗气。加上南方的水土，个个身段苗条
+			，魔鬼身材。她们还会很自豪地说：谁说我们湘妹子不漂亮，瞿颖不漂亮？你们有没有欣赏能力？
+		</div>
+		<div id="box3">
+			haha haha haha hahh hhhh hhahh hhahah ahah ahh但是，湘妹子自己还是很自信的，即使在全国排不上第一，
+			前几名还是有戏的。皮肤是没有说的，三湘四水把湘妹子的皮肤养得白嫩白嫩。
+			个子不高也是小巧玲珑，更有风味。湘妹子也越来越会打扮，一位去过长沙的外地人说，
+			天哪，长沙女孩子穿得真时髦，大胆，而且还不俗气。加上南方的水土，个个身段苗条
+			，魔鬼身材。她们还会很自豪地说：谁说我们湘妹子不漂亮，瞿颖不漂亮？你们有没有欣赏能力？
+		</div>
+	</body>
+</html>

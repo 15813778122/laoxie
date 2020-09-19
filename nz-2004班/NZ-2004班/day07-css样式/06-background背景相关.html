@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 600px;
+				height: 500px;
+				font-size: 20px;
+				color: #fff;
+				/*
+				 font:倾斜 加粗 大小/行高 字体;
+				 font-weight:加粗;
+				 */
+				/*background: red;背景
+				  
+				 */
+				background-color: red;/*背景颜色*/
+				background-image: url("img/3.jpg");/*背景图片*/
+				background-repeat: no-repeat;/*背景图是否平铺*/
+				background-repeat: repeat;
+				background-repeat: repeat-x;
+				background-repeat: repeat-y;
+				background-repeat: no-repeat;
+				
+				background-position: left top;/*默认值*/
+				background-position: left center;
+				background-position: left bottom;
+				background-position: center top;
+				background-position: center;
+				background-position: center bottom;
+				background-position: right top;
+				background-position: right center;
+				background-position: right bottom;
+				background-position: 100px 200px;
+				
+				background: skyblue url("img/3.jpg") no-repeat 0px 0px scroll;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			background-color:背景颜色;
+				颜色单词red blue green...
+				十六进制值# 0-9 a-f
+				三原色值rgb(0,0,0)	0-255
+				
+			background-image:url("图片地址");
+				背景图默认平铺
+				画了一幅画
+				img	挂了一幅画
+				
+			background-repeat:图片是否重复;
+				repeat		重铺(默认值)
+				no-repeat	不重铺
+				repeat-x	水平重铺
+				repeat-y	垂直重铺
+				
+			background-position:背景定位;
+				关键字写法
+					水平值	left center right
+					垂直值	top center bottom
+				具体像素位置
+				
+			综合写法:
+				background:颜色 图片 是否重复 定位 关联;
+				
+			
+			background-attachment:背景关联;
+				scroll	滚动(默认值)
+				fixed	固定
+		-->
+		<div class="box">哈哈哈哈哈哈
+			<!--<img src="img/2.jpg"/>-->
+		</div>
+	</body>
+</html>

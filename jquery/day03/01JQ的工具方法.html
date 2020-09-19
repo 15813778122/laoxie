@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                JQ对象函数
+                    $().xxx() $().yyy();
+
+                JQ的工具方法
+                    $.xxx() $.yyy();
+                【注】跟我们自己封装的普通函数没有任何的区别。JQ对象和JS对象都可以去用。
+            */
+
+            /*
+                $()下的常用方法(都没用了，ECMA5和ECMA6类似功能的函数)
+                • type()   输出当前数据的数据类型，类似于JS的typeof 
+                • trim()   去除字符串前后的空格
+                • inArray()
+                • proxy()    功能类似于bind
+                • noConflict()
+                • $.parseJSON()   JSON.parse()  将json格式的字符串转成对应的数据类型
+                • makeArray()    将伪数组转成数组。 Array.from()
+            */
+
+            var str = new String("hello");
+            var arr = [10, 20, 30];
+            var d = new Date();
+            // alert(typeof str); //object
+            // alert(typeof arr); //object
+            // alert(typeof d);   //object
+
+            //JQ的工具方法  $.type();
+
+            // alert($.type(str)); //string
+            // alert($.type(arr)); //array
+            // alert($.type(d));   //date
+
+
+            var str = "   h e l  l o   ";
+            // alert("|" + str + "|");
+
+            // alert("|" + $.trim(str) + "|"); //|h e l  l o|
+
+            //ECMA5  新增字符串方法
+            // alert("|" + str.trim() + "|");   //|h e l  l o|
+
+
+
+            //ECMA5新增数组  indexOf()  
+            var arr = [10, 20, 30, 40, 50, 30];
+            // var res = $.inArray(30, arr);
+            // alert(res); //2
+
+            // var res2 = $.inArray(30, arr, 3);
+            // alert(res2); //5
+
+            // alert(arr.indexOf(30));    //2
+            // alert(arr.indexOf(30, 4)); //5
+
+
+            /*
+                JQ的方法基础是$函数。
+            */
+
+           
+            var Tian = $.noConflict(); //可以给$函数起一个别名
+            //不要轻易修改$的值。
+            var $ = 10;
+            Tian(function(){
+                Tian(document).click(function(){
+                    alert("hello world");
+                })
+            })
+
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

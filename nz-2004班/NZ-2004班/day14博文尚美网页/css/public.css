@@ -1,0 +1,60 @@
+@charset "utf-8";
+/*网站公共样式*/
+
+.pos-a{position: absolute;}
+.pos-r{position: relative;}
+/*版心*/
+.main{
+	width: 1082px;
+	margin: 0 auto;
+}
+/*头部样式*/
+.hCon{
+	height: 81px;
+}
+.logo{
+	width: 162px;
+	height: 44px;
+	margin-top: 18px;
+}
+.hCon .list{
+	width: 667px;
+	height: 81px;
+	line-height: 81px;
+	text-align: center;
+}
+.hCon .list li{
+	float: left;
+	margin-left: 50px;
+}
+/*头部样式结束*/
+
+/*底部样式开始*/
+.footer{
+	background: #66c5b4;
+}
+.footMain{
+	height: 54px;
+	font-size: 12px;
+}
+.fooTxt{
+	color: #fff;
+	line-height: 54px;
+}
+.footList li{
+	float: left;
+	padding-top: 20px;
+}
+.footList li a{
+	display: block;
+	height: 12px;
+	color: #fff;
+	padding: 0px 15px;
+	border-left: 1px solid #fff;
+	line-height: 12px;
+	text-transform: capitalize;/*英文首字母大写*/
+}
+.footList li .bor_l{
+	border-left: none;
+}
+/*底部样式结束*/

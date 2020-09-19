@@ -1,0 +1,183 @@
+@charset "utf-8";
+/*首页样式*/
+/*轮播图区域banner区域*/
+/*.banner{
+	background: #d3d5d4;
+}*/
+.bannCon{
+	height: 469px;
+	background: skyblue;
+	position: relative;
+}
+.bannCon img{
+	width: 1352px;
+	height: 469px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -676px;
+}
+.bannCon .btn{
+	width: 92px;
+	height: 12px;
+	position: absolute;
+	bottom: 19px;
+	left: 50%;
+	margin-left: -46px;
+}
+.btn li{
+	float: left;
+}
+.btn li a{
+	display: block;
+	width: 12px;
+	height: 12px;
+	background: url("../img2/circle01.png") no-repeat center;
+	margin: 0 5px;
+}
+.btn li .active{
+	background: url("../img2/circle02.png") no-repeat center;
+}
+
+/*content 内容区域*/
+.con2{
+	
+	background: #f8f8f8;
+}
+.con1Main{
+	height: 450px;
+	min-height: 346px;/*最小高度*/
+	padding-top:60px;
+}
+.con2Main{
+	min-height: 408px;/*最小高度*/
+	padding-top: 52px;
+}
+.con3Main{
+	min-height: 450px;
+	padding-top: 70px;
+}
+.con2Main .tit_h2{
+	color: #66c5b4;
+}
+.tit_h2{
+	font-size: 20px;
+	color: #363636;
+	font-family: "宋体";
+	text-align: center;
+	line-height: 20px;
+	background: url("../img2/leng.png") no-repeat center;
+}
+.tit_h3{
+	font-size: 14px;
+	color: #9f9f9f;
+	line-height: 14px;
+	text-align: center;
+}
+/*内容1的四张图位置*/
+.con1List{
+	margin-top: 33px;
+}
+.con1List li{
+	width: 200px;
+	height: 270px;
+	/*background: purple;*/
+	float: left;
+	margin: 0 35px;
+	text-align: center;
+}
+.con1List li img{
+	margin: 0 auto 30px;
+}
+.con1List li h3{
+	color: #434343;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 18px;
+	margin-bottom: 16px;
+	text-transform: uppercase;/*将英文全部大写*/
+}
+.con1List li h4{
+	color: #434343;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+/*con2内容区域*/
+.con2List{
+	padding: 38px 12px 0px;
+}
+.con2List li{
+	width: 339px;
+	height: 181px;
+	float: left;
+	
+}
+.con2List li .centerli{
+	margin: 0px 20px;
+}
+.con2Main .more{
+	width: 176px;
+	height: 37px;
+	background: #66c5b4;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	line-height: 37px;
+	border-radius: 20px;
+	margin: 36px auto 0px;
+}
+
+/*con3内容区域*/
+.con3Con{
+	margin-top: 57px;
+}
+.con3Img{
+	width: 224px;
+	height: 186px;
+	border: 5px solid #e5e5e7;
+}
+.con3Time{
+	width: 848px;
+	height: 196px;
+}
+/*dl 月份位置*/
+.time{
+	width: 420px;
+	float: left;
+	margin-bottom: 50px;
+}
+.time dt{
+	width: 72px;
+	height: 73px;
+	text-align: center;
+	border-right: 1px solid #dcdcdc;
+}
+dt .spa1{
+	font-size: 39px;
+	color: #66c5b4;
+	font-weight: bold;
+}
+dt .spa2{
+	font-size: 20px;
+	color: #999;
+	text-transform: capitalize;/*英文首字母大写*/
+}
+.time dd{
+	width: 331px;
+	padding-left: 16px;
+}
+dd .t_h3{
+	color: #3f3f3f;
+	font-size: 14px;
+	line-height: 14px;
+	
+}
+dd .t_h4{
+	margin-top: 18px;
+	color: #a4a4a4;
+	font-size: 12px;
+	line-height:20px;
+}
+
+

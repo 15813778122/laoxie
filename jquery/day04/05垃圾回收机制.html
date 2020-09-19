@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            /*
+                计算机的程序，是在内存中运行。
+
+                一般情况下，我们系统根据函数调用，分配内存。
+            */
+
+            /*
+           
+            var a = 2;  //全局变量
+            function show(){
+                a++;
+                console.log(a);
+            }
+
+            show(); //3
+            show(); //4  【注】完成了对a的累加
+            //【注】会造成全局变量污染。 两个人以上，能够保证所有的全局的变量名字都不一样么。
+            
+            */
+            function show(){
+                var a = 2; //局部变量
+                a++;
+                console.log(a);
+            }
+
+            show(); //3  没有办法对a进行累加
+            show(); //3
+            console.log(a);  //a is not defined
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

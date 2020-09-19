@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box1{
+				width: 200px;
+				height: 200px;
+				background: red;
+				margin: 100px;
+				border-radius: 10px;
+			}
+			.box3{
+				height: 200px;
+				background: skyblue;
+				margin-top: 100px;
+				display: inline-block;
+				width: -webkit-fill-available;
+			}
+			.box3{
+				height: 200px;
+				background: skyblue;
+				margin-top: 100px;
+				display: inline-block;
+				width: -webkit-fill-available;
+			}
+			.box3_1{
+				float: left;
+				margin-right: 10px;
+				width: 100px;
+				background: green;
+				height: -webkit-fill-available;
+			}
+			.box4{
+				width: -webkit-fit-content;
+				height: 200px;
+				background: skyblue;
+				margin-top: 100px;
+				margin: auto;
+			}
+			.box4_1{
+				float: left;
+				margin-right: 10px;
+				width: 100px;
+				background: green;
+			}
+			.box5{
+				width: -webkit-max-content;
+				height: 200px;
+				background: gold;
+				margin-top: 100px;
+			}
+			.box5-1{
+				width: 100px;
+				height: 100px;
+				background: purple;
+			}
+			.box5-2{
+				background: pink;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			css3属性:
+				文本属性:
+					word-wrap:;
+					word-break:;
+					
+				文本阴影:
+					text-shadow:水平偏移 垂直偏移 模糊度 阴影颜色;
+					text-shadow:第一份阴影,第二份阴影;
+					
+				字体图标:
+					1:引入外部文件
+					2:调用类名
+					
+				背景相关属性:
+					background-origin:背景原点(起始位置)
+						border-box
+						padding-box
+						content-box
+						
+					background-clip:;背景裁剪
+						border-box
+						padding-box
+						content-box
+						
+					background-size:水平大小 垂直大小;背景图大小
+						px %
+						cover(表示背景图拉伸布满)	contain(表示背景图片在内容区域正常显示)
+						注:background:url(),url();设置多个背景
+						
+				图片边框:
+					border-image:url("图片路径") 图片向内偏移量 图片的填充方式;
+					border-image-source:url("图片地址");
+					border-image-slice:垂直偏移量 水平偏移量;
+					border-image-repeat:;
+						repeat	从中间向两边平铺
+						round	从一边到另一边铺满
+						stretch	拉伸
+						
+				圆角:
+				一组值:
+					border-radius:左上 右上 右下 左下;
+					border-radius:左上 右上左下 右下;
+					border-radius:左上右下 右上左下;
+					border-radius:四个角一样的大小;
+				两组值:
+					border-radius:一组值/第二组值;
+				
+				正圆:元素是正方形,圆角的半径是元素宽度的一半
+				椭圆:元素是长方形,半径是50%
+				
+			盒子阴影:
+				box-shadow:水平偏移量 垂直偏移量 模糊度 阴影大小 颜色;
+					inside	内部阴影(可选)
+			
+			宽度:
+				width:;
+					-webkit-fill-available 自动填充剩余的空间
+					fit-content 宽/高由内容撑起来
+		-->
+		<div class="box1"></div>
+		<div class="box2"></div>
+		
+		<div class="box3">
+			hhhhhh
+			<div class="box3_1">1 dawdwada</div>
+			<div class="box3_1">2dawaa</div>
+			<div class="box3_1">3dadadawdad</div>
+		</div>
+		
+		<div class="box4">
+			<div class="box4-1"></div>
+			<div class="box4-1"></div>
+			<div class="box4-1"></div>
+			<div class="box4-1"></div>
+		</div>
+		
+		<div class="box5">
+			<div class="box5-1"></div>
+			<div class="box5-2">hhhhhhhh</div>
+		</div>
+	</body>
+</html>

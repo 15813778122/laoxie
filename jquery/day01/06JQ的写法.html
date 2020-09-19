@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div{width: 100px; height: 100px ; background-color: red; margin: 20px;}
+        </style>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+
+            /*
+                jquery的写法
+                    1、方法函数化(在JQ中所有的操作都可以通过函数去完成)
+                        $(函数) 等价于 window.onload
+
+                    2、链式操作
+                    3、取值赋值一体化
+            */
+            $(function(){
+                //获取div1标签间的内容
+                //JS的写法
+                // var oDiv = document.getElementById("div1");
+                // alert(oDiv.innerHTML);
+
+
+                //jquery中获取标签间内容 html() 等价于innerHTML
+                //你学会了一个方法，就会了这个方法的两种功能
+
+                //获取标签间的内容
+                // alert($("#div1").html());
+
+                //设置标签间内容
+                // $("#div1").html("<strong>粗体字体</strong>")
+
+
+                //jquery获取标签间的文本  text() 的方法获取
+                // alert($("#div1").text()); //取值
+
+                // $("#div1").text('<strong>粗体字体</strong>');
+
+
+                //操作jq css样式，是通过css方法去完成的
+                //取值  只能获取符合条件的第一个的值
+                // alert($("div").css("width")); 
+
+                //赋值
+                // $("div").css("height", 200);
+                // $("div").css("height", "200px");
+
+                //赋值多个  直接对所有符合条件的元素，进行批量赋值
+                $("div").css({
+                    width: "200px",
+                    height: 200,
+                    backgroundColor: "yellow"
+                })
+            })
+
+        </script>
+    </head>
+    <body>
+        <div id = 'div1'><h1>div文本</h1></div>
+        <div>div2</div>
+        <div>div3</div>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			section{
+				width: 200px;
+				height: 100px;
+				background: red;
+			}
+			article{
+				width: 300px;
+				height: 100px;
+				background: pink;
+			}
+			header{
+				width: 300px;
+				height: 100px;
+				background: red;
+			}
+			aside{
+				width: 200px;
+				height: 100px;
+				background: orange;
+			}
+			footer{
+				width: 300px;
+				height: 100px;
+				background: pink;
+			}
+			nav{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+			figure{
+				width: 300px;
+				height: 100px;
+				background: pink;
+			}
+			main{
+				width: 200px;
+				height: 100px;
+				background: red;
+			}
+			mark{
+				background: red;
+				color: yellow;
+				width: 200px;
+				height: 100px;
+				display: block;
+			}
+			time{
+				width: 200px;
+				height: 100px;
+				background: red;
+				display: block;
+			}
+			dialog{
+				display: block;
+				width: 200px;
+				height: 100px;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			语义化标签:(有指定内容的仓库)
+				<div>是一个容器</div>
+				<水果仓库>放水果</水果仓库>
+				<服装仓库>放服装</服装仓库>
+			
+			语义化标签:
+				section:类似于div,偏向画结构
+				article:偏向于内容展示
+				aside:偏向于在旁边的内容,在一侧的
+				hea1der:内容的头部,网页的头部,头部区域
+				footer:内容的尾部,网页的尾部区域
+				nav:	做导航 链接区域
+				figure > figcaption:	类似dl>dt+dd的结构
+					注意:figcaption是figure的标题,一般在第一个位置或者最后一个位置
+				mark:高亮显示,默认背景颜色为黄色,可以更改颜色,是一个内联元素	
+				time:一般用来放时间,内联元素
+				dialog:类似于微信对话框,默认是display:none;有默认定位,有默认的边框
+		-->
+		<section>section标签</section>
+		<article>article标签</article>
+		<aside>aside标签</aside>
+		<header>页面头部内容</header>
+		<footer>页面尾部内容</footer>
+		<nav>做导航 链接</nav>
+		<figure>
+			<figcaption>标题</figcaption>
+		</figure>
+		<main>主要内容</main>
+		<p>哈哈哈哈哈哈<mark>嘿嘿</mark>哈哈哈哈哈哈</p>
+		<time>10:20</time>
+		<dialog>嘿嘿嘿</dialog>
+	</body>
+</html>

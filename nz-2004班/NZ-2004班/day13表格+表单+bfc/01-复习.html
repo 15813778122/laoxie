@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			宽高自适应
+				宽度自适应:
+					1:块级元素默认宽度100%
+					2:设置样式width:;单位%
+					
+				高度自适应:
+					前提条件html,body{height:100%;}
+					1:元素高度默认自适应
+					2:设置样式height:;单位%
+				
+				最小宽高:
+					min-height:最小高度;
+					min-width:最小宽度;
+					
+				最大宽高:
+					max-height:最大高度;
+					max-width:最大宽度;
+					
+				浮动高度塌陷:
+					问题:子元素浮动,父元素未设置高度,父元素将高度塌陷，会引起布局混乱
+					
+				高度塌陷解决办法:
+					1:给父元素添加height:;
+						缺点:不灵活
+					2:给父元素添加overflow:hidden;
+						缺点:定位出去的元素将被隐藏
+					3:给浮动的子元素最后添加兄弟空元素(块级元素),然后设置样式clear:left/right/both;清除浮动
+						缺点:代码冗余
+					4:万能清除法
+					:after{
+						content:"";
+						display:block;
+						width:0;
+						height:0;
+						overflow:hidden;
+						visibility:hidden;
+						clear:left/right/both;清除浮动
+					}
+					
+				伪对象选择器:
+					.box:after{content:"内容";}
+					在box元素的内容后面添加
+					
+					.box:before{content:"内容";}
+					在box元素的内容前面添加
+					
+					:first-letter{}
+					第一个字的样式
+					
+					:first-line{}
+					第一行文字的样式
+					
+				visibility:显示隐藏;
+					hidden	隐藏
+					visibile	显示
+					
+				visibility:hidden; 和 display:none;的区别
+					1:前者占位,后者不占位
+					2:都是隐藏元素
+					
+				一屏页面的书写:
+					必须加上html,body{height:100%;}
+		-->
+	</body>
+</html>

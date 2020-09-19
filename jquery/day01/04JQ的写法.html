@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                jquery的写法
+                    1、方法函数化(在JQ中所有的操作都可以通过函数去完成)
+                        $(函数) 等价于 window.onload
+
+                    2、链式操作
+                    3、取值赋值一体化
+            
+
+            window.onload = function(){
+                //这里的代码是页面加载完成以后执行，在这里获取元素节点
+            }
+            */
+
+            $(function(){ //等价于window.onload
+                // alert("页面加载完成了");
+
+                //给按钮添加点击事件
+                /*
+                var oBtn = document.getElementById("btn1");
+                oBtn.onclick = function(){
+                    alert("点击");
+                }
+                
+
+                //在JQ中添加事件，也是变成了函数的形式
+                $("#btn1").click(function(){
+                    alert("点击1");
+                })
+                $("#btn1").click(function(){
+                    alert("点击2");
+                })
+
+                //后续所有的事件绑定，大家都会了。
+
+                $("h1").mouseover(function(){
+                    $("h1").css("backgroundColor", 'yellow');
+                })
+                $("h1").mouseout(function(){
+                    $("h1").css("backgroundColor", 'green');
+                })
+                */
+            })
+
+        </script>
+    </head>
+    <body>
+        <h1>hello world</h1>
+        <button id = 'btn1'>按钮</button>
+    </body>
+    <script>
+        // alert("这是body下面");
+    </script>
+</html>

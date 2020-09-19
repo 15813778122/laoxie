@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            /*
+                linux命令
+                    touch 文件名字  创建文件
+                    cd ..  回到上一级目录
+
+
+                1、打开 git bash 
+                2、新建一个文件夹 (路径中尽量不要出现中文)
+                3、git init
+                    初始化，成功以后，出现一个.git的文件
+                    .git 存放着当前仓库关于git的所有信息。
+                4、readme.md 是每一个项目都必须要有的。
+                    【注】readme.md就是一个说明书  .md markdown
+                【注】markdown格式，使用方式和大家使用word文档，去写文档是一个道理。
+                
+                5、将数据从工作区提交到暂存区
+                    git add *  文件名
+                    git commit -m "这次提交描述"
+
+                    git status 查看当前的提交状态
+                
+                6、在gitee，新建一个远程仓库
+
+                7、设置一些全局的设置
+                    git config --global user.name "码农雨飞"
+                    git config --global user.email "tian18840876830@163.com"
+
+                8、设置我们要提交的远程仓库地址
+                    git remote add origin 你仓库的地址
+                    git push -u origin master
+                【注】上述两个步骤只有第一次提交的时候需要设置。
+
+                9、如果大家不想每次都输入账户和密码，那么我们可以配置ssh密匙。
+
+                10、上述完成以后，后续的项目编写中，我们只需要
+                    git add *
+                    git commit -m ""
+
+                    git push
+
+                11、我们提交git项目的时候，如果希望有一些文件忽略提交(直接将这些文件过滤掉)
+                    <1>.git文件所在目录，新建.gitignore 文件(设置忽略文件路径)
+                    <2>后续继续提交的时候，就可以将设置好的忽略文件忽略上传。
+                【注】我们在进行git命令操作的时候，注意要在.git所在目录操作。
+            */
+
+            /*
+                大家以后在公司里开发项目：
+                    1、项目需求订好以后（目标）
+                    2、不停的有新的版本进行迭代
+                    3、先出一个1.0.0系列版本，（要求：能跑起来，能看就行）
+                    4、后续的开发中，不停的完善。
+            */
+            
+
+            /*
+
+            【注】操作git命令的时候，需要在.git所在目录去操作。
+                关于分支操作的命令一共就三个
+                git branch 分支的名字  创建分支
+                git checkout 分支名字  切换分支
+                git merge 分支名字     合并分支(一定要站在主分支上合并)
+
+
+
+                On branch master  你现在在主分支。
+                Switched to branch 'wuxian'   切换分支到wuxian分支
+                
+            */
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

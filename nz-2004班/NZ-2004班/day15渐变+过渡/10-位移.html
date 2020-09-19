@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 500px;
+				height: 400px;
+				background: #f00;
+				margin: 100px;
+			}
+			.box1{
+				width: 200px;
+				height: 100px;
+				background: skyblue;
+				transition: 1s;
+			}
+			.box:hover .box1{
+				transform: translate(100px,50px);/*位移*/
+				transform: translate(100px);
+				
+				/*单一方向的位移*/
+				transform: translateX(10px);/*水平位移*/
+				transform: translateY(100px);/*垂直位移*/
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--
+			位移:
+				transform:translate(水平位移,垂直位移);
+				transform:translate(水平位移);
+				
+				transform:translateX(水平位移);
+				transform:translateY(垂直位移);
+				
+				默认情况:正值从上往下，从左往右
+					
+		-->
+		<div class="box">
+			<div class="box1"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 500px;
+				height: 500px;
+				background: skyblue;
+				
+			}
+			.box1{
+				width: 100px;
+				height: 100px;
+				background: skyblue;
+				/*transition: 1s;*//*过渡 需要事件触发*/
+				/*使用animation调用关键帧*/
+				/*animation:mz 3s;综合写法*/
+				animation-name: mz2;/*关键帧名字 动画名*/
+				animation-duration: 2s;/*关键帧时长 总运动时间*/
+				animation-delay: 3s;/*关键帧延迟时间*/
+				animation-iteration-count: 2;/*运动执行次数 默认情况一次 infinite无限循环*/
+				animation-direction: reverse;/*运动方向*/
+				animation-direction: alternate;/*先正向再反向*/
+				animation-direction: alternate-reverse;
+				animation-timing-function: ease;/*运动使用的类型*/
+				animation: mz2 2s 1s linear infinite;
+				
+			}
+			.box:hover .box1{
+				animation-play-state: running;/*鼠标移入暂停*/
+			}
+			/*定义动画*/
+			@keyframes mz{
+				from{margin-left: 0;}
+				to{
+					margin-left: 500px;
+				}
+			}
+			@keyframes mz2{
+				0%{/*初始状态*/
+					margin-left: 0px;
+					margin-bottom: 0px;
+				}
+				25%{
+					margin-left: 500px;
+					margin-top: 0px;
+				}
+				50%{
+					margin-left: 500px;
+					margin-top: 400px;
+				}
+				75%{
+					margin-left: 0px;
+					margin-top: 400px;
+				}
+				100%{
+					margin-left: 0px;
+					margin-top: 0px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			transition:;	过渡 需要事件触发
+			
+			animation		动画 不需要事件触发，使用关键帧就可以执行	
+				1:定义动画
+				from{}起始位置
+				to{}终点位置
+				
+				0%{}起始位置
+				25%{}过程1
+				..过程n
+				100%{}终点位置
+				
+				2:调用动画
+				animation-name:;关键帧名字 动画名
+				animation-duration:;关键帧时长 总运动时间
+				animation-delay: ;关键帧延迟时间
+				animation-iteration-count:;运动执行次数 
+					数字 数字为几，执行多少次
+					默认情况一次 
+					infinite无限循环
+				animation-direction:;运动方向
+					reverse	反向运动
+					alternate	单数次,顺时针 偶数次,逆时针
+					alternate-reverse	单数次,逆时针 偶数次,顺时针
+					animation-timing-function:;运动使用的类型(加速 减速 贝塞尔曲线运动...)
+					animation-play-state:;
+						paused	暂停
+						running 运动
+					
+					综合写法:
+						animation:名字 运动时间 速度 延迟时间 次数;
+				
+				
+				
+		-->
+		<div class="box">
+			<div class="box1"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,2 @@
+show("I am a String!!!");
+//任何JSONP跨域的数据，都必须这么写

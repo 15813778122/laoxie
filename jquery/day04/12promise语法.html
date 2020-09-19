@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            /*
+                promise 是 ECMA6新增的语法
+
+                【注】在开发过程中，有可能有多个异步程序需要串行。
+
+                【注】一个promise对象后面，只能跟一个.then。
+
+            */
+
+            var state = 1; //1代表执行成功，0代表执行失败
+            new Promise(function(resolve, reject){
+                //resolve 程序执行成功以后调用回调函数
+                //reject  程序执行失败以后调用的回调函数
+                console.log("promise主体代码1")
+                if(state == 1){
+                    resolve("程序执行成功1");
+                }else{
+                    reject("程序执行失败1");
+                }
+            }).then(function(msg){
+                //promise 对象中的代码执行成功以后，才会执行这里
+                console.log("then1，" + msg);
+
+                return new Promise(function(resolve, reject){
+                    console.log("promise主体代码2");
+                    if(state == 1){
+                        resolve("程序执行成功2");
+                    }else{
+                        reject("程序执行失败2");
+                    }
+                })
+            }).then(function(msg){
+                console.log("then2，" + msg);
+            }).catch(function(msg){
+                //promise 对象中的内容执行失败以后，才会执行这里
+                console.log("Catch，" + msg);
+            })
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            /*
+                【注】闭包，大家天天都在写，但是经过今天的系统学习以后，你就知道具体怎么回事。
+
+                内存泄漏（了解）
+            */
+
+            window.onload = function(){
+                var oDiv = document.getElementById("div1");
+
+                oDiv.onclick = function(){
+                    alert(oDiv.id);
+                    console.log(oDiv);
+                }
+
+                /*
+                var id = oDiv.id;
+                oDiv.onclick = function(){
+                    console.log(id);
+                }
+                oDiv = null;
+                */
+
+                //IE浏览器  window.onunload   页面解构的时候去执行的一个事件
+                window.onunload = function(){
+                    oDiv.onclick = null;
+                    oDiv = null;
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id = 'div1' title = 'hello' class = 'box'>div文本</div>
+    </body>
+</html>

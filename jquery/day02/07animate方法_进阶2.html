@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #div1{width: 100px; height: 100px; background-color: red;}
+            #div2{width: 100px; height: 100px; background-color: blue;}
+        </style>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                animate方法 JQ官方的动画函数
+                参数：
+                    第一个参数：对象，传入要变化的样式和目的值
+                    第二个参数：动画持续时间，如果不传入默认是400毫秒。
+                    第三个参数：运动形态（只支持两种运动形态）
+                        匀速(linear)  慢块慢（默认）(swing)
+                    第四个参数：回调函数
+
+                细节：链式运行，写法上不太一样。
+                【注】每一次启动定时器之前，将上一次定时器关闭掉。
+                【注】习惯性，每次调用animate之前，都调用一次stop(true);
+
+
+                delay() 延迟  完成延迟多少毫秒以后，继续运行。
+            */
+            $(function(){
+                // $("#div1").hover(function(){
+                //     $("#div2").stop(true).animate({width: 300, height: 300}, 2000);
+                // }, function(){
+                //     $("#div2").stop(true).animate({width: 100, height: 100}, 2000);
+                // })
+
+
+                // /*
+                $("#div1").click(function(){
+                    $(this)
+                    .animate({
+                        width: 300
+                    }, 2000)
+                    .delay(4000)
+                    .animate({
+                        height: 300
+                    }, 2000)
+                    .animate({
+                        marginLeft: 300
+                    }, 2000);
+                })
+
+
+                //点击div2的时候，关闭上述的动画
+                $("#div2").click(function(){
+                    // $("#div1").stop(); //关闭当前正在进行的动画，后续动画不受影响。
+
+                    $("#div1").stop(true); //关闭所有的动画，包括后续的动画。
+
+                    // $("#div1").stop(true, true); //关闭所有的动画，并且将当前正在进行的动画直接设置到目的值。
+
+                    // $("#div1").finish();  //结束  关闭所有的动画,并且将所有的动画都到达目的值。
+                })
+                // */
+            })
+
+        </script>
+    </head>
+    <body>
+        <div id = 'div1'></div>
+        <div id = 'div2'></div>
+    </body>
+</html>

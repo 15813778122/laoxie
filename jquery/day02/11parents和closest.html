@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+            
+                parents()  找到当前节点的所有祖先节点
+                    参数是，css选择器，可以对我们选中的节点在进行二次筛选。
+
+                parent()   找到当前节点的父节点
+
+                closest()
+                    找到第一个符合条件的祖先节点，必须传入参数。（从自己这个节点开始去查找）
+            */
+            $(function(){
+                // $("#div2").parent().css("backgroundColor", 'red');
+
+                // $("#div2").parents(".box").css("backgroundColor", 'red');
+
+                $("#div2").closest(".box").css("backgroundColor", 'red');
+            })
+
+        </script>
+    </head>
+    <body class = 'box'>
+        <div id = 'div1'>
+            div1文本
+            <div id = 'div2' class = 'box'>div2文本</div>
+        </div>
+    </body>
+</html>

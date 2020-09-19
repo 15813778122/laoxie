@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				
+			}
+			.box{
+				width:500px;
+				height: 500px;
+				border: 10px solid #FFA500;
+				margin: 100px;
+				overflow: hidden;
+				position: relative;
+			}
+			img{
+				width: 500px;
+				height: 500px;
+				transition: 1s;
+			}
+			/*.box:hover img{
+				transform: rotate(60deg);
+			}*/
+			.borderBox{
+				width:400px;
+				height:400px;
+				border: 3px solid #FFA500;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				transition: 2s;/*过渡*/
+				transform-origin: left top;/*设置旋转基点*/
+				transform-origin: 10px 150px;
+				transform: rotate(230deg) translateY(100px);
+			}
+			.box:hover .borderBox{
+				transform: rotate(360deg) translateY(0px);
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			旋转基点:
+				transform-origin:水平值  垂直值;/*设置旋转基点*/
+                	默认是中心点 
+                left right top bottom
+                	具体像素值
+		-->
+		<div class="box">
+			<img src="img/9.png"/>
+			<div class="borderBox"></div>
+		</div>
+	</body>
+</html>

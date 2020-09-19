@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			@import url("style.css");/*是css样式的一种写法*/
+			div{
+				width: 300px;
+				height: 100px;
+				background: red;
+			}
+			#tit{
+				font-weight: normal;
+			}
+			.tit2{
+				color:red;
+			}
+			.tit3{
+				font-size: 30px;
+				color: blue;
+			}
+		</style>
+		<!--<link rel="stylesheet" href="style.css">-->
+	</head>
+	<body>
+		<!--
+        	1:样式表的创建(内部样式 外部样式)
+        		内部样式针对当前这个页面起作用
+        		外部样式可以针对多个页面起作用,嵌套条件,需要页面进行引入
+        		引入方式:
+        			方式1:在head标签中添加<link rel="stylesheet" href="css文件"> 推荐使用
+        			方式2:在style标签第一行添加@import url("css文件地址"); 不推荐使用
+        			两种引入方式的区别:
+        				1:一个是标签，一个是css样式的一种写法
+        				2:优先加载link,后加载@import
+        				3:link没有兼容性问题,@import有兼容性问题
+        				4:js能控制link标签，不能控制@import
+        				
+        			
+        				
+        	2:选择符的应用(id class 包含 群组 伪类 :hover)
+        		选择器{属性:值;}
+        		id什么时候使用
+        			id="name"
+        			#name{}
+        			在一个页面当中只允许出现一次相同的值,一个class可以用多个值
+        			小明的身份证号:430000000000
+        			小丽的身份证号:482000000000
+        		class什么时候使用
+        			class="name"
+        			.name{}
+        			在一个页面中可以多次出现,
+        		类型选择器什么时候使用(div span p a img...)
+        		群组选择器什么时候使用
+        			选择器1,选择器2,选择器3{}
+        			提取公共样式，简化代码
+        			
+        		包含选择器什么时候使用
+        			选择器1 选择器2 选择器3{}
+        			
+        		伪类选择器什么时候使用
+        			:link{}		未访问状态
+        			:visited{}	访问过后的状态
+        			:hover{} 	鼠标移入状态(案例)
+        			:active{}	鼠标按下的状态
+        			
+        			.box:hover{} 移入.box 改变的是.box
+        			
+        			.box:hover .txt{} 移入.box 改变后代.txt
+        			
+        			
+        	3:选择器权重
+        		id > class >类型选择器
+        		0100   0010   0001
+        		包含选择器权重 是单个选择器权重之和
+        		内联样式权重 1000
+        		
+        		权重值最高的为 !important
+        		
+        	4:css继承性
+        	
+        	5:网页上下色块(基本的网页布局)
+        		页面结构划分:
+        			1:头部区域
+        			2:轮播图区域
+        			3:内容区域
+        			4:底部区域
+        			
+        	6:ps的应用(基本操作)
+        		1:放大缩小
+					ctrl + alt + shift + 鼠标滚轮
+			
+				2:测量尺寸
+					矩形选框工具
+					F8 调出信息面板
+					修改尺寸单位
+					编辑 -- 首选项 -- 单位与标尺 -- px
+				
+				3:辅助线 ctrl + R
+        		
+        	7:作业问题
+        		1:图片路径
+        			相对路径
+        			
+        		2:表单的属性
+        			method="提交方式"
+        				get
+        				post
+        			action="提交到哪里去"
+        			
+        		3:表格
+        			table > tr > td
+        -->
+        
+        <div>哈哈哈哈哈哈哈哈哈</div>
+        <p>测试外部样式</p>
+        <h1 id="tit">测试选择器2</h1>
+        <h3 id="tit2"></h3>
+        <h2 class="tit2">测试选择器class</h2>
+        <h2 class="tit2">测试选择器class</h2>
+        <h2 class="tit2">测试选择器class</h2>
+        <h2 class="tit2 tit3">测试选择器class</h2>
+           
+	</body>
+</html>

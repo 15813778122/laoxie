@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{height: 100%;}
+			body{
+				background: url("img3/2.jpg") no-repeat;
+				overflow: hidden;
+				/*背景图大小:水平大小 垂直大小;*/
+				background-size: 100%;
+			}
+			.box{
+				width: 620px;
+				height: 520px;
+				background:url(img3/bracket.png) no-repeat center bottom;
+				position: fixed;
+				left: 0;
+				right: 0;
+				bottom: -140px;
+				margin: auto;
+			}
+			/*box底下的第一个子集*/
+			.box img:nth-child(1){
+				position: absolute;
+				top: -380px;
+				left: -73px;
+				animation: move1 60s linear infinite;
+			}
+			/*box底下的第二个子集*/
+			.box img:nth-child(2){
+				position: absolute;
+				top: -134px;
+				left: 30px;
+			}
+			.box2{
+				width: 768px;
+				height: 768px;
+				/*background: rgba(0,0,200,0.5);*/
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+				animation: move1 60s linear infinite;
+			}
+			/*小图位置*/
+			.box2 img{
+				position: absolute;
+				animation: move2 60s linear infinite;
+				transform-origin: 50% 0;/*改变旋转基点*/
+			}
+			.box2 img:nth-child(1){
+				top: 40px;
+				left: 324px;
+			}
+			.box2 img:nth-child(2){
+				top: 132px;
+				right: 88px;
+			}
+			.box2 img:nth-child(3){
+				top: 380px;
+				right: 10px;
+			}
+			.box2 img:nth-child(4){
+				bottom: -18px;
+				right: 50px;
+			}
+			.box2 img:nth-child(5){
+				bottom: -140px;
+				right: 306px;
+			}
+			.box2 img:nth-child(6){
+				bottom: 30px;
+				left: 74px;
+			}
+			.box2 img:nth-child(7){
+				bottom: 215px;
+				left: 0px;
+			}
+			.box2 img:nth-child(8){
+				top: 144px;
+				left: 80px;
+			}
+			/*大圈先转起来 小图的父级元素也要一齐转动*/
+			@keyframes move1{
+				0%{
+					transform: rotate(0deg);
+				}
+				50%{
+					transform: rotate(180deg);
+				}
+				100%{
+					transform: rotate(360deg);
+				}
+			}
+			/*小图逆时针旋转*/
+			@keyframes move2{
+				0%{
+					transform: rotate(0deg);
+				}
+				50%{
+					transform: rotate(-180deg);
+				}
+				100%{
+					transform: rotate(-360deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="img3/fsw.png"/>
+			<img src="img3/big-title.png"/>
+		</div>
+		<div class="box2">
+			<img src="img3/boy.png"/>
+			<img src="img3/girl.png"/>
+			<img src="img3/girls.png"/>
+			<img src="img3/hairboy.png"/>
+			<img src="img3/mimi.png"/>
+			<img src="img3/mudog.png"/>
+			<img src="img3/dog.png"/>
+			<img src="img3/shamegirl.png"/>
+		</div>
+	</body>
+</html>

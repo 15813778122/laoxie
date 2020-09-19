@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Document</title>
+        <script>
+            function download(data){
+                alert("下载的数据：" + data);
+            }
+
+            /* 
+                1、在需要的时候加载数据
+                2、能否引入除.js文件以外的其他路径,重点是代码是否是我们想要的代码
+
+
+                【注】对于计算机来说，文件后缀是没有任何用处的。
+                后缀作用：用于给计算机上的软件，快速识别应该用哪个软件打开。
+
+
+                JSONP跨域的使用流程：
+                    1、先去声明一个函数，这个函数有一个形参，这个形参会拿到我们想要下载的数据，使用这个参数做后续数据的处理
+                    2、在需要下载数据的时候，动态创建script标签，将标签src属性设置成，下载数据的链接
+                    3、当script插入到页面上的时候，就会，调用已经封装好的函数，将我们需要的数据传过来。
+            */
+        </script>
+        <!-- https://api.asilu.com/weather/ -->
+        <script>
+            window.onload = function(){
+                var oBtn = document.getElementById("btn1");
+                oBtn.onclick = function(){
+                    var oScript = document.createElement("script");
+                    oScript.src = 'demo.txt';
+                    document.body.appendChild(oScript);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button id = 'btn1'>下载数据</button>
+        <!-- 
+            src 这个属性是可以完成跨源。
+         -->
+        <img src="http://b.hiphotos.baidu.com/image/pic/item/908fa0ec08fa513db777cf78376d55fbb3fbd9b3.jpg" alt=""/>
+    </body>
+</html>

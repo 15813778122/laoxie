@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            /*
+                解决：
+                    1、全局变量污染
+                    2、所有的内容都私有化
+
+                问题：
+                    如果想要对原有的代码进行二次修改，是非常困难。
+            */
+            /*
+                A同学
+            */
+            var moduleA = (function(){
+                var _count = 10;   //私有变量
+
+                function showA(){  //私有函数
+                    _count += 20;
+                    console.log(_count);
+                }
+
+                function showB(){
+                    _count *= 10;
+                    console.log(_count);
+                }
+
+                return {
+                    aaa: showA,
+                    bbb: showB
+                }
+            })();
+
+
+
+            /*
+                B同学
+            */
+            var moduleB = (function(){
+                var _count = 100;
+
+                function showA(){
+                    _count -= 30;
+                    console.log(_count);
+                }
+
+                function showB(){
+                    _count *= 100;
+                    console.log(_count);
+                }
+                return {
+                    aaa: showA,
+                    bbb: showB
+                }
+            })();
+
+            moduleA.aaa();
+            moduleA.bbb();
+
+            moduleB.aaa();
+            moduleB.bbb();
+            // console.log(_count);
+            // console.log(showA);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

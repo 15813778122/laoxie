@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			video:视频标签
+			audio:音频标签
+			
+			属性:	
+				src="文件地址"
+				controls="显示控件"
+				autoplay="自动播放" 谷歌屏蔽了
+				loop="循环播放"
+				muted="静音"
+				poster="图片地址" 显示为第一帧图片,直到用户点击播放按钮
+				
+			source标签:定义媒介资源(备份文件)
+				type="文件类型"
+					文件类型:
+						视频:
+							video/egg
+							video/webm
+							video/mp4
+						音频:
+							audio/ogg
+							audio/mpeg
+							audio/wav
+							主流的音频文件格式mp3 ogg wav
+							
+						
+		-->
+		<!--<video src="video/3theA.mp4" controls autoplay="" loop="1" muted="" poster="1.jpg">
+			您的浏览器是渣渣，看不见我
+		</video>-->
+		<video id="video" controls="">
+			<source type="video/webm" src="video/movie.webm"/>
+			<source type="video/ogg" src="video/movie.ogg" />
+			<source type="video/mp4" src="video/mov_bbb.mp4"/>
+			您的浏览器实在太渣渣，臣妾做不到
+		</video>
+		
+		<audio src="video/a.mp3" controls="" autoplay="" loop="" muted="">
+			<source type="audio/mpeg" />
+			<source type="audio/ogg" src="video/ogg"/>
+			<source type="audio/wav" />
+		</audio>
+	</body>
+</html>

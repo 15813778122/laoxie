@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 200px;
+				height: 100px;
+				background: red;
+				position: static;/*默认定位*/
+				left: 100px;/*距离左边100px*/
+				top:100px;/*距离顶部100px*/
+			}
+			.txt{
+				height: 150px;
+				 background: gold;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			文档流:
+				普通流:从上至下，从左至右
+				浮动流:元素添加了float:;
+				定位流:添加了定位属性
+				
+			定位:position
+				static	默认值,设置坐标无效
+				absolute	绝对定位
+					特征:
+					1:脱离文档流，不占位置
+					2:默认参考html的00点(浏览器零点)
+					3:如果有父级，且父级有定位，那就参考父级元素(默认定位除外) 相当于给子元素指定了参考物
+					
+				relative:相对定位
+					特征:
+					1:占据文档流，占位置
+					2:参考自身加载在页面中的位置
+					
+				fixed:固定定位
+					特征:
+					1:脱离文档流，不占位
+					2:元素固定在页面中不随着页面滚动而滚动
+					3:参考浏览器的00点
+					
+				sticky:粘性定位
+					特征:
+					1:页面达到一定高度时，脱离文档流
+					2:效果是吸附浏览器顶部
+			
+			坐标位置 水平 left right
+				    垂直 top	 bottom
+				    
+			包含块:
+				形成嵌套结构，且父级元素有设置定位position:relative;
+				
+			absolute 和 relative的区别
+				1:是否占据文档流，absolute不占据，relative占据
+				2:参考物不同,absolute参考html,relative参考本身加载到页面的位置
+			
+			层级关系:
+				前提条件:必须有定位的元素才可以修改层级关系
+				属性:
+				z-index:;
+				auto	默认值
+				number	具体数字，可以为负数
+				
+				并列关系:改变任何一个元素的层级关系都可以
+				嵌套关系:只能改变子集的层级关系
+				
+			元素居中方式:
+				方式一:
+					position: absolute;/*子元素改变自己得位置*/
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					margin: auto;/*自适应*/
+				
+				方式二:
+					position: absolute;/*子级作为被参考物*/
+					top:50%;
+					left: 50%;
+					margin-left: -宽度值的一半px;
+					margin-top: -高度值的一半px;
+			
+				
+			锚点链接:
+				1:点击位置	a标签	href="#mz"
+				2:确定跳转位置	id="mz"
+				3:页面高度足够
+				<a href="#name">点击位置</a>
+				<标签 id="name">指定的跳转位置</标签>
+		-->
+		
+		<div class="box"></div>
+		<p class="txt">辅助元素看效果</p>
+	</body>
+</html>

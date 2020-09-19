@@ -1,0 +1,31 @@
+/*顶部区域*/
+#box .boxTop{
+	height: 106px;
+	background: pink;
+}
+#box .boxTop .topList{
+	height: 72px;
+	background: #39424b;
+}
+#box .boxTop .topBtn{
+	height: 34px;
+	background: #66aa00;
+}
+
+/*轮播图区域*/
+#box .banner{
+	height: 394px;
+	background: skyblue;
+}
+
+/*内容区域*/
+#box .content{
+	height: 1226px;
+	background: #666;
+}
+
+/*底部区域*/
+#box .footer{
+	height: 524px;
+	background: #46505a;
+}

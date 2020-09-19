@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 30%;
+				height: 40px;
+				border: 1px solid red;
+				margin: 100px;
+				display: inline-flex;
+				min-width: 200px;
+			}
+			input[type="text"]{
+				height: 40px;
+				border: none;
+				background: pink;
+				outline: none;/*消除点击输入框时的蓝色外边框*/
+				text-indent: 2em;/*首行缩进两个字*/
+				flex: 1;
+			}
+			input[type="submit"]{
+				height: 40px;
+				border: none;
+				background: #ccc;
+				width: 50px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<input type="text" />
+			<input type="submit" />
+		</div>
+	</body>
+</html>

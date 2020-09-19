@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			*{margin: 0px; padding: 0px}
+			#q{width: 300px; height: 30px; padding: 5px; border: 1px solid #f90; font-size: 16px}
+			#ul1{border: 1px solid #f90; width: 310px; margin: 0px; display: none }
+			#ul1 li{list-style: none}
+			#div1{width: 312px; margin: 100px auto}
+			#ul1 li a{line-height: 30px; padding: 5px; text-decoration: none; color: black; display: block}
+			#ul1 li a:hover{background-color: #f90; color: white}
+        </style>
+        <script>
+            function download(data){
+                // alert("下载的数据是：" + data);
+
+                //取出数据
+                var arr = data.s;
+                var oUl = document.getElementById('ul1');
+                oUl.innerHTML = '';
+                oUl.style.display = 'block';
+
+                for(var i = 0; i < arr.length; i++){
+                    var newLi = document.createElement("li");
+                    var oA = document.createElement("a");
+                    oA.innerHTML = arr[i];
+                    oA.href = 'http://www.baidu.com/s?wd=' + arr[i];
+                    oA.target = '_blank';
+                    
+                    newLi.appendChild(oA);
+                    oUl.appendChild(newLi);
+                }
+            }
+        </script>
+		<script>
+			
+
+			window.onload = function(){
+				var oQ = document.getElementById('q');
+				var oUl = document.getElementById('ul1');
+                
+                oQ.onkeyup = function(){
+                    var oValue = this.value;
+                    if(!oValue){
+                        oUl.style.display = 'none';
+                    }else{
+                        //加载数据
+                        var oScript = document.createElement("script");
+                        oScript.src = `http://suggestion.baidu.com/su?wd=${this.value}&cb=download`;
+                        document.body.appendChild(oScript);
+                    }
+                }
+			}
+		</script>
+	</head>
+	<body>
+		<div id = 'div1'>
+			<input type="text" id = 'q'>
+			<ul id = 'ul1'>
+				<!-- <li><a href="#">百度</a></li>
+				<li><a href="#">百度</a></li>
+				<li><a href="#">百度</a></li> -->
+			</ul>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

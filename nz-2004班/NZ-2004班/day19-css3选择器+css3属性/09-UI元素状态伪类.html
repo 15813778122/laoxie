@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style type="text/css">
+            *{margin: 0;padding: 0;}
+            /*选中可以输入的元素*/
+            input:enabled{
+                background: red;
+            }
+            input:disabled{
+                background: yellow;
+            }
+            input:checked{
+                width:100px;
+                height:100px;
+            }
+             
+            p::selection{
+                background: yellow;
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            :enabled{}  选中可以输入的元素
+            :disabled{} 选中不可输入的元素
+            :checked{}  选中被选中的元素
+             
+            ::selection{}   被用户选中的内容处于高亮的状态
+             
+             
+        -->
+        <form action="">
+            <input type="text" disabled /> <!--禁用-->
+            <input type="text" />
+            <input type="text" />
+             
+            <input type="radio" name="man" id="ha" />
+            <label for="ha">哈哈哈哈1</label>
+             
+            <input type="radio" name="man" id="aa" />
+            <label for="aa">哈哈哈哈2</label>
+        </form>
+         
+        <p>哈哈哈哈哈哈哈哈哈哈啊哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+    </body>
+</html>

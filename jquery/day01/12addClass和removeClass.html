@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src = "jquery-1.10.1.min.js"></script>
+        <script>
+            /*
+
+            操作class名字的：
+                addClass()    添加class名字   
+                【注】里面有重复的className，会自动去重。
+                
+                
+                removeClass() 删除class名字
+                【注】里面有不存在的className，会自动去重。
+            【注】任何的元素节点上，都可以一个或者多个class
+            */
+
+            $(function(){
+                $("button").eq(0).click(function(){
+
+                    //box2是重复  
+                    // $("#div1").addClass("box2 box3 box4");
+
+                    //box3不存在
+                    $("#div1").removeClass("box2 box3");
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div id = 'div1' class = 'box1 box2'></div>
+        <button>添加class名字</button>
+    </body>
+</html>

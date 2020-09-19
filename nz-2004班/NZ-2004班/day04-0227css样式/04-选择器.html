@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*div{
+				width: 200px;/*宽度
+				height: 100px;/*高度
+				background: red;
+			}
+			p{
+				width: 100px;
+				height: 20ox;
+				background: pink;
+			}*/
+			.mz{
+				width: 300px;
+				height: 50px;
+				background: pink;
+			}
+			#mz{
+				font-size: 30px;
+				color: red;
+			}
+			#spa{
+				color: blue;
+				font-size: 30px;
+			}
+			/*.txt{
+				font-size: 10px;
+				color: red;
+			}*/
+			div .txt{
+				font-size: 30px;
+				color: blue;
+			}
+			div .txt span{
+				color: red;
+				font-size: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+        	选择器:
+        			类型选择器(标签选择器):div span h1 p ...
+        			
+        			类选择器(class选择器):选中指定的元素，在一个页面中可以多次出现
+        				1:在标签中添加属性 class="mz"
+        				2:在样式中得选择器 .mz{}
+        				
+        			id选择器:选中指定的元素，在一个页面中相同值只允许出现一次
+        				1:在标签中添加属性 id="mz"
+        				2:在样式使用添加选择器#mz{}
+        -->
+        <div class="mz"></div>
+        <div class="mz">文字内容</div>
+        <p class="mz"></p>
+        <p></p>
+        
+        <span id="mz">使用另一种选择器控制我</span>
+        <span id="spa">内容信息</span>
+        
+        <div id="">
+        	<p class="txt">文字内容1
+        		<span>span中的内容</span>
+        	</p>
+        	
+        </div>
+        <p class="txt">文字内容2</p>
+	</body>
+</html>

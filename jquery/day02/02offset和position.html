@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            margin: 30px;
+            position: relative;
+        }
+
+        #div2 {
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            margin: 20px;
+        }
+    </style>
+    <script src='jquery-1.10.1.min.js'></script>
+    <script>
+        /*
+
+            【注】下述两个方法是专门用于获取当前节点的坐标。
+            offset()   不管如何设置定位，直接获取当前节点距离最左边和最上边的距离。
+            position() 肯定什么都算，获取当前节点距离第一个有定位的父节点的距离
+
+
+
+            【注】专门用于获取父节点,第一个有定位的父节点。
+            • offsetParent()
+
+            VSCode 不支持的话，自己下载插件去
+            快捷键： ctrl + alt/option + f  自动代码规范
+        */
+
+        $(function () {
+            //获取div2距左和距上的距离
+            // $(document).click(function () {
+            //     // alert($("#div2").offset().left);
+            //     alert($("#div2").position().left);
+            // })
+
+            $("#div2").offsetParent().css("backgroundColor", 'red');
+        })
+
+    </script>
+</head>
+
+<body>
+    <div id='div1'>
+        <div id='div2'></div>
+    </div>
+</body>
+
+</html>

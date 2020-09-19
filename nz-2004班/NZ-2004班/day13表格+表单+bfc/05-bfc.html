@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box1{
+				width: 100px;
+				height: 100px;
+				background: pink;
+				margin: 10px;
+			}
+			.box2{
+				width: 100px;
+				height: 100px;
+				background: red;
+				margin: 20px;
+			}
+			.box3{
+				width: 300px;
+				height:300px;
+				background: red;
+				border: 20px solid red;
+			}
+			.box4{
+				width: 100px;
+				height:100px;
+				background: #000;
+				border: 20px solid red;
+				margin-left: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			bfc:是一个有特殊功能的容器
+			
+			解析bfc区域的规则(特殊功能):
+				1:bfc区域中的元素垂直摆放
+				2:同属于同一个bfc区域的元素间距由margin决定,同属于同一个bfc区域的元素margin会重叠
+				3:每个元素的左外边距挨着父级元素左边框
+				4:bfc区域不会与float元素重叠
+				5:bfc区域里的元素不会影响外面的元素
+				6:计算bfc元素高度时,浮动元素也参与计算
+				
+			bfc区域的触发条件:
+				1:html(根元素)是一个最大的bfc区域
+				2:position为absolute和fixed
+				3:display为inline-block table-cell table-caption flex inline-flex
+				4:overflow不为visible
+				5:float不为none
+		-->
+		<div class="box1"></div>
+		<div class="box2"></div>
+		
+		<div class="box3">
+			<div class="box4"></div>
+		</div>
+		<div class="box5">
+			
+		</div>
+	</body>
+</html>

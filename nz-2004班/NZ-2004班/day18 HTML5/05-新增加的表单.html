@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <!--
+            input 中新增加的type类型
+                type="email"    请输入邮箱地址
+                type="url"      请输入网址
+                type="range"    滑块
+                type="number"   请输入数字
+                type="search"   搜索表单
+                type="color"    生成颜色表单
+                 
+               	作为了解
+                type=“time”      限制用户必须输入时间类型
+                type=“month”        限制用户必须输入月类型
+                type=“week”        限制用户必须输入周类型
+                type=“datetime-local”        选取本地时间
+                type=”date”     年月日
+                 
+            	新增加的表单属性:
+                required    检测是否为空(必填字段)
+                step        步长,确定一个值-4 0 4 8
+                min         限定最小值
+                max         限定最大值
+                 
+                autoplete="是否自动关联提示信息"
+                    on  默认值 关联
+                    off 不关联
+                     
+                placeholder="文本框的提示信息"
+                 
+                autofocus   自动聚焦,光标的初始位置,一个页面只有一个
+                 
+                pattern="正则表达式" 可以自己指定合法的格式
+                    //手机号正则表达式:  ^1[3|5|8]\d{9}$
+                     
+                novalidate="取消验证"   
+                 
+                multiple    多选
+                 
+                list    结合 datalist标签的id属性才有效
+                 
+            新增加的标签:
+                <input type="text" list="aa" />
+                <datalist id="aa">
+                    <option value="http://www.baidu.com"></option>
+                    <option value="http://www.vip.com"></option>
+                    <option value="http://www.mao.com"></option>
+                    <option value="http://www.taobao.com"></option>
+                </datalist>
+                 
+                output 输出标签,用于计算结果的输出或者是脚本的输出
+                 
+                 
+ 
+        -->
+        <form action="" method="" novalidate>
+            请输入邮箱地址:<input type="email" required />
+            <br><br>
+             
+            请输入网址: <input type="url"  />
+            <br><br>
+             
+            请拨动滑块: <input type="range" value="10" min="0" max="10" />
+            <br><br>
+             
+            请输入号码: <input type="number" step="1" min="4" max="8" />
+            <br><br>
+             
+            请搜索: <input type="search"/>
+            <br><br>
+             
+            请选择颜色: <input type="color" />
+            <br><br>
+             
+            时间: <input type="time" />
+                <br><br>
+                 
+            月份: <input type="month" />
+                <br><br>
+                 
+            周期: <input type="week" />
+                <br><br>
+                 
+            本地时间: <input type="datetime-local" />
+                <br><br>
+                 
+            <input type="date" />
+            <br><br>
+             
+            请夸我: <input type="text" value="" name="txt" autocomplete="on" autofocus />
+            <br><br>
+             
+            请看提示信息: <input type="text" placeholder="请输入昵称" />
+            <br><br>
+             
+            请输入手机号: <input type="text" pattern="^1[3|5|8]\d{9}$" />
+            <br><br>
+             
+            上传文件: <input type="file" multiple />
+            <br><br>
+             
+            <input type="text" list="aa" />
+            <datalist id="aa">
+                <option value="http://www.baidu.com"></option>
+                <option value="http://www.vip.com"></option>
+                <option value="http://www.mao.com"></option>
+                <option value="http://www.taobao.com"></option>
+            </datalist>
+             
+             
+             
+             
+            <br><br>
+            <input type="submit" />
+        </form>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            $(function(){
+                // JQ中获取表单元素的value值用的val方法
+
+                // alert($("input").val()); //取值
+
+                // $("input").val("world");
+
+
+                /*
+                    size() 返回已经获取到的元素的个数
+                */
+
+                // alert($("ul li").size());
+
+
+                /*
+                    each  基本上JQ中是用不着循环的。
+                    【注】JQ可以通过each方法对我们选中的节点进行遍历。
+                */
+
+                $("li").each(function(index, elem){
+                    /*
+                        index 当前遍历到的元素的下标
+                        elem  当前遍历到的元素(JS元素节点)
+                    */
+                    // elem.innerHTML = index;
+                    $(elem).html(index);
+                })
+            })
+
+        </script>
+    </head>
+    <body>
+        <input type="text" value = '123'>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			宽高自适应:
+				块级元素默认宽度100%
+				给元素添加宽度 width:;	单位%
+				
+			高度自适应:
+				默认元素高度不写
+				元素添加高度height:;单位%(前提条件html,body{height:100%})
+				
+			最小宽高:
+				min-width:最小宽度;
+				max-width:最大宽度;
+				min-height:最小高度;
+				max-height:最大高度;
+			
+			浮动元素的高度塌陷:
+				问题:父元素未设置高度，子元素浮动将造成父元素高度塌陷
+			解决办法:
+				1:给父元素添加高度
+					缺点:不灵活
+				2:给父元素添加overflow:hidden;
+					缺点:定位出去 的元素将看不见
+				3:清除浮动clear:left/right/both;
+					给浮动的元素最后添加一个空元素(块级元素)
+						height:0;
+						clear:left/right/both
+					缺点:代码冗余
+				4:万能清除法
+				
+			visibility:显示隐藏;
+				hidden	隐藏
+				visible	显示
+				
+				visibility:hidden;	与 	display:none;的区别
+					1:都是隐藏
+					2:前者隐藏时占据文档流，后者隐藏时脱离文档流
+					
+			伪对象:
+				:after{content:"";}在...之后，伪装一个元素，可以添加样式
+		-->
+	</body>
+</html>

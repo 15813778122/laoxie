@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 500px;
+				height: 400px;
+				margin: 100px;
+				background: pink;
+			}
+			.box1{
+				width: 200px;
+				height: 50px;
+				background: red;
+				transition: 1s;
+			}
+			.box:hover .box1{
+				transform: skew(60deg);/*倾斜*/
+				transform: skewX(30deg);
+				transform:skewY(30deg);
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			倾斜:		skew()	deg
+				transform:skew(水平倾斜);
+				transform:skew(水平,垂直);
+				transform:skewX();
+				transform:skewY();
+		-->
+		<div class="box">
+			<div class="box1"></div>
+		</div>
+	</body>
+</html>

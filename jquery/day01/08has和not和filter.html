@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                has  包含，对于已经获取到的元素进行筛选，但是筛选的条件是，是否包含符合条件的子节点
+                not  filter的反义词
+                filter  过滤，对我们已经查找到的元素节点进行二次的筛选
+            */
+            $(function(){
+                // $("div").filter(".box").css("backgroundColor", 'green');
+
+                // $("div").not(".box").css("backgroundColor", 'green');
+
+                //获取div节点，这个div节点必须是子节点class=box的div节点。
+                //请有女朋友的站起来
+                $("div").has(".box").css("backgroundColor", 'green');
+            })
+
+        </script>
+    </head>
+    <body>
+        <div>div1文本<span class = 'box'>span文本</span></div>
+        <div class = 'box'>div2文本</div>
+    </body>
+</html>

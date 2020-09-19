@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				width: 700px;
+				height: 100px;
+				background: yellow;
+				margin: 40px;
+				
+			}
+			li{
+				list-style: none;
+				width: 100px;
+				height: 90px;
+				background: pink;
+				float: left;
+				margin-right: 5px;
+			}
+			span{
+				width: 100px;
+				height: 90px;
+				background: red;
+				display: block;/*块级元素 显示*/
+			}
+			.spa1{
+				background: #ccc;
+			}
+			.spa2{
+				background: #ffa540;
+				display: none;
+			}
+			li:hover .spa1{
+				display: none;/**/
+			}
+			li:hover .spa2{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>
+				<span class="spa1">哈哈哈</span>
+				<span class="spa2">黑呵呵</span>
+			</li>
+			<li><span class="spa1">哈哈哈</span><span class="spa2">黑呵呵</span></li>
+			<li><span class="spa1">哈哈哈</span><span class="spa2">黑呵呵</span></li>
+			<li><span class="spa1">哈哈哈</span><span class="spa2">黑呵呵</span></li>
+			<li><span class="spa1">哈哈哈</span><span class="spa2">黑呵呵</span></li>
+		</ul>
+	</body>
+</html>

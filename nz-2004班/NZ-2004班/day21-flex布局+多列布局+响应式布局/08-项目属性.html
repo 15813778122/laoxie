@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			/*body{
+				display: flex;
+			}*/
+			.box{
+				width: 600px;
+				height: 500px;
+				background: pink;
+				margin: 100px;
+				display: flex;/*设为弹性盒*/
+				align-items: center;
+			}
+			.box div{
+				width: 100px;
+				height: 100px;
+				background: red;
+				margin: 3px;
+			}
+			.box .box2{
+				
+				align-self: flex-end;
+				align-self: center;
+				align-self: stretch;
+				align-self: auto;
+				align-self: center;
+				order: 1;
+			}
+			.box .box3{
+				order: 2;
+			}
+			.con1{
+				/*width: 500px;*/
+				width: 100%;
+				height: 50px;
+				background: red;
+				margin-top: 100px;
+				display: flex;
+				/*align-items: center;*/
+			}
+			.con1 input:nth-child(1){
+				/*width: 396px;*/
+				flex:1;/*剩余的空间都分配给他*/
+			}
+			.con1 input:nth-child(2){
+				width: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box1">1</div>
+			<div class="box2">2</div>
+			<div class="box3">3</div>
+			<div class="box4">4</div>
+			<div class="box5">5</div>
+		</div>
+		<div class="con1">
+			<input type="text" />
+			<input type="submit" />
+		</div>
+	</body>
+</html>

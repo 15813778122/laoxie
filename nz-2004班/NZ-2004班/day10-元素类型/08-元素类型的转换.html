@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box1{
+				width: 300px;
+				height: 100px;
+				background: pink;
+				display: inline;/*将元素转换为内联元素*/
+				margin:30px;
+			}
+			.spa{
+				background: red;
+				width: 300px;
+				height: 100px;
+				margin: 30px;
+				display: block;/*将元素转换为块元素*/
+			}
+			a{
+				width: 100px;
+				height: 100px;
+				background: red;
+				margin: 10px;
+				display: inline-block;/*将元素转换为内联块元素*/
+				
+			}
+			.box2{
+				width: 300px;
+				height: 200px;
+				background: pink;
+				margin: 100px;
+				
+			}
+			.box2 .txt{
+				width: 100px;
+				height: 80px;
+				background: skyblue;
+				display: none;/*把元素藏起来*/
+			}
+			.box2:hover .txt{
+				display: block;/*显示 且是块状元素类型*/
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			块状元素 block
+			内联元素	inline
+			内联块元素	inline-block(结合了块元素和内联元素特征)
+			
+			元素类型的转换:	display:;
+				display:inline;将元素转换为内联元素
+				display:block;	将元素转换为块元素(显示)
+				display:inline-block;	讲元素转换为内联块元素
+				
+				display:none;隐藏
+				
+				display:list-item;将元素转换为列表类型
+				
+		-->
+		<div class="box1">div默认就是一个块元素，被转换成了内联元素</div>
+		<span class="spa">span默认是内联元素，将被转换为块元素</span>
+		哈哈哈哈哈哈哈哈哈哈
+		
+		<a href="#" class="btn">哈哈哈1</a>
+		<a href="#" class="btn">哈哈哈2</a>
+		<a href="#" class="btn">哈哈哈3</a>
+		<a href="#" class="btn">哈哈哈4</a>
+		
+		<div class="box2">
+			<a href="" class="txt">dadada</a>
+		</div>
+	</body>
+</html>

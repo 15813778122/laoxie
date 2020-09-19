@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			/*box下的所有a都会被选中*/
+			.box a{
+				color: red;
+				font-size: 30px;
+			}
+			/*选中儿子*/
+			.box > a{
+				color: red;
+				font-size: 30px;
+			}
+			/*只选中紧跟在p后面的第一个a(只能选中一个)*/
+			p + a{
+				color: red;
+			}
+			/*选中p标签后的所有a(可以选中多个)*/
+			p ~ a{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			父级 > 子集
+			.box>.box$*3>p+a
+		-->
+		<div class="box">
+			<p><a href=""></a></p>
+			<a href=""></a>
+			<a href=""></a>
+			<a href=""></a>
+			<a href=""></a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "day06",
+  "version": "1.0.0",
+  "description": "当前项目的描述",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "qianfeng",
+  "license": "ISC",
+  "devDependencies": {
+    "request": "^2.88.2"
+  }
+}

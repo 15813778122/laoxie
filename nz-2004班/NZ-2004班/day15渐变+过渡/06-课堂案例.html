@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			img{
+				display: block;
+				
+			}
+			.box{
+				width: 400px;
+				height: 500px;
+				background: pink;
+				margin: 100px;
+				border: 10px solid #ccc;
+				position: relative;
+				overflow: hidden;
+			}
+			.box img{
+				width: 500px;
+				height: 100%;
+				transition: 1s;
+			}
+			
+			.txt2,.txt3,.txt4{
+				position: absolute;
+				background: skyblue;
+				color: #000;
+				/*left: 50px;*/
+				left: -160px;
+			}
+			.txt1{
+				color: #fff;
+				position: absolute;
+				top: 50px;
+				left: 50px;
+				font-size: 30px;
+				font-weight: bold;
+				transform: 0.3s;
+			}
+			.txt2{
+				top:150px;
+				transition: 0.5s;
+			}
+			.txt3{
+				top:200px;
+				transition: 1s;
+				
+			}
+			.txt4{
+				top:250px;
+				transition: 1.3s;
+				
+			}
+			.box:hover p{
+				left: 50px;
+			}
+			.box:hover img{
+				margin-left: -20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="img/9.png"/>
+			<p class="txt1">Taylor Swift</p>
+			<p class="txt2">Birthday:1989.12</p>
+			<p class="txt3">440-400-400</p>
+			<p class="txt4">4001952</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 500px;
+				height: 400px;
+				background: pink;
+			}
+			.txt1{
+				background: red;
+				color: #fff;
+				font-size: 20px;
+				font-weight: bold;
+				transform: translateY(20px);
+				transition: 1s;
+			}
+			.txt2{
+				background: red;
+				color: skyblue;
+				font-weight: bold;
+				transform: translateY(300px);
+				transition: 1s;
+			}
+			.box:hover .txt1{
+				transform: translateY(60px);
+			}
+			.box:hover .txt2{
+				transform: translateY(200px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<p class="txt1">哈哈哈哈哈哈哈呵呵</p>
+			<p class="txt2">哈哈哈哈哈哈哈呵呵</p>
+		</div>
+	</body>
+</html>

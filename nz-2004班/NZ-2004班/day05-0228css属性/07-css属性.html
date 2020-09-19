@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul{
+				list-style: disc;/*列表修饰符:默认小黑点*/
+				list-style: circle;/*空心圆*/
+				list-style: square;/*实心方块*/
+				font-size: 12px;
+				background: pink;
+				border:1px solid blue ;
+				
+				list-style: none;/*去掉小黑点*/
+				list-style-type: none;
+				list-style-image:url("images/3.png");
+				list-style-position: outside;
+				list-style-position: inside;
+				
+			}
+			li{
+				border:1px solid red ;
+			}
+			ol{
+				list-style: none;
+			}
+			
+			.box1{
+				width: 300px;
+				height: 100px;
+				background: red;
+				border: 10px solid #000;
+				border: 10px dotted #000;
+				border: 10px dashed #666;
+				border-width: 30px;/*边框的大小*/
+				border-style: solid;/*边框的形态*/
+				border-color: blue;/*边框的颜色*/
+				
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+        	列表修饰符
+        		list-style:; == list-style-type:;
+        			disc	小黑圆点
+        			circle	空心圆
+        			square	实心方块
+        			none	去掉修饰
+        			list-style-image:url("图片地址");
+        			list-style-position:图片位置;
+        				outside	外边
+        				inside	里面
+        			
+        	边框:
+        		border:边框大小 边框形态 边框颜色;
+        		border-width:边框的大小;
+        		border-style:边框的形态;
+        		border-color:边框的颜色;
+        		某一个方向的拆分:
+        			border-top:上边框大小 上边框形态 上边框颜色;
+        			border-bottom:下边框大小 下边框形态 下边框颜色;
+        			border-left:左边框大小 左边框形态 左边框颜色;
+        			border-right:右边框大小 右边框形态 右边框颜色;
+        			
+        		利用边框斜切实现三角形
+        			border:30px solid transparent; 颜色设置为透明
+        			border-top-color:red; 某一个方向的颜色不透明
+        -->
+		<ul>
+			<li>列表符号</li>
+			<li>列表符号</li>
+			<li>列表符号</li>
+			<li>列表符号</li>
+			<li>列表符号</li>
+			<li>列表符号</li>
+		</ul>
+		
+		<ol>
+			<li>列表符号</li>
+			<li>列表符号</li>
+			<li>列表符号</li>
+			<li>列表符号</li>
+			<li>列表符号</li>
+			<li>列表符号</li>
+		</ol>
+		
+		<div class="box1">设置边框</div>
+	</body>
+</html>

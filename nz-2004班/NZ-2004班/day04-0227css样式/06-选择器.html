@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{/*匹配页面所有的元素，进行统一的操作*/
+				margin: 0;
+				padding: 0;
+			}
+			a{
+				color:red;
+				font-size: 30px;
+			}
+			a:link{color: red;}/*未访问之前*/
+			a:visited{color:yellow;}/*访问过后的状态*/
+			a:hover{color:blue;}/*鼠标悬停的状态*/
+			a:active{color: purple;}/*鼠标按下的状态*/
+			
+			/*.hezi{color: red;font-size: 30px;}
+			.txt{color: red;font-size: 30px;}
+			#spa{color:red;font-size: 30px;}*/
+			.hezi,.txt,#spa,h2{
+				color:red;font-size: 30px;
+			}
+			p{color: red;}
+			.box p{color: blue;}
+		</style>
+	</head>
+	<body>
+		<!--
+			伪类选择器:
+        		:link{}		未访问之前的状态
+        		:visited{}	访问过后的状态
+        		:hover{}	鼠标悬停的状态
+        		:active{}	鼠标按下的状态
+        		注意:有顺序要求 love	hate
+        		
+        	通配符 * 匹配页面所有的元素
+        	
+        	群组选择器 选择器1,选择器2,选择器3{}
+        	
+        	包含选择器(后代选择器)选择器1 选择器2 选择器3{}
+        	
+        
+        -->
+		<a href="#">伪类选择器</a>
+		<div class="hezi">div标签的内容</div>
+		<p class="txt">p段落标签的内容</p>
+		<span id="spa">span文本节点标签的内容</span>
+		<h2>h2标题标签</h2>
+		
+		<div class="box">
+			<p>box中的p元素</p>
+		</div>
+		<p>独立的p元素</p>
+	</body>
+</html>

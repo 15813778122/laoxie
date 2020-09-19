@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                 add()   可以将多个选择器进行组合
+                 slice() JQ的方法  获取指定范围内的元素。
+            */
+            $(function(){
+                /*
+
+                【注】多个复杂的选择器，我们可以分开，这样的话，可以方便我们去阅读。
+                $("span").add("div").add("p").add("strong").add("ul li").click(function(){
+                    alert(this.tagName);
+                }).mouseover(function(){
+                    $(this).css("backgroundColor", 'orange');
+                }).mouseout(function(){
+                    $(this).css("backgroundColor", 'blue');
+                })
+               
+
+                $("span,div,p,strong,ul li").click(function(){
+                    alert(this.tagName);
+                }).mouseover(function(){
+                    $(this).css("backgroundColor", 'orange');
+                }).mouseout(function(){
+                    $(this).css("backgroundColor", 'blue');
+                })
+                 */
+
+                 // [start, end)
+                $("ul li").slice(1, 4).css("backgroundColor", 'red');
+
+
+            })
+        </script>
+    </head>
+    <body>
+        <span>span</span>
+        <div>div</div>
+        <p>p文本</p>
+        <strong>strong文本</strong>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </body>
+</html>

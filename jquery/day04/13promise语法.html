@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            /*
+                promise是用于解决异步程序串行的问题。
+
+                是用来描述单个程序的运行的状态
+                同步和异步
+                同步：阻塞，当前程序必须等前面的程序执行完毕以后，才能执行。
+                异步：非阻塞，前面的程序是否执行完毕对，当前程序没有影响。
+                【注】排队。
+
+
+                多个程序之间执行关系
+                并行和串行
+                并行：多个程序之间，同时执行
+                串行：多个程序之间，按照顺序依次执行。
+
+                
+                异步并行
+                同步串行
+                异步串行（设定好规则）
+
+                【注】promise用于解决  异步程序串行的问题。
+            */
+
+
+            //案例
+            /*
+                第一次启动5秒定时器
+                当5秒定时器到达目的值，再去启动3秒定时器
+                当3秒定时器到达目的值，再去启动4秒定时器
+
+
+                下述代码的问题：
+                    1、嵌套太多
+                    2、没有办法很轻松的看出来代码的结构
+                【注】回调地狱。
+
+            */
+
+            // console.time("test1");
+            // console.log("启动5秒的定时器");
+            // setTimeout(function(){
+            //     console.log("5秒定时到了");
+            //     console.log("启动3秒的定时器");
+
+            //     setTimeout(function(){
+            //         console.log("3秒定时到了");
+            //         console.log("启动4秒的定时器");
+
+            //         setTimeout(function(){
+            //             console.log("4秒定时器到了");
+            //             console.timeEnd("test1"); //12018 毫秒 - 倒计时结束
+            //         }, 4000);
+            //     }, 3000);
+            // }, 5000);
+
+            console.time("test2");
+            new Promise(function(resolve){
+                console.log("启动5秒的定时器");
+                setTimeout(function(){
+                    resolve("5秒定时到了");
+                }, 5000);
+            })
+            .then(function(msg){
+                console.log("then1，" + msg);
+                return new Promise(function(resolve){
+                    console.log("启动3秒的定时器");
+                    setTimeout(function(){
+                        resolve("3秒定时到了");
+                    }, 3000);
+                })
+            })
+            .then(function(msg){
+                console.log("then2，" + msg);
+                return new Promise(function(resolve){
+                    console.log("启动4秒的定时器");
+                    setTimeout(function(){
+                        resolve("4秒定时到了");
+                    }, 4000);
+                })
+            })
+            .then(function(msg){
+                console.log("then3，" + msg);
+                console.timeEnd("test2");
+            })
+            .catch(function(msg){
+                console.log("catch，" + msg);
+            })
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+
+            //封装一个英雄构造函数
+            function Hero(name, sex){
+                this.name = name;
+                this.sex = sex;
+            }
+
+            //给英雄添加方法
+            Hero.prototype.showSelf = function(){
+                console.log("我是" + this.name + "，性别是" + this.sex + "的");
+                //构造函数中this就是当前构造函数新创建的对象
+                return this;
+            }
+            Hero.prototype.A = function(){
+                console.log("普通攻击");
+                return this;
+            }
+            Hero.prototype.blink = function(){
+                console.log("闪现");
+                return this;
+            }
+
+            var libai = new Hero("李白", "男");
+            //开始游戏  速度太慢
+            // var res = libai.showSelf();
+            // console.log(res);
+            // libai.A();
+            // libai.blink();
+
+            //【注】上述这些方法，可以被当前构造函数新创建对象调用的。
+
+
+            //进行连招
+            // var res = libai.showSelf();
+            // // console.log(res);
+            // res.A();
+
+
+            //链式操作。
+            libai.showSelf().A().blink().A().showSelf();
+
+            
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 300px;
+				height: 100px;
+				font-size: 30px;
+			}
+			.box p{
+				font-size: 20px;
+				color: red;
+			}
+			.box p span{
+				font-size: 14px;
+				color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+        	css样式的三种写法:
+        		1:内部样式
+        		<head>
+        			<style type="text/css">
+        				选择器{属性:值;}
+        			</style>
+        		</head>
+        		2:外部样式
+        			1:创建独立的css文件
+        			2:创建独立的html页面
+        			3:建立联系
+        				方式一:在html页面中添加
+        				<head>
+        					<link rel="stylesheet" href="css地址">
+        				</head>
+        				
+        				方式二:
+        				<style type="text/css">
+        					@import url(css文件地址);
+        				</style>
+        				
+        		3：内联样式
+        			<标签 style="属性:值;"></标签>
+        			
+        		优先级:
+        			内联样式  > 内部样式 外部样式
+        			内部样式和外部样式收到加载顺序的影响
+        			
+        	选择器(选中指定的元素)
+        		1:类型选择器 div span p ul li h1.....
+        		2:类选择器(class选择器)
+        			<div class="box"></div>
+        			.box{属性:值;}
+        			在一个页面中能出现多次，一般用于设置样式
+        		3:id选择器
+        			<div id="box"></div>
+        			#box{顺序性:值;}
+        			在一个页面中有且仅有一个相同的值，不能多次出现，一般不用于设置样式
+        			
+        		4:包含选择器
+        			体现结构关系
+        			<div class="box">
+        				<span>内容1</span>
+        			</div>
+        			<span>内容2</span>
+        			.box span{属性:值;}选中内容1的span
+        			选择器1 选择器2 选择器3{属性:值;}
+        			
+        		5:群组选择器
+        			选择器1,选择器2,选择器3{属性:值;}
+        			
+        		6: * 通配符 匹配页面中所有的元素
+        			*{margin:0;padding:0;}消除元素默认的间距
+        			
+        		7:伪类选择器
+        			:link{}		未访问的状态
+        			:visited{}	访问过后的状态
+        			:hover{}	鼠标移入的状态
+        			:active{}	鼠标按下的状态
+        			注意:按照此顺序书写
+        			
+        	选择器权重:
+        		id > class > 类型选择器
+        		0100   0010		0001
+        		伪类选择器 0010
+        		包含选择器 所有选择器权重之和
+        		内联样式1000
+        		.box{
+        			color:red !important;优先级最高
+        			color:blue;
+        		}
+        	
+        	css层叠
+        		一个标签可以写多个样式,后加载的覆盖先加载的
+        	
+        -->
+        <div class="box">
+        	<p>
+        		<span>hhhhhhhh</span>
+        	</p>
+        </div>
+	</body>
+</html>

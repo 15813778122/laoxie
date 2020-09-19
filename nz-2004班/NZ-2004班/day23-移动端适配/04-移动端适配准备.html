@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0;
+			}
+			.box{
+				height: 100px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">dawaafaaw</div>
+		<!--
+			视口:
+				就是浏览器显示页面内容的屏幕区域
+			视口分为:布局视口	视觉视口	理想视口	
+			布局视口:
+				一般移动端设备的浏览器都默认设置了一个布局视口,为了解决早期pc端页面在移动端上的显示问题
+				苹果 安卓 基本上设置这个视口的分辨率980px
+				
+			视觉视口:
+				你看到的网页区域,指的是网址的区域
+				通过缩放去操作视觉视口不会影响布局视口
+				
+			理想视口:
+				1:使网址在移动设备的浏览器中最理想的一个状态(浏览和阅读宽度设定的)
+				2:对设备来说就是最理想的尺寸
+				3:引入一个meta标签,通知浏览器进行对应的操作
+				4:meta标签的主要目的就是为了使布局视口的宽度应该与理想窗口的宽度一致,就是设备有多宽,布局视口就有多宽
+			
+				<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+				width=device-width 当前的宽度与当前设备的宽度一直
+				initial-scale=1 初始的缩放比例(默认为1)
+				minimum-scale=1 允许用户缩放到的最小比例(默认为1)
+				maximum-scale=1 允许用户缩放到的最大比例(默认为1)
+				user-scalable=no 用户是否可以手动缩放(默认不允许) 因为我们不希望用户去放大缩小页面
+				注意:移动端必须写meta标签,且是禁止用户随意缩放	
+				
+			视口缩放:
+			
+			在375px的设备中截图出来 到ps 中测量是750px
+			在ps中值要比设备中的px值大一倍
+			
+			物理像素:
+				1:指的就是屏幕显示的最小的点,是真实存在的,设备厂商在生产设备时就已经固定好了的,比如苹果678 750*1334
+				2:视网膜高清显示屏,retina显示屏,作用上把更多的物理像素点压缩至一块屏幕里,像素点越密集,看的越清晰,达到更高的分辨率,提高画质
+		了解:	 ppi:每英寸所显示的像素点的密度
+				 dpi:每英寸所显示的像素点的点数	
+			
+		重点:	
+			物理像素比: dpr = 物理像素 / 逻辑像素
+				物理像素:就是设备所显示的像素(手机截图在ps中量取出来的像素大小)
+				逻辑像素:页面在css中书写的像素
+				
+		常见的设计稿:
+			设计图 640px 		dpr 2	320
+				 750px		dpr 2	375
+				 1125px 	dpr 3
+			
+		常见的单位:
+			px
+			em
+			pt(磅) 更多应用于安卓设置
+			deg 角度
+			%
+			
+			rem:跟随html的font-size:;值的大小
+				默认状态下 1rem = 16px
+				
+			vw:视口的宽度	width:100vw; 占满整个视口的宽度
+				能够随着视口的宽度变化而变化
+				100vw = 满屏 = 320px
+				100vw = 满屏 = 375px
+				
+			vh:视口的高度	height:100vh; 占满整个视口的高度	
+				能够随着视口的高度变化而变化
+		
+			vmin: 作比较,窗口的宽高谁小,谁小就按照谁显示
+			vmax: 作比较,窗口的宽高谁大,谁大就按照谁显示
+		-->
+	</body>
+</html>

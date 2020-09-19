@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--结合脚本,脚本看不懂没关系-->
+		<!--
+			10 + a = 10a
+			10 + 1 = 101
+		-->
+		<form action="" oninput="res.value=parseInt(num1.value)+parseInt(num2.value)">
+			<input type="range" id="num1" min="0" max="10" step="2"/>
+			+
+			<input type="text" id="num2"/>
+			=
+			<output name="res" for="num1 num2"></output>
+		</form>
+	</body>
+</html>

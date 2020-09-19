@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 400px;
+				height: 100px;
+				background: red;
+				box-shadow: 10px 10px 10px 10px yellow;
+				-webkit-box-shadow: 10px 10px 10px 10px yellow;
+				-o-box-shadow:10px 10px 10px 10px yellow;
+				-ms-box-shadow:10px 10px 10px 10px yellow;
+				-moz-box-shadow:10px 10px 10px 10px yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			渐进增强:(从小到大)
+				先保证最基本的功能 ~>	用户体验的提升
+				
+			优雅降级:(从大到小)
+				先针对版本较高的设备进行项目构建,保证用户体验的完美 ~>	牺牲一些效果,保证最基本的功能
+				
+			选择器(选择符):
+				id class 类型(div span...) 后代选择器 伪类选择器 伪元素选择器...
+				
+			属性选择器:
+				e[attr]{}		选中e元素，且e元素有attr属性
+				e[attr="value"]	选中e元素，且e元素有attr属性，值为value
+				e[attr~="value"] 选中e元素，且e元素有attr属性,包含值value(用空格隔开)
+				e[attr^="value"] 选中e元素，且元素有attr属性，以value值开头
+				e[attr$="value"] 选中e元素，且有attr属性,以value值结尾
+				e[attr*="value"] 选中e元素，且有attr属性，包含value值(不需要空格隔开)
+				e[attr|="value"] 选中e元素,且有attr属性,仅有value值，或者以value-开头
+			
+			结构伪类选择器:
+				:first-child{}	第一个元素
+				:last-child{}	最后一个元素
+				:nth-child(n){}	指定位置的元素
+					n是从0开始的自然数
+					2n是偶数列		even
+					2n-1是奇数列	odd
+				only-child{}	选中只有一个子元素的标签
+				:nth-last-child(n){} 指定的元素 倒着数
+				
+				:first-of-type{}	指定类型的第一个元素
+				:last-of-type{}		指定类型的最后一个元素
+				:nth-of-type(n){}	指定类型的指定位置的元素
+				:nth-last-of-type(n){} 指定类型的指定位置的元素，倒着数
+				
+				:only-of-type{}		指定类型中只有一个同一类型的元素
+				
+			拓展:	
+				:root{}	选中html(根元素)
+				:empty{}选中空元素
+		-->
+		<div class="box"></div>
+		
+	</body>
+</html>

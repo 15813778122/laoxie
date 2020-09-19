@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			网格布局:
+				display:;
+					inline-grid
+					grid
+				容器(父元素):
+					grid-template-rows:;划分行
+					grid-template-columns:;划分列
+						px
+						%
+						fr
+						auto
+						如果需要规律的行和列
+						repeat(4,1fr)
+						
+					grid-template-areas:
+						'区域1 区域1 区域2'
+						'区域1 区域1 区域2'
+						'区域3 区域3 区域3';划分区域
+					注意:必须划分了行和列
+						使用时必须结束项目属性grid-area:占领区域;
+						
+					综合写法:grid-template:'分区' 分行/分列;
+					
+					行间距 列间距
+					grid-row-gap:;
+					grid-column-gap:;
+						综合写法:grid-gap:行间距 列间距;
+						
+					网格整体	
+					justify-content:;
+					align-content:;
+						取值:
+							stretch
+							start
+							end
+							center
+							space-around
+							space-between
+							space-evenly
+							
+					指定网格内容水平 垂直对齐方式
+					justify-items:;
+					align-items:;
+					综合写法: place-items:;
+						取值:
+						stretch 拉伸
+						start
+						end
+						center
+					
+				项目(子元素):
+					根据网格线来确定项目的起止位置
+					grid-column-start:列线开始位置;
+					grid-column-end:列线结束位置;(有span属性)
+						grid-column-end:span 2;表示占2个网格
+					综合写法:grid-column:开始位置 结束位置;	
+							grid-column:1 / span 2;从1开始,占2个格	
+					
+					grid-row-start:;行线开始位置
+					grid-row-end:;行线结束位置
+						grid-row-end:span 3;表示占3个网格
+					综合写法:grid-row:开始位置 结束位置;	
+							grid-row:2 / span 3;从2号线开始,占3格
+							
+					grid-area:表示当前网格所占的区域,名字和位置两种表示方式;		
+					方式一:使用名字占位
+					容器属性:grid-template-areas:
+								'a1 a1 a2'
+								'a3 a3 a2'
+								'a3 a3 a4';
+					项目属性:grid-area:a1;
+					
+					方式二:使用位置占位
+						grid-area:行线开始/列线开始/行线结束/列线结束;
+						
+					单个网格的单个内容水平垂直对齐方式
+					justify-self:;
+					align-self:;
+						综合写法:place-self:;
+							取值:
+							stretch 拉伸
+							start
+							end
+							center
+		-->
+	</body>
+</html>

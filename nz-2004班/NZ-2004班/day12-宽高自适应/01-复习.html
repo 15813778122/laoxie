@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			定位:
+			position:;
+				static	默认值
+				relative	相对定位
+					特征:
+						1:占据文档流
+						2:相对自身加载到页面中的初始位置进行位置改变
+				absolute	绝对定位
+					特征:
+						1:脱离文档流
+						2:默认相对html(根元素)进行定位
+						3:参考最近的有定位(static除外)的父级元素
+				fixed	固定定位
+					特征:
+						1:脱离文档流
+						2:相对浏览器窗口改变进行定位
+				sticky	粘性定位
+					特征:
+						1:脱离文档流
+						2:结合了relative和fixed的特征
+						
+				坐标属性:
+					水平方向 left right
+					垂直方向 top	bottom
+					
+				包含块:
+					父级有定位且是position:relative;,子集有定位为position:absolute;就是包含块
+				
+				层级关系:
+					前提关系:想要改变层级关系，那元素必须有定位
+					z-index:层级关系;
+						auto	默认值
+						number	具体数字(值越大,层级越高,值越小，层级越低，可以为负数)
+						并列关系:两个元素都可以改变层级关系
+						嵌套关系:只能改变子元素的层级关系
+				
+				锚点:
+					实现本页面的跳转,页面要足够高
+					<a href="#name">点击位置</a>
+					<标签  id="name">跳转位置</标签>
+		-->
+	</body>
+</html>

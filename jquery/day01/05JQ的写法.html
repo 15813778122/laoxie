@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                jquery的写法
+                    1、方法函数化(在JQ中所有的操作都可以通过函数去完成)
+                        $(函数) 等价于 window.onload
+
+                    2、链式操作(简写的方式)
+            
+
+            window.onload = function(){
+                //这里的代码是页面加载完成以后执行，在这里获取元素节点
+            }
+            */
+
+            $(function(){ //等价于window.onload
+                //以下的操作，操作是主体是同一个，链式操作简化以下的操作
+                //设置css样式
+                /*
+                $("h1").css("backgroundColor", 'blue');
+
+                //给h1添加移入移出
+                $("h1").mouseover(function(){
+                    $("h1").css("backgroundColor", 'yellow');
+                })
+                $("h1").mouseout(function(){
+                    $("h1").css("backgroundColor", 'green');
+                })
+                */
+
+                $("h1").css("backgroundColor", 'blue')
+                .mouseover(function(){
+                    $("h1").css("backgroundColor", 'yellow');
+                })
+                .mouseout(function(){
+                    $("h1").css("backgroundColor", 'green');
+                });
+
+            })
+
+        </script>
+    </head>
+    <body>
+        <h1>hello world</h1>
+        <button id = 'btn1'>按钮</button>
+    </body>
+    <script>
+        // alert("这是body下面");
+    </script>
+</html>

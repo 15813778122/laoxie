@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 400px;
+				height: 400px;
+				background: rgba(255,0,0,0.5);/*元素背景颜色透明*/
+				margin: 100px auto;
+				opacity: 0;/*元素本身透明*/
+				
+				/*形成3D的空间*/
+				transform-style: preserve-3d;
+				/*添加景深 近大远小的效果*/
+				perspective: 500px;
+				
+				perspective-origin: 100px 300px;/*设置观测点的位置*/
+			}
+			.box1{
+				width: 100px;
+				height: 200px;
+				background: rgb(255,255,0);
+				transition: 1s;
+			}
+			.box:hover .box1{
+				transform: rotateX(70deg);
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			css3 景深 (3D的空间)
+				观察物体的时候 近大远小
+				
+				给父元素添加
+					transform-style: preserve-3d;形成3D的空间
+					perspective:800px;添加景深 近大远小的效果 900px-1200px
+				设置观测点:
+					perspective-origin:;
+						left right
+						top	bottom
+						px
+						
+				background:rgba(红,绿,蓝,透明度);
+					a 透明度 取值范围0-1 背景颜色透明
+				
+				
+		-->
+		<div class="box">
+			<div class="box1"></div>
+		</div>
+	</body>
+</html>

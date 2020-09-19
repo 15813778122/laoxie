@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			文本溢出相关属性:
+				overflow:文本溢出;
+					hidden	隐藏
+					scroll	滚动查看
+					auto	自适应
+					inherit	继承
+					
+				white-space:空白空间;
+					nowrap	强制不换行,但是干不过br标签
+					pre		原格式输出
+					pre-line	原格式输出，被迫换行
+					pre-wrap	原格式输出，被迫换行
+					normal		默认值
+					
+				text-overflow:省略号;
+					clip	 裁剪
+					ellipsis	省略号
+					
+				显示省略号的四个步骤:
+					1:元素添加width,且内容超出元素
+					2:内容强制不换行white-space:nowrap;
+					3:超出隐藏 overflow:hidden;
+					4:省略号 text-overflow:ellipsis;
+				注意:只针对单行文本有效
+				
+			元素类型:
+				块状元素(block):div p h1-h6 ul li ol dl...
+					1:单独占据一行
+					2:能设置宽高
+					3:能正常设置内外边距
+					4:一般用于搭建页面结构
+					5:在页面中矩形显示
+					
+				内联元素(inline):span a i em b strong...
+					1:只占据自己内容位置大小，能在一行显示
+					2:不能设置宽高
+					2:不能正常设置上下内外边距
+					4:一般结合CSS样式显示页面效果
+					5:只要内容单位最小才有可能是矩形显示
+					
+				内联块元素(inline-block):img input
+					1:只占据自己内容位置大小，能在一行显示
+					2:能设置宽高
+					3:能正常设置内外边距
+					
+			元素类型互相转换:
+				display:元素类型转换;
+					block	将元素转换成块元素(显示)
+					inline	将元素转换成内联元素
+					inline-block	将元素转换成内联块元素
+					none	隐藏(在页面中消失不见，且不占据位置)
+					list-item	将元素转换成列表类型
+		-->
+	</body>
+</html>

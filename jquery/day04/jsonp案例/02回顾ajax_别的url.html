@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Document</title>
+        <script>
+            window.onload = function(){
+                var oBtn = document.getElementById("btn1");
+
+                /* 
+                    已拦截跨源请求：同源策略禁止读取位于 https://api.asilu.com/weather/ 的远程资源。（原因：CORS 头缺少 'Access-Control-Allow-Origin'）。
+
+                    【注】ajax只能下载同源的数据，跨源的数据是禁止下载。
+
+                    同源策略：
+                        1、通协议
+                        2、同域名/同IP
+                        3、同端口号
+
+                    跨源的需求：
+                    
+                    跨源的方式：
+                        1、修改ajax同源协议(不建议)
+                        2、委托php文件进行跨源
+                        3、JSONP
+
+                */
+                oBtn.onclick = function(){
+                    var xhr = new XMLHttpRequest();
+
+                    xhr.open("get", "https://api.asilu.com/weather/", true);
+
+                    xhr.send();
+
+                    xhr.onreadystatechange = function(){
+                        if(xhr.readyState == 4){
+                            alert(xhr.responseText);
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button id = 'btn1'>下载数据</button>
+    </body>
+</html>

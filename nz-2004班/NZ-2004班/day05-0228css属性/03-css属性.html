@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				font-size: 20px;
+			}
+			html{
+				font-size: 20px;
+			}
+			.txt1{
+				font-size: 16px;/*默认文本大小*/
+				font-size: 30px;/*文本大小 px是像素单位*/
+				font-size: 1em;/*跟随直接父级的文本大小*/
+				font-size: 12px;/*最小值为12*/
+				font-size: 9pt;/*9pt等价12px*/
+				font-size: 1rem;/*跟随html(根元素)的文本大小*/
+				
+				color: red;/*英文*/
+				color: #FF0000;/*十六进制*/
+				color:#f00;/*#ff0000 aabbcc abc*/
+				color:#ababab;
+				color:rgb(0,0,0);/*red green blue*/
+				
+				font-family: "微软雅黑";
+			}
+			.box{
+				font-size: 40px;
+			}
+			.box p{
+				font-size: 1em;
+			}
+			
+			.txt2{
+				font-weight: bold;/*加粗*/
+				font-weight: bolder;/*更加粗*/
+			}
+			b{
+				font-weight: normal;/*常规字体 取消了加粗*/
+			}
+			h1{
+				font-weight: normal;
+				font-weight: 500;
+			}
+			i{
+				font-style: normal;/*常规字体 不倾斜*/
+			}
+			em{
+				font-style: normal;
+			}
+			.txt3{
+				font-style: italic;
+				font-style: oblique;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+        	文本大小:
+        		font-size:;
+        			px 必须记住,具体的像素单位
+        			9pt = 12px
+        			em 跟随直接父级的文本大小，成倍数关系
+        			rem跟随html(根元素)的文本大小,成倍数关系
+        			关键字表示方式
+        			例:small=13px
+        			
+        			默认16px为默认大小
+        			最小显示12px
+        			
+        	文本颜色
+        		color:;
+        			英文单词
+        			十六进制 组成 # 0-9 a-f 	aabbcc格式可以缩写abc
+        			rgb(0,0,0)red green blue 取值范围0-255
+        			
+        	字体:
+        		font-family:字体1,字体2,字体3;
+        		1:多个字体之间用逗号隔开
+        		2:中文表示的字体添加引号
+        		3:单个英文单词表示的字体不需要添加引号,
+        			多个英文单词表示的字体需要添加引号
+        			
+        	是否加粗:	
+        		font-weight:;
+        		bold	加粗
+        		bolder	更加粗
+        		normal	常规字体(取消加粗)
+        		100 - 400 变细
+        		500		常规粗细(取消加粗效果)
+        		600 - 900 加粗
+        		
+        	是否倾斜:
+        		font-style:;
+        			normal  常规字体(不倾斜)
+        			oblique 倾斜
+        			italic	倾斜
+        -->
+		我是辅助
+		<div class="txt1">文本内容1</div>
+		<div class="box">
+			<p>文本内容2</p>
+		</div>
+		<b>加粗标签b</b>
+		<h1>默认有加粗效果的标题标签</h1>
+		<p class="txt2">默认没有加粗效果的p标签</p>
+		
+		<i>倾斜标签i</i>
+		<em>倾斜标签</em>
+		<p class="txt3">默认没有倾斜效果的标签</p>
+	</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #div1{width: 100px; height: 100px; background-color: red;}
+            #div2{width: 100px; height: 100px; background-color: blue;}
+
+        </style>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                hover  同时移入和移出添加事件的
+                hover(funcOver, funcOut);
+
+
+                动画特效函数
+                • show()         hide()  
+                动画效果：从左上角收起和展开。
+                自带两个参数：
+                    第一个参数： 毫秒数 动画持续的时间
+                    第二个参数： 回调函数，动画结束以后执行回调函数
+
+
+
+                • fadeIn()       fadeOut()
+                动画效果：透明度的淡入淡出。
+
+                • fadeTo()
+                自带两个参数：
+                    第一个参数： 毫秒数 动画持续的时间
+                    第二个参数： 透明度的比例  0-1小数
+                    第三个参数： 回调函数，动画结束以后执行回调函数
+
+                • slideDown() slideUp()
+                动画效果：卷闸效果。
+            */
+            $(function(){
+                $("#div1").hover(function(){
+                    // $(this).css("backgroundColor", 'green');
+                    // $("#div2").hide(4000, function(){
+                    //     $("#div1").html("移入成功");
+                    // });
+
+                    // $("#div2").fadeOut(4000, function(){
+                    //     $("#div1").html("移入成功");
+                    // });
+
+                    // $("#div2").fadeTo(4000, 0.5, function(){
+                    //     $("#div1").html("移入成功");
+                    // });
+
+                    $("#div2").slideUp(4000, function(){
+                        $("#div1").html("移入成功");
+                    });
+                }, function(){
+                    // $(this).css("backgroundColor", 'red');
+                    // $("#div2").show(4000, function(){
+                    //     $("#div1").html("移除成功");
+                    // });
+
+                    // $("#div2").fadeIn(4000, function(){
+                    //     $("#div1").html("移除成功");
+                    // });
+
+                    // $("#div2").fadeTo(4000, 1, function(){
+                    //     $("#div1").html("移除成功");
+                    // });
+
+                    $("#div2").slideDown(4000, function(){
+                        $("#div1").html("移除成功");
+                    });
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div id = 'div1'></div>
+        <div id = 'div2'></div>
+    </body>
+</html>

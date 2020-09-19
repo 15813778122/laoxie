@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 423px;
+				height: 780px;
+				background: #9cbc2b;
+				margin: 50px auto;
+				border-radius: 10px;
+				padding: 16px 20px 12px;
+			}
+			header{
+				font-size: 20px;
+				height: 36px;
+				line-height: 36px;
+				text-transform: capitalize;/*首字母大写*/
+			}
+			p{
+				min-height: 44px;
+				border: 1px solid #e4ecc3;
+				border-radius: 5px;/*设置圆角*/
+				padding-left: 12px;
+				box-shadow: 0px 0px 2px 1px #fff;
+				background: #bad06b;
+				margin-bottom: 4px;
+			}
+			span{
+				float: left;
+				font-size: 14px;
+				margin-top: 13px;
+			}
+			.inp{
+				float: right;
+				margin-top: 8px;
+				margin-right: 70px;
+				width: 226px;
+				height: 26px;
+				border-radius: 5px;/*设置圆角*/
+				outline: none;/*选中后的蓝色外边框消除*/
+				border:none;/*取消默认的边框*/
+				text-indent: 6px;
+				font-style: italic;
+			}
+			.txtare{
+				width: 220px;
+				height: 96px;
+				margin-bottom: 16px;
+			}
+			.clear:after{
+				content: "";
+				display: block;
+				width: 0;
+				height: 0;
+				clear: both;
+				
+			}
+			.inp1{
+				margin-bottom: 20px;
+				margin-left: 25px;
+				margin-right:33px ;
+			}
+			.inp2{
+				margin-left: 25px;
+				margin-right:33px ;
+			}
+			.inp3{
+				margin-left: 25px;
+				margin-right:33px;
+			}
+			.but{
+				width: 130px;
+				height: 37px;
+				background: #374313;
+				border-radius: 20px;
+				color: #faead0;
+				font-size: 20px;
+				text-align: center;
+				line-height: 37px;
+				margin-top: 20px;
+				border: none;
+				margin-left: 142px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<form action="">
+				<header>Step 1:Your details</header>
+				<p>
+					<span>Name</span>
+					<input  type="text" class="inp" placeholder="First and last name"/>
+				</p>
+				<p>
+					<span>Email</span>
+					<input  type="email" class="inp" placeholder="example@domain.com"/>
+				</p>
+				<p>
+					<span>Phone</span>
+					<input  type="number" class="inp" placeholder="Eg.+447500000000"/>
+				</p>
+				<header>Step 2:Delivery address</header>
+					<p class="clear">
+						<span>Address</span>
+						<textarea class="txtare inp"></textarea>
+					</p>
+					<p>
+					<span>Post code</span>
+					<input  type="text" class="inp"/>
+				</p>
+				<p>
+					<span>Country</span>
+					<input  type="text" class="inp"/>
+				</p>
+				<header>Step 3:Card details</header>
+				<p>
+					<span>Card type</span>
+					<br /><br />
+					<input type="radio" class="inp1" name="card"/>VISA
+					<input type="radio" class="inp2" name="card"/>AmEx
+					<input type="radio" class="inp3" name="card"/>Mastercard
+				</p>
+				<p>
+					<span>Card number</span>
+					<input  type="number" class="inp"/>
+				</p><p>
+					<span>Security code</span>
+					<input  type="number" class="inp"/>
+				</p>
+				<p>
+					<span>Name on card</span>
+					<input  type="text" class="inp" placeholder="Exact name as on the card"/>
+				</p>
+				<input type="button" value="BUY IT!"  class="but"/>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 600px;
+				height: 600px;
+				background: red;
+				margin: 100px auto;
+				display: flex;/*设为弹性盒模*/
+				
+				flex-direction: row-reverse;/*反向主轴*/
+				flex-direction: column;/*y为主轴*/
+				flex-direction: column-reverse;/*y为反向主轴*/
+				flex-direction: row;/*设置主轴*/
+				flex-wrap:nowrap;/*子元素不换行*/
+				flex-wrap: wrap;/*子元素换行*/
+				flex-wrap: wrap-reverse;/*子元素反向换行*/
+				/*综合写法*/
+				flex-flow: row-reverse nowrap;
+				flex-direction: row;
+				justify-content: flex-start;/*在主轴的起始位置*/
+				justify-content: flex-end;/*在主轴的终点位置*/
+				justify-content: center;/*在主轴中间对齐*/
+				justify-content: space-around;/*自动分配间距*/
+				justify-content: space-between;/*两端对齐,中间自动分配*/
+				align-items: flex-start;/*设置元素在侧轴上的对齐方式*/
+				align-items: flex-end;/*在侧轴的终点位置*/
+				align-items: center;/*在侧轴的中间位置*/
+				align-items: baseline;/*在文本内容的基线对齐*/
+				align-items: stretch;/*在侧轴的默认位置对齐*/
+				align-content: flex-start;
+				align-content: flex-end;
+				align-content: center;
+				align-content: space-around;
+				align-content: space-between;
+				align-content: stretch;
+			}
+			.box div{
+				width: 100px;
+				height: 100px;
+				background: pink;
+				margin: 3px;
+				
+			}
+			.box .box1{
+				font-size: 30px;
+			}	
+			.box1{
+				width: 300px;
+				height: 300px;
+				background: red;
+				margin: 200px auto;
+				display: flex;/*设置为弹性盒*/
+			}
+			.box1 span{
+				width: 100px;
+				height: 100px;
+				background: pink;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box1">1</div>
+			<div class="box2">2</div>
+			<div class="box3">3</div>
+			<div class="box4">4</div>
+			<div class="box5">5</div>
+			<div class="box6">6</div>
+			<div class="box7">7</div>
+			<div class="box8">8</div>
+		</div>
+		<div class="box1">
+			<span></span>
+		</div>
+		<!--
+			弹性盒布局:display:flex;
+					display:inline-flex;(两个(父级)元素会在一行显示)
+				作用:控制子集在"主轴"上的排列
+				显示规则:所有的子元素都会在主轴上排列
+					默认x为主轴
+					如果设置x为主轴,那y为侧轴
+					如果设置y为主轴,那么x为侧轴
+				设置方法:父元素必须为弹性盒disply:flex;
+				
+			设置为display:flex;
+				1:弹性盒,子元素默认在主轴排列,默认x为主轴
+				2:父级元素为弹性盒,子元素都能设置宽高
+				3:父元素为弹性盒,让子元素在弹性盒中上下左右居中,只需要设置margin:auto;
+				
+			设置display:flex / inline-flex;对子元素的影响
+				子元素的浮动float 和 clear 无效
+				vertical-align(元素垂直对齐方式)无效
+				
+				容器(父元素)
+					属性:
+						flex-direction:;
+							row	水平方向主轴
+							row-reverse	水平反向主轴
+							column	垂直主轴
+							column-reverse	垂直反向主轴
+							
+						flex-wrap:;子元素是否换行
+							nowrap	不换行
+							wrap	换行
+							wrap-reverse	反向换行
+							
+						flex-flow:;设置主轴 是否换行
+							例:row nowrap
+						
+						justify-content:;子元素在主轴上的对齐方式
+							flex-start		起始位置
+							flex-end		终点位置
+							center			居中
+							space-around	完全自动分配
+							space-between	两端对齐,中间自动分配
+						
+						align-items:;子元素在侧轴上的对齐方式
+							flex-start	起始位置
+							flex-end	终点位置
+							center		居中
+							baseline	基线对齐
+							stretch		默认位置对齐
+						
+						align-content:;多行元素在侧轴上的对齐方式,多行元素才有效
+							flex-start	起始位置
+							flex-end	终点位置
+							center		居中
+							space-around    完全自动分配
+                        	space-between   两端对齐,中间自动分配
+                        	stretch     默认位置对齐
+							
+						
+						
+				项目(子元素)
+					属性:
+					align-self:;子元素在侧轴上的对齐方式
+						flex-start	起始位置
+						flex-end	终点位置
+						center		居中
+						stretch		拉伸(此元素不设置宽度或者高度)
+						auto		默认值
+							注意:如果父元素有此属性设置,则继承align-items:;属性设置
+							
+					order:;数值越大,子元素越靠后		
+		-->
+	</body>
+</html>

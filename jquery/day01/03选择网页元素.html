@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- 引入jquery -->
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                选择网页元素上（获取页面上的元素节点）
+                    1、模拟css选择网页元素(基本上所有获取网页元素的方法都可以在这里用)
+                    2、独有的表达式写法
+                    3、多种筛选方式
+
+                原生JS来说：
+                    document.getElementById();
+                    node.getElementsByClassName();
+                    document.getElementsByName();
+                    node.getElementsByTagName();
+
+                    document.querySelector()
+                    document.querySelectorAll();
+
+                jquery提供了一个非常好用的获取网页元素的方法：
+                $();
+
+                .css("样式属性", "样式属性的值");  设置元素节点的css样式
+
+            */
+
+            window.onload = function(){
+               //获取页面上所有的li标签
+            //    $("li").css("backgroundColor", 'yellow');
+
+            // 增加一些表达式的写法
+                // $("li:first").css("backgroundColor", 'yellow');
+                // $("li:last").css("backgroundColor", 'yellow');
+
+
+                //下标为奇数位的变色
+                // $("li:odd").css("backgroundColor", 'red');
+                // $("li:even").css("backgroundColor", 'red');
+
+
+                //指定下标去获取对应的元素
+                // $("li:eq(3)").css("backgroundColor", 'red');
+
+
+
+                /*
+                    获取网页元素的时候，讲究一个随便，你习惯用哪个就使用哪种方法获取就OK了。
+                */
+                //获取ul下 li标签中 所有class = box的节点
+                // $("ul .box").css("backgroundColor", 'red');
+                // $("ul li.box").css("backgroundColor", 'red');
+
+
+                //对我们找到的节点在进行二次过滤
+                $("ul li").filter(".box").css("backgroundColor", 'green');
+
+
+            }
+        </script>
+    </head>
+    <body>
+        <div id = 'div1' title = 'world'>div1</div>
+        <ul>
+            <li class = 'box' title = 'world'></li>
+            <li></li>
+            <li name = 'hello'></li>
+            <li></li>
+            <li class = 'box'></li>
+        </ul>
+        <ol>
+            <li name = 'hello'></li>
+            <li class = 'box'></li>
+            <li name = 'hello'></li>
+        </ol>
+    </body>
+</html>

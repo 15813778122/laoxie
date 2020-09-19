@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #msg {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            position: absolute;
+            display: none;
+        }
+
+        #close {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+    </style>
+    <script src='jquery-1.10.1.min.js'></script>
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                //显示弹窗
+
+
+                //让整个弹窗居中
+                var l = ($(window).outerWidth() - $("#msg").outerWidth()) / 2;
+                var t = ($(window).outerHeight() - $("#msg").outerHeight()) / 2 + $(window).scrollTop();
+
+                $("#msg").css({
+                    display: "block",
+                    left: l,
+                    top: t
+                });
+            })
+
+            $("#close").click(function () {
+                //关闭弹窗
+                $("#msg").css("display", 'none');
+            })
+
+            //完成窗口滚动和窗口大小发生变化的时候，还是要让弹窗居中
+            //scroll resize
+            $(window).on("scroll resize", function () {
+                //让整个弹窗居中
+                var l = ($(window).outerWidth() - $("#msg").outerWidth()) / 2;
+                var t = ($(window).outerHeight() - $("#msg").outerHeight()) / 2 + $(window).scrollTop();
+
+                $("#msg").css({
+                    left: l,
+                    top: t
+                });
+            })
+
+        })
+
+    </script>
+</head>
+
+<body style='height: 3000px'>
+    <button id='btn1'>显示弹窗</button>
+    <div id='msg'>
+        <input type="text" placeholder="用户名">
+        <br>
+        <input type="text" placeholder="密码">
+        <div id='close'>X</div>
+    </div>
+</body>
+
+</html>

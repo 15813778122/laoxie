@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                关于ajax下载数据的细分函数
+                $.get();  专门用于发送get请求
+                $.post(); 专门用于发送post请求
+
+                【注】难免还是要记忆一些函数。
+            */
+            $(function(){
+                $("button").eq(0).click(function(){
+                    $.get("demo.txt", function(body, statusText, xhr){
+                        alert(body); //通过url下载到的数据
+                        alert(statusText); //下载状态的文本 success error
+                        alert(xhr.status);  //网络状态码
+                    })
+                })
+
+
+                $("button").eq(1).click(function(){
+                    $.post("1.post.php", {
+                        username: "钢铁侠",
+                        age: 40,
+                        password: "123abc"
+                    }, function(body, statusText, xhr){
+                        alert(body); //通过url下载到的数据
+                        alert(statusText); //下载状态的文本 success error
+                        alert(xhr.status);  //网络状态码
+                    })
+                })
+
+                //下面这个方法大家记住就ok
+                $("button").eq(2).click(function(){
+
+                    /*
+                        JQ的ajax方法是可以给大家提供自动数据解析
+
+                        dataType: 
+                            json
+                            text
+                            xml  （用的比较少）
+                            jsonp  JQ的jsonp跨域
+                    */
+
+                    /*
+                    $.ajax({
+                        type: "get",
+                        url: "getNews.json",
+                        // dataType: "text",   //返回的数据格式，设置以后会根据返回的数据格式自动转换
+                        // 如果dataType不去设置的话，会根据我们url的后缀，自动识别并解析
+                        success: function(body){
+                            console.log(body);
+                            
+                        },
+                        error: function(err){
+                            console.log(err);
+                        }
+                    })
+                    */
+
+                    $.ajax({
+                        type: "get",
+                        url: "https://api.asilu.com/weather/?city=北京",
+                        dataType: "jsonp", //就可以跨域
+                        success: function(body){
+                            console.log(body);
+                        },
+                        error: function(err){
+                            console.log(err);
+                        }
+
+                    })
+                })
+            })
+
+        </script>
+    </head>
+    <body>
+        <button>GET请求</button>
+        <button>POST请求</button>
+        <button>AJAX请求</button>
+    </body>
+</html>

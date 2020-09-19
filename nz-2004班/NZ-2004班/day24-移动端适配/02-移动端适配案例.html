@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="reset.css"/>
+		<title></title>
+		<style type="text/css">
+			/*为了让页面效果跟谁浏览器窗口大小的变化而改变*/
+			html{font-size:26.67vw;}/*font-size:100px*/
+			html,body{height: 100%;}
+			header{
+				height: 0.44rem;
+				background: #387ec2;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+			}
+			header .logoImg{
+				height: 0.3rem;
+				margin: 0 auto ;
+				padding-top: 0.09rem;
+			}
+			header a:nth-child(1){
+				display: block;
+				height: 0.3rem;
+			}
+			header .heaBtn{
+				width: 0.22rem;
+				position: absolute;
+				right: 0.27rem;
+				top: 0.12rem;
+			}
+			main{
+				background: pink;
+				height: 100%;
+				padding: 0.44rem 0 0.5rem;
+				box-sizing: border-box;
+				overflow-y: auto;/*在垂直方向超出 自适应*/
+			}
+			.banner img{
+				width: 3.75rem;
+			}
+			nav{
+				display: flex;
+				height: 0.32rem;
+				background: #f2f2f2;
+				align-items: center;/*在侧轴上居中*/
+			}
+			nav b{
+				font-size: 0.15rem;
+				padding-left: 0.1rem;
+				padding-right: 0.1rem;
+				display: flex;
+				align-items: center;/*在侧轴上居中*/
+			}
+			nav b img{
+				width: 0.13rem;
+				margin-right: 0.05rem;
+			}
+			nav a{
+				font-size: 0.11rem;
+				color: #000;
+				margin-left: 0.39rem;
+			}
+			.con{
+				display: flex;
+				flex-wrap: wrap;
+				border-bottom: 0.1rem solid #f2f2f2;
+			}
+			.con li{
+				width: 25%;
+				box-sizing: border-box;
+				height: 0.94rem;
+				font-size: 0.14rem;
+				border-right: 1px solid #efefef;
+				border-bottom: 1px solid #efefef;
+			}
+			.con li a{
+				/*为了控制a里面的图片和文本*/
+				display: flex;
+				width: 100%;
+				height: 100%;
+				flex-direction: column;/*主轴为垂直方向*/
+				align-items: center;/*项目在侧轴居中*/
+				justify-content: center;
+				color: #000;
+			}
+			.con li:nth-child(4n){
+				border-right: none;
+			}
+			.con li img{
+				width: 0.28rem;
+				height: 0.31rem;
+				margin-bottom: 0.05rem;
+			}
+			/*第二部分内容区域*/
+			.conHeader{
+				height: 0.38rem;
+				padding: 0px 0.13rem 0px 0.14rem;
+				display: flex;
+				justify-content: space-between;/*子元素左右对齐*/
+				align-items: center;/*子元素在侧轴居中*/
+				border-bottom: 2px solid #efeff4;
+			}
+			.conHeader .txt{
+				font-size: 0.16rem;
+				/*背景图 不平铺 背景图定位/背景图大小*/
+				background: url(../day23-移动端适配/img1/btn2.jpg) no-repeat left center/0.13rem;
+				padding-left:0.13rem;
+			}
+			.conHeader .more{
+				font-size: 0.14rem;
+				color:#9d9d9d;
+			}
+			/*详细信息位置*/
+			.conImg{
+				margin-left: 0.15rem;
+				border-top: 1px solid #e4e4e4;
+				padding: 0.14rem 0;
+			}
+			.conImg dt{
+				width: 0.95rem;
+				height: 0.69rem;
+				margin-right: 0.16rem;
+				
+			}
+			.conImg dt img{
+				width: 100%;
+			}
+			.conImg dd{
+				height: 0.69rem;
+				
+			}
+			.conImg dd h2{
+				font-size: 0.15rem;
+				width: 2.14rem;
+				font-family: "宋体";
+				line-height: 0.18rem;
+			}
+			.conImg dd .coxTxt{
+				font-size: 0.11rem;
+				width: 2.35rem;
+				display: flex;
+				justify-content: space-between;
+				margin-top: 0.06rem;
+				align-items: center;
+			}
+			dd .coxTxt .txt{
+				width: 0.61rem;
+				height: 0.22rem;
+				border: 1px solid #ef7e5f;
+				border-radius: 0.02rem;
+				line-height: 0.22rem;
+				text-align: center;
+			}
+			dd .coxTxt span{
+				color: #a8a8a8;
+			}
+			footer{
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 0.5rem;
+				background: #e1e1e1;
+				display: flex;
+				font-size: 0.11rem;
+				justify-content: space-around;
+				align-items: center;
+				padding-top: 0.08rem;
+				box-sizing: border-box;
+			}
+			.fooBox img{
+				width: 0.26rem;
+				margin: 0 auto 0.06rem;
+			}
+			.active{
+				color: #387ec2;
+			}
+			/*ps中测量出来的大小减半，再除100*/
+		</style>
+	</head>
+	<body>
+		<header>
+			<a href="">
+				<img class="logoImg" src="img1/logo.jpg" alt="" />
+			</a>
+			<a href="">
+				<img class="heaBtn" src="img1/btn.jpg" alt="" />
+			</a>
+		</header>
+		<main>
+			<div class="content">
+				<div class="banner">
+					<img src="img1/banner.jpg" alt="" />
+				</div>
+				<nav>
+					<b><img src="img1/btn2.jpg" alt="" />学员必看:</b>
+					<a href="">退考须知</a>
+					<a href="">退考须知</a>
+				</nav>
+				<ul class="con">
+					<li>
+						<img src="../day23-移动端适配/img1/home.jpgo" alt="" />
+						<p>企业发展</p>
+					</li>
+					<li>
+						<img src="../day23-移动端适配/img1/home.jpgo" alt="" />
+						<p>企业发展</p>
+					</li>
+					<li>
+						<img src="../day23-移动端适配/img1/home.jpgo" alt="" />
+						<p>企业发展</p>
+					</li>
+					<li>
+						<img src="../day23-移动端适配/img1/home.jpgo" alt="" />
+						<p>企业发展</p>
+					</li>
+					<li>
+						<img src="../day23-移动端适配/img1/home.jpgo" alt="" />
+						<p>企业发展</p>
+					</li>
+					<li>
+						<img src="../day23-移动端适配/img1/home.jpgo" alt="" />
+						<p>企业发展</p>
+					</li>
+					<li>
+						<img src="../day23-移动端适配/img1/home.jpgo" alt="" />
+						<p>企业发展</p>
+					</li>
+					<li>
+						<img src="../day23-移动端适配/img1/home.jpgo" alt="" />
+						<p>企业发展</p>
+					</li>
+					<li>
+						<img src="../day23-移动端适配/img1/home.jpgo" alt="" />
+						<p>企业发展</p>
+					</li>
+					<li>
+						<img src="../day23-移动端适配/img1/home.jpgo" alt="" />
+						<p>企业发展</p>
+					</li>
+					<li>
+						<img src="../day23-移动端适配/img1/home.jpgo" alt="" />
+						<p>企业发展</p>
+					</li>
+					<li>
+						<img src="../day23-移动端适配/img1/home.jpgo" alt="" />
+						<p>企业发展</p>
+					</li>
+				</ul>
+				<div class="conHeader">
+					<p class="txt">查看资讯</p>
+					<a href="" class="more">查看更多</a>
+				</div>
+				<dl class="conImg">
+					<dt>
+						<img src="../day23-移动端适配/img1/con1.jpg"/>
+					</dt>
+					<dd>
+						<h2>哈哈哈哈哈哈 | 哈哈哈,哈哈哈</h2>
+						<div class="conTxt">
+							<p class="txt">海驾活动</p>
+							<span>14天前</span>
+						</div>
+					</dd>
+				</dl>
+				<dl class="conImg">
+					<dt>
+						<img src="../day23-移动端适配/img1/con1.jpg"/>
+					</dt>
+					<dd>
+						<h2>哈哈哈哈哈哈 | 哈哈哈,哈哈哈</h2>
+						<div class="conTxt">
+							<p class="txt">海驾活动</p>
+							<span>14天前</span>
+						</div>
+					</dd>
+				</dl>
+				<dl class="conImg">
+					<dt>
+						<img src="../day23-移动端适配/img1/con1.jpg"/>
+					</dt>
+					<dd>
+						<h2>哈哈哈哈哈哈 | 哈哈哈,哈哈哈</h2>
+						<div class="conTxt">
+							<p class="txt">海驾活动</p>
+							<span>14天前</span>
+						</div>
+					</dd>
+				</dl>
+				<dl class="conImg">
+					<dt>
+						<img src="../day23-移动端适配/img1/con1.jpg"/>
+					</dt>
+					<dd>
+						<h2>哈哈哈哈哈哈 | 哈哈哈,哈哈哈</h2>
+						<div class="conTxt">
+							<p class="txt">海驾活动</p>
+							<span>14天前</span>
+						</div>
+					</dd>
+				</dl>
+				<dl class="conImg">
+					<dt>
+						<img src="../day23-移动端适配/img1/con1.jpg"/>
+					</dt>
+					<dd>
+						<h2>哈哈哈哈哈哈 | 哈哈哈,哈哈哈</h2>
+						<div class="conTxt">
+							<p class="txt">海驾活动</p>
+							<span>14天前</span>
+						</div>
+					</dd>
+				</dl>
+				<dl class="conImg">
+					<dt>
+						<img src="../day23-移动端适配/img1/con1.jpg"/>
+					</dt>
+					<dd>
+						<h2>哈哈哈哈哈哈 | 哈哈哈,哈哈哈</h2>
+						<div class="conTxt">
+							<p class="txt">海驾活动</p>
+							<span>14天前</span>
+						</div>
+					</dd>
+				</dl>
+				<dl class="conImg">
+					<dt>
+						<img src="../day23-移动端适配/img1/con1.jpg"/>
+					</dt>
+					<dd>
+						<h2>哈哈哈哈哈哈 | 哈哈哈,哈哈哈</h2>
+						<div class="conTxt">
+							<p class="txt">海驾活动</p>
+							<span>14天前</span>
+						</div>
+					</dd>
+				</dl>
+			</div>
+		</main>
+		<footer>
+			<div class="fooBox active">
+				<img src="../day23-移动端适配/img1/circle.jpg" alt="" />
+				<p>首页</p>
+			</div>
+			<div class="fooBox">
+				<img src="../day23-移动端适配/img1/circle.jpg" alt="" />
+				<p>首页</p>
+			</div>
+			<div class="fooBox">
+				<img src="../day23-移动端适配/img1/circle.jpg" alt="" />
+				<p>首页</p>
+			</div>
+			<div class="fooBox">
+				<img src="../day23-移动端适配/img1/circle.jpg" alt="" />
+				<p>首页</p>
+			</div>
+		</footer>
+	</body>
+</html>

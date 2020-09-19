@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                text()
+                类似于我们原生JS中的innerText
+
+                【注】纯文本，包括子节点中的纯文本也获取到。
+
+
+                get()
+                    需要传入参数，将JQ对象转成对应JS的dom节点
+
+                【注】JS和JQ可以共存但是不能混用。
+            */
+
+            $(function(){
+                // alert($("div").text());
+                // alert($("div").html());
+
+
+                //赋值
+                // $("div").text("<h1>hello world</h1>")
+
+
+
+
+                //取值
+                // alert($("ul li").html()); //取值的时候只能取第一个符合条件的元素。
+
+                //就必须让JQ对象后面 跟JS的语法
+                // alert($("ul li").get(2).innerHTML);
+
+
+                //设置每一个li标签，标签间内容是当前节点的下标
+
+                for(var i = 0; i < $("ul li").size(); i++){
+                    // $("ul li").get(i).innerHTML = i;
+
+                    //系统提供了一种简便的方式 .get(i) 简写成 [i];
+
+                    $("ul li")[i].innerHTML = i;
+                }
+
+            })
+
+
+        </script>
+    </head>
+    <body>
+        <div>div文本
+            <strong>strong文本</strong>
+            <em>em文本</em>
+        </div>
+        <ul>
+            <li>111</li>
+            <li>222</li>
+            <li>333</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script>
+            function download(data){
+                var oT1 = document.getElementById("t1");
+                var oInfo = document.getElementById("info");
+
+                oInfo.innerHTML = `城市：${data.city}  PM2.5：${data.pm25}`;
+
+
+                var arr = data.weather;
+                //通过循环添加数据到页面上
+                var html = ``;
+                for(var i = 0; i < arr.length; i++){
+                    html += `<tr>
+                                <td>${arr[i].date}</td>
+                                <td>${arr[i].weather}</td>
+                                <td>${arr[i].wind}</td>
+                                <td>${arr[i].temp}</td>
+                            </tr>`;
+                }
+
+                oT1.innerHTML = html;
+            }
+
+            window.onload = function(){
+                var oCity = document.getElementById("city");
+                var oSearch = document.getElementById("search");
+                
+
+                //给按钮添加点击操作
+                oSearch.onclick = function(){
+                    if(!oCity.value){
+                        alert("请输入城市名称");
+                    }else{
+                        var oScript = document.createElement("script");
+                        oScript.src = `https://api.asilu.com/weather/?city=${oCity.value}&callback=download`;
+                        document.body.appendChild(oScript);
+                    }
+                }
+
+
+            }
+        </script>
+    </head>
+    <body>
+        <div class = 'container'>
+            <div class = 'panel panel-primary'>
+                <div class = 'panel-heading'>
+                    <h2>天气查询&nbsp;&nbsp;&nbsp;&nbsp;<span id = 'info'>城市：  PM2.5：</span></h2>
+                </div>
+                <div class = 'panel-body'>
+                    <div class = 'form-group'>
+                        <label for="city">城市名称：</label>
+                        <input id = 'city' class = 'form-control' type="text" name = 'city' placeholder="请输入城市名称">
+                    </div>
+                    <button id = 'search' class = 'btn btn-primary form-control'>查询天气</button>
+                </div>
+                <div class = 'panel-footer'>
+                    <!-- 通过一个表格展示我们的数据 -->
+                    <table class = 'table table-bordered table-hover'>
+                        <thead>
+                            <tr>
+                                <th>日期</th>
+                                <th>天气</th>
+                                <th>风向</th>
+                                <th>气温</th>
+                            </tr>
+                        </thead>
+                        <tbody id = 't1' >
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

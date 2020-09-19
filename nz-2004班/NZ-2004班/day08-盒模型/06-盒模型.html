@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width:200px;
+				height: 200px;
+				background: red;
+				border:10px solid #000000;
+				padding: 10px;/*内边距*/
+				padding: 10px 30px;
+				padding: 10px 20px 30px;/*上 左右 下*/
+				padding: 10px 20px 30px 40px;/*上 右 下 左*/
+			}
+			.box2{
+				width:200px;
+				height: 200px;
+				background: red;
+				border:10px solid #000000;
+				padding-top:10px;/*顶部内边距*/
+				padding-right: 50px;/*右内边距*/
+				padding-bottom: 30px;/*底部内边距*/
+				padding-left:20px;/*左内边距*/
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			外边距:改变元素外边的间距
+			内边距:改变元素与内容的间距
+				padding:一个值;一个值,改变4个方向
+				padding:上下  左右;
+				padding:上 左右 下;
+				padding:上 右 下 左;顺时针方向变化
+				
+				padding-top:顶部内边距;
+				padding-right: 右内边距;
+				padding-bottom: 底部内边距;
+				padding-left:左内边距;
+				注意:内边距没有负值;
+				
+				margin:四个方向;
+				margin:上下 左右;
+				margin:上 左右 下;
+				margin:上 右 下 左;
+				
+				margin-top:上外边距;
+				margin-right:右外边距;
+				margin-bottom:下外边距;
+				margin-left:左外边距;
+				注意:margin可以为负值,auto自适应
+			
+			margin常见bug:
+				1:上下外边距相遇,只显示较大值
+				2:嵌套关系的元素，子元素的上外边距和父元素的上外边距相遇，取较大值
+			
+			盒模型占位大小计算:
+				w = width+左右边框+左右内边距+左右外边距
+				h = height+上下边框+上下内边距+上下外边距
+		-->
+		<div class="box">
+			<img src="img/1.png" />
+		</div>
+		<div class="box2">
+			<img src="img/1.png" />
+		</div>
+	</body>
+</html>

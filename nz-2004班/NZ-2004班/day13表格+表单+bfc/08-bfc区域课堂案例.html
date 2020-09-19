@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box1{
+				width: 300px;
+				height: 600px;
+				background: pink;
+				float: left;/*一个元素浮动*/
+			}
+			.box2{
+				height: 550px;
+				background: red;
+				overflow: hidden;/*另一个触发为bfc区域*/
+				/*position:absolute;*/
+			}
+		</style>
+	</head>
+	<body>
+		<!--两列布局-->
+			<div class="box1"></div>
+			<div class="box2"></div>
+	</body>
+</html>

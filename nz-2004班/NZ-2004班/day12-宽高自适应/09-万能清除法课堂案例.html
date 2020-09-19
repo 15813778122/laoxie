@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.list,.box{
+				background: red;
+				width: 800px;
+			}
+			/*.list:after{
+				content: "";
+				display: block;
+				width: 0;
+				height: 0;
+				clear: left;
+				overflow: hidden;
+				visibility: hidden;
+			}*/
+			.qc:after{
+				content: "";
+				display: block;
+				width: 0;
+				height: 0;
+				clear: left;
+				overflow: hidden;
+				visibility: hidden;
+			}
+			li,p{
+				list-style: none;
+				width: 200px;
+				height: 200px;
+				background: skyblue;
+				margin-left: 10px;
+				float: left;
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="list">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		
+		<div class="box">
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</div>
+	</body>
+</html>

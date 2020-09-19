@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 300px;
+				height: 300px;
+				margin: 100px;
+				background: -webkit-radial-gradient(ellipse,yellow,red,#000);
+				background: -webkit-radial-gradient(yellow 10%,red 50%,#000 70%);
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			径向渐变:(一定要加浏览器前缀)
+				从一个点到四周的渐变
+				
+				background: -webkit-radial-gradient(渐变位置,形状,大小,颜色1,颜色2);
+				渐变位置:默认从中心到四周
+					left	从左边到四周的渐变
+					right
+					top
+					bottom
+					
+					left top	从左上角到四周的渐变
+					left bottom
+					right top
+					...
+					
+					10px 30px	距离左边10px 距离上边30px
+		
+				形状:
+					默认椭圆	ellipse
+					正圆		circle
+					注意:元素是正方形,则都是正圆
+					
+				大小:
+					size：渐变的大小，即渐变到哪里停止，它有四个值。 
+					closest-side：最近边； 
+					farthest-side：最远边； 
+					closest-corner：最近角； 
+					farthest-corner：最远角。
+		-->
+		<div class="box"></div>
+	</body>
+</html>

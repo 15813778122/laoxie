@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,p,span{width: 100px; height: 100px; background-color: orange; position: absolute;}
+    </style>
+    <script src = 'jquery-1.10.1.min.js'></script>
+    <script>
+        /*
+            JQ的插件方法：
+            插件：既插既用。
+
+            【注】使用JQ的时候，大家会有这样的体验。
+            你难免有这样的牢骚，如果JQ再有一个这样的方法就更好。
+
+
+            JQ给大家提供了两个插件方法，让大家对原来的JQ函数进行二次拓展。
+
+            $.extend()     拓展JQ的工具方法  $.xxx() $.yyy()
+            $.fn.extend()  拓展JQ的对象方法  $().xxx()  $().yyy();
+        */
+
+        //拓展插件函数
+        $.extend({
+            aaa: function(){
+                alert("工具方法");
+            }
+        })
+        $.fn.extend({
+            aaa: function(){
+                alert("JQ方法");
+            },
+            drag: function(){
+                //this = $("div");
+                //实现拖拽的具体的代码
+                this.mousedown(function(ev){
+                    //this 指向当前按下的div，JS对象
+                    var offsetX = ev.clientX - $(this).offset().left;
+                    var offsetY = ev.clientY - $(this).offset().top;
+
+                    var _this = this; //记录一下当前按下的div
+                    $(document).mousemove(function(ev){
+                        $(_this).css({
+                            left: ev.clientX - offsetX,
+                            top: ev.clientY - offsetY
+                        })
+                    })
+                })
+
+                $(document).mouseup(function(){
+                    $(document).off("mousemove");
+                })
+                return this;
+            }
+        })
+
+        $(function(){
+            // $.aaa();         //工具方法
+            // $("div").aaa();  //JQ方法
+
+
+            //给div添加拖拽效果
+            $("div").drag().mousedown(function(){
+                $(this).css("backgroundColor", 'red')
+            }).mouseup(function(){
+                $(this).css("backgroundColor", 'blue')
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <!-- <p>p</p>
+    <span>span</span> -->
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div{width: 200px; height: 200px; border: 1px solid black;}
+        </style>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                jquery 因为要满足所有人下载需求。
+                【注】jquery提供多种多样，多种形态下载数据的方法。
+            */
+            $(function(){
+                $("button").eq(0).click(function(){
+                    /*
+                        第一个参数是：下载数据的url
+                        第二个参数是：回调函数，下载完成以后执行的函数
+
+                        load 作用：
+                        1、下载数据
+                        2、将下载到的数据，填充到选中元素的innerHTML
+                    */
+                    $("div").load("demo.txt", function(body, statusText, xhr){
+                        alert(body); //通过url下载到的数据
+                        alert(statusText); //下载状态的文本 success error
+                        alert(xhr.status);  //ajax对象
+                    })
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <button>ajax_load方法</button>
+        <div></div>
+        <div></div>
+        <div></div>
+    </body>
+</html>

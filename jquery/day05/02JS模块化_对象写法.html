@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+
+            /*
+                解决：全局变量污染的问题。
+                问题：
+                    对象写法所有属性和函数，都不是私有，
+                    外部都可以访问的到。
+            */
+            //A同学
+            var moduleA = {
+                _count: 10,
+                funcA: function(){
+                    this._count += 100;
+                    console.log(this._count);
+                },
+                funcB: function(){
+                    this._count *= 20;
+                    console.log(this._count);
+                }
+            }
+
+            //B同学
+            var moduleB = {
+                _count: 100,
+                funcA: function(){
+                    this._count -= 10;
+                    console.log(this._count);
+                },
+                funcB: function(){
+                    this._count *= 6;
+                    console.log(this._count);
+                }
+            }
+
+            //上述重名的变量和函数，都属于不同的对象。
+            moduleA._count = 1000;
+            moduleA.funcA();
+            moduleA.funcB();
+
+            moduleB.funcA();
+            moduleB.funcB();
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

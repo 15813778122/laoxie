@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            //attr 专门用来操作某些元素节点的行间属性
+            $(function(){
+                //取值  
+                // alert($("div").attr("id"));
+                // alert($("div").attr("title"));
+                // alert($("div").attr("name"));
+                // alert($("div").attr("xxx"));
+
+
+                //赋值
+                // $("div").attr("id", "div2");
+                // $("div").attr("title", "box");
+                // $("div").attr("name", "box5");
+                // $("div").attr("zzz", "ooo");
+
+
+                //如果我们想要同时给多个值进行赋值，我们可以直接传入对象
+                $("div").attr({
+                    id: "div2",
+                    title: "box",
+                    name: "box5",
+                    zzz: "ooo"
+                })
+            })
+
+        </script>
+    </head>
+    <body>
+        <div id = 'div1' title = 'world' name = 'hello' xxx = 'yyy'></div>
+    </body>
+</html>

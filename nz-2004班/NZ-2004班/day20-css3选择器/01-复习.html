@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style type="text/css">
+            *{margin: 0;padding: 0;}
+            input:checked + label{
+                color:red;
+                background: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            css3优点:完全向后兼容,浏览器还同时支持css2
+             
+           	 渐进增强(从小到大)  优雅降级(从大到小)
+             
+            css3选择器:
+                	属性选择器:
+                    e[attr]{}   选中e元素,且有attr属性
+                    e[attr="value"]{}   选中e元素,且attr="value"
+                    e[attr~="value"]{} 选中e元素,包含attr="value",value值是其中一个
+                     
+               	 伪类选择器:
+                    	结构伪类:
+                        :first-child{}  第一个子元素
+                        :last-child{}   最后一个子元素
+                        :nth-child(n){} 指定位置的子元素
+                            2n  偶数 even
+                            2n-1 奇数 odd
+                        :first-of-type{}    指定类型的第一个子元素
+                        :last-of-type{}     指定类型的最后一个子元素
+                        :nth-of-type(n){}   指定类型,且指定位置的子元素
+                         
+                    	目标伪类: 
+                        e:target{}  匹配所有的e元素,且匹配关联的元素
+                        	手风琴效果
+                         
+                    UI状态伪类:(主要用于form表单元素)
+                        :enabled{}  选中可用状态
+                        :disabled{} 选中不可用状态
+                        :checked{}  选中默认选中状态
+                        ::selection{}   选中用户选中的状态改变高亮(颜色)
+                         
+                    	动态伪类:
+                        :link{}
+                        :visited{}
+                        :hover{}
+                        :active{}
+                        :focus{} 用户行为选择器,元素获取焦点
+                 
+                	层级选择器:
+                    e > f:   e元素下的所有子集f,不包括孙集
+                     
+                    e + f:  e元素后的第一个兄弟f  (只选中了一个)
+                     
+                    e ~ f:  e元素后所有的兄弟f  (选中不止一个)
+                 
+        -->
+        <!--遗留小案例-->
+        <form action="">
+            <input type="radio" name="man" id="ha" />
+            <label for="ha">哈哈哈哈1</label>
+             
+            <input type="radio" name="man" id="aa" />
+            <label for="aa">哈哈哈哈2</label>
+             
+            <input type="checkbox" id="pg" />
+            <label for="pg">苹果</label>
+            <input type="checkbox" id="lz" />
+            <label for="lz">栗子</label>
+            <input type="checkbox" id="jz" />
+            <label for="jz">橘子</label>
+            <input type="checkbox" id="mt" />
+            <label for="mt">馒头</label>
+        </form>
+    </body>
+</html>

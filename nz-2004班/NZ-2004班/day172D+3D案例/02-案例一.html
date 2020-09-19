@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				height: 100%;
+			}
+			body{
+				background: #ccc;
+				/*overflow: hidden;*/
+			}
+			li{
+				list-style: none;
+			}
+			.box{
+				height: 100%;
+			}
+			ul{
+				width:140px;
+				position: fixed;
+				right: 20px;
+				top: 0;
+			}
+			li{
+				width: 120px;
+				height: 120px;
+				background: #fff;
+				border-radius: 50%;/*设置圆角*/
+				border:10px solid #fff;
+			}
+			/*将a标签放大*/
+			a{
+				display: block;/*转为块级元素*/
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				background: rgba(0,0,0,0.5);
+				transition:all 1s;
+			}
+			a:hover{
+				background: rgba(0,0,0,0);
+			}
+			li:nth-child(1){
+				background: url("img1/1-1.jpg") center;
+			}
+			li:nth-child(2){
+				background: url("img1/2-1.jpg") center;
+			}
+			li:nth-child(3){
+				background: url("img1/3-1.jpg") center;
+			}
+			li:nth-child(4){
+				background: url("img1/4-1.jpg") center;
+			}
+			li:nth-child(5){
+				background: url("img1/5-1.jpg") center;
+			}
+			/*大图*/
+			.box img{
+				width: 100%;
+				height: 100%;
+				transition:all 2s;
+				position: fixed;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				margin: auto;
+			}
+			/*ul是第一个子集	img是第二个子集*/
+			.box img:nth-child(2){
+				transform: translateY(-100%);
+				
+			}
+			.box img:nth-child(2):target{
+				transform: translateY(0);
+			}
+			.box img:nth-child(3){
+				transform: translateX(-100%);
+			}
+			.box img:nth-child(3):target{
+				transform: translateX(0);
+			}
+			.box img:nth-child(4){
+				transform: rotate(0deg);
+				opacity: 0;
+			}
+			.box img:nth-child(4):target{
+				transform: rotate(360deg);
+				opacity: 1;
+			}
+			.box img:nth-child(5){
+				transform: scale(0);
+				opacity: 0;
+			}
+			.box img:nth-child(5):target{
+				transform: scale(1);
+				opacity: 1;
+			}
+			.box img:nth-child(6){
+				transform: scale(2);
+				opacity: 0;
+			}
+			.box img:nth-child(6):target{
+				transform: scale(1);
+				opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul>
+				<li><a href="#img1"></a></li>
+				<li><a href="#img2"></a></li>
+				<li><a href="#img3"></a></li>
+				<li><a href="#img4"></a></li>
+				<li><a href="#img5"></a></li>
+			</ul>
+			<img src="img1/1.jpg" alt="" id="img1"/>
+			<img src="img1/2.jpg" alt="" id="img2"/>
+			<img src="img1/3.jpg" alt="" id="img3"/>
+			<img src="img1/4.jpg" alt="" id="img4"/>
+			<img src="img1/5.jpg" alt="" id="img5"/>
+		</div>
+	</body>
+</html>

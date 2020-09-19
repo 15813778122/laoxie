@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			2d:
+				transform:skew();倾斜
+				
+			3d:
+				区别于2d的地方,3d有近大远小
+				景深:
+					perspective:;元素视线的距离,一般在父元素中使用
+					900px-1200px
+					
+				事物的观察点:
+					perspective-origin:;
+						center left right top bottom
+						% px
+						
+				3D的场景:
+					transform-style:;
+						flat	默认值,是呈现在2d场景中
+						preserve-3d	呈现在3d中
+					
+					3d位移
+					3d旋转
+					3d缩放
+					注:比2d多一个z轴
+					
+			css3动画	
+				1:定义一个动画过程
+					1)@keyframes mz{
+						from{初始状态}
+						to{结束状态}
+					}
+					2)keyframes mz{
+						0%{初始状态}
+						...
+						100%{结束状态}
+					}
+					
+				2:给对应的元素调用
+					animation:动画名字 运动时间 运动的类型 动画延迟时间 动画是否循环 运动的方向;
+					animation-name:;
+					animation-duration:;
+					animation-timing-function:;
+					animation-delay:;
+					animation-iteration-count:;
+					animation-direction:;
+					
+				鼠标移入时暂停:
+					animation-play-state:;
+					
+				animation 和 transition的对比:
+					相同点:都是随着时间的改变而改变元素的属性值
+					不同点:transition需要触发一个事件才会引起元素属性的改变
+						animation不需要任何事件触发也可以完成元素随着时间的变化而改变属性
+					
+			添加:
+				background:rgba(红,绿,蓝,透明);
+					透明取值范围0-1
+					
+				border-radius:圆角;
+				
+				backface-visibility:hidden;背面不可见
+				
+				选择器:target{}	关联目标元素
+		-->
+	</body>
+</html>

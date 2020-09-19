@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src = "jquery-1.10.1.min.js"></script>
+        <script>
+            /*
+
+
+                wrap()  独立包装
+
+                wrapAll()   整体包装
+                
+                wrapInner() 内部包装
+
+                unwrap()    取消包装，如果当前节点外层有包装，去掉，body不能去
+            */
+
+            $(function(){
+                //给页面所有span标签，都包装一个p节点
+                // $("span").wrap("<p title = 'hello' name = 'world'></p>");
+
+                // $("span").wrapAll("<p title = 'hello' name = 'world'></p>");
+
+                // $("span").wrapInner("<p title = 'hello' name = 'world'></p>");
+
+                $("span").unwrap();
+            })
+        </script>
+    </head>
+    <body>
+        <div>
+            <span>span1</span>
+        </div>
+        <span>span2</span>
+        <span>span3</span>
+        <span>span4</span>
+    </body>
+</html>

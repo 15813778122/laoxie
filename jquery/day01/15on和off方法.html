@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div{width: 100px; height: 100px; background-color: red; margin: 20px;}
+        </style>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+
+            /*
+                on   事件绑定
+                off  事件解绑
+            */
+            $(function(){
+                //绑定点击事件在div上
+                /*
+                $("div").click(function(){
+                    alert("单击");
+                })
+                */
+                //1、给单个事件，绑定单个函数
+                /*
+                $("div").on("click", function(){
+                    alert("点击");
+                })*/
+
+                //2、给多个事件，一定要用空格隔开，绑定同一个函数
+                /*
+                var i = 0;
+                $("div").on("click mouseover", function(){
+                    $(this).html(i++);
+                })*/
+
+                //3、给不同的事件添加不同的方法
+                
+                $("div").on({
+                    click: function(){
+                        alert("点击");
+                    },
+                    mouseover: function(){
+                        $(this).css("backgroundColor", 'blue');
+                    },
+                    mouseout: function(){
+                        $(this).css("backgroundColor", 'orange');
+                    }
+                })
+                function show(){
+                    alert("hello world");
+                }
+
+                $("div").click(show); //click 有两个函数
+
+
+                //取消事件绑定，通过off方法
+                $("button").eq(1).click(function(){
+                    //1、取消div上所有的事件和函数
+                    // $("div").off();
+
+                    //2、取消div上某一个事件下的所有函数
+                    // $("div").off("click");
+
+                    //3、取消div上某一个事件下的某一个指定的函数(必须有这个函数的函数名)
+                    $("div").off("click", show);
+                })
+
+
+                //4、实现事件委托
+                /*
+                $("ul li").click(function(){
+                    //让当前点击的li变成红色
+                    $(this).css("backgroundColor", 'red');
+                })*/
+                
+                /*
+                    第一个参数： 绑定事件类型
+                    第二个参数： 目标对象的选择器target
+                    第三个参数： 绑定的函数  this会强制指向第二个参数选中的目标对象。
+                
+                $("ul").on("click", "li", function(){
+                    $(this).css("backgroundColor", 'red');
+                })
+
+                var i = 5;
+                $("button").eq(0).click(function(){
+                    //新增li节点添加到ul中
+                    $(`<li>${i++ * 111}</li>`).appendTo($("ul"));
+                })
+                */
+            })
+
+        </script>
+    </head>
+    <body>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <ul>
+            <li>111</li>
+            <li>222</li>
+            <li>333</li>
+            <li>444</li>
+        </ul>
+        <button>添加新的li节点</button>
+        <button>取消事件绑定</button>
+        
+    </body>
+</html>

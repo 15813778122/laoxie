@@ -1,0 +1,22 @@
+.list{
+	list-style: none;
+	width: 150px;
+	background: pink;
+}
+.list li{
+	height: 40px;
+	border-bottom: 1px solid #000;/*设置li下边框*/
+	background: yellow;
+	text-align: center;
+	line-height: 40px;
+}
+/*第一个li*/
+.list .listli{
+	background: cornflowerblue;
+	color: #fff;
+	font-weight: bold;
+}
+.list li:hover{
+	background: skyblue;
+	
+}

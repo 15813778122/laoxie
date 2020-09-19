@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style> 
+            div{padding: 50px;}
+            #div1{background-color: blue;}
+            #div2{background-color: orange;}
+            #div3{background-color: greenyellow;}
+
+        </style>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+
+            【注】JQ 1.0系列直接兼容到IE8以下的。
+
+
+            以下学习的所有的方法都是我们已经兼容过的一些事件细节。      
+                ev     事件对象
+                【注】获取当前鼠标的位置。
+                pageX    pageY    距离整个页面左上角为原点，包含滚动距离
+                clientX clientY   距离可视窗口的左上角为原点。
+
+
+                which 
+                鼠标事件下，类似于之前在js中实现的一个属性叫做button
+                 1  鼠标左键
+                 2  鼠标滚轮
+                 3  鼠标右键
+
+
+                键盘事件下，keydown  代表的是键码(不区分大小写的码) 支持全键盘
+                          keypress 代表的是字符码(区分大小写的码) 只支持字符键
+                在不同的事件类型下代表的意思不太一样。
+                
+                
+                
+                【注】下述这两个方法是已经兼容后的两个方法。
+                preventDefault   阻止默认事件
+                stopPropagation  阻止事件冒泡
+            */
+
+            /*
+            window.onload = function(){
+                document.onclick = function(ev){
+                    //获取事件对象
+                    var e = ev || window.event; //给事件对象做浏览器的兼容
+                }
+            }
+            */
+
+            $(function(){
+                $(document).mousedown(function(ev){
+                    //ev JQ中兼容后的事件对象
+
+                    //输出当前点击鼠标的坐标
+
+                    // alert(ev.clientX + ", " + ev.clientY);
+                    // alert(ev.pageX + ", " + ev.pageY);
+
+                    // alert(ev.which);
+                })
+
+                // $(document).keydown(function(ev){
+                //     alert(ev.which);
+                // })
+
+
+                //这个事件只支持字符键
+                // $(document).keypress(function(ev){
+                //     alert(ev.which);
+                // })\
+
+
+                /*
+                    大家在日常开发的时候，不要为了使用JQ而使用JQ。
+                    一定要按照实际需求，选择简洁的方式进行操作。
+                */
+                //给三个div添加点击
+                $("div").click(function(ev){
+                    //输出点击div的id
+                    alert(this.id);
+                    // alert($(this).attr("id")); 这里代码运行效率是要远低于上面这行代码的。
+
+                    //阻止事件冒泡
+                    ev.stopPropagation();
+                })
+
+
+                $("a").click(function(ev){
+                    //阻止a链接的默认行为
+                    alert("我是a链接")
+
+                    //比较麻烦
+                    // ev.preventDefault();
+                    // ev.stopPropagation();
+
+                    //系统给我们提供了一种更加简便的方式
+                    return false; // 在JQ中的事件绑定函数中，return false 代表既阻止事件冒泡，又阻止默认行为。
+                    
+                })
+            })
+
+        </script>
+    </head>
+    <body style = 'height: 3000px'>
+        <h1>hello world</h1>
+        <h1>hello world</h1>
+        <h1>hello world</h1>
+        <div id = 'div1'>
+            <div id = 'div2'>
+                <div id = 'div3'>
+                    <a href="https://www.baidu.com">百度</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.list{
+				width: 400px;
+				height: 500px;
+				background: pink;
+				margin: 100px auto;
+			}
+			li{
+				background: skyblue;
+				margin-bottom: 2px;
+				list-style: none;
+				height: 40px;
+			}
+			/*第一个元素*/
+			li:first-child{
+				color: red;
+			}
+			/*最后一个元素*/
+			li:last-child{
+				color: red;
+			}
+			/*选中第二个元素*/
+			li:nth-child(2){
+				color: blue;
+				font-size: 20px;
+			}
+			/*选中所有元素*/
+			li:nth-child(n){
+				color: blue;
+				font-size: 20px;
+			}
+			/*只选中只有一个同级元素的li*/
+			li:only-child{
+				background: red;
+			}
+			/*倒数的第几个元素*/
+			ul:nth-last-child(2){
+				border: 10px solid #000;
+			}
+			
+			p:first-of-type{
+				color:red;
+			}
+			span:first-of-type{
+				color: red;
+			}
+			
+			p:last-of-type{
+				font-size: 30px;
+			}
+			span:last-of-type{
+				font-size: 40px;
+				color: pink;
+			}
+			p:nth-of-type(4){
+				color: pink;
+			}
+			a:only-of-type{
+				color: purple;
+			}
+			a:only-child{
+				background: purple;
+			}
+			span:nth-last-of-type(3){
+				color: gold;
+				background: yellow;
+			}
+			/*直接选中根元素html*/
+			:root{
+				background: #ccc;
+			}
+			/*选中空元素*/
+			a:empty{
+				display: block;
+				width: 400px;
+				height: 400px;
+				background: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			结果伪类选择器:	
+				:first-child{}	选中第一个元素
+				:last-child{}	选中最后一个元素
+				:nth-child(n){}	n是从0开始的,
+					2n		偶数列 even
+					2n-1	奇数列 odd
+				:only-child{}	选中只有本身一个同级的元素	
+				:nth-last-child(n){}	倒数第n个元素
+		-->
+		
+		<!--
+			所有小孩中的第一个 first-child{}
+                	未分类 p1是第一个 
+                      span4是第四个
+                       
+            	男孩中的第一个 first-of-type{}
+               	 分类后 p1是第一个
+            	女孩中的第一个 first-of-type{}
+                	分类后 span4是第一个
+             
+            	有很多同级元素,但是只有一个a标签 :only-of-type{}
+            	没有其他同级元素,只有一个a标签 :only-child{}
+		-->
+		<ul class="list">
+			<li>哈哈哈1<a href="#">1111</a></li>
+			<li>哈哈哈2<a href="#"></a></li>
+			<li>哈哈哈3<a href="#"></a></li>
+			<li>哈哈哈4<a href="#"></a></li>
+		</ul>
+		
+		<div class="box">
+			<p>哈哈哈哈哈哈哈哈哈哈1</p>
+			<p>哈哈哈哈哈哈哈哈哈哈2</p>
+			<p>哈哈哈哈哈哈哈哈哈哈3</p>
+			<span>嘿嘿嘿4</span>
+			<span>嘿嘿嘿5</span>
+			<span>嘿嘿嘿6</span>
+			<a href="">123</a>
+			<p>哈哈哈哈哈哈哈哈哈哈7</p>
+			<p>哈哈哈哈哈哈哈哈哈哈8</p>
+			<p>哈哈哈哈哈哈哈哈哈哈9</p>
+			<p>哈哈哈哈哈哈哈哈哈哈10</p>
+		</div>
+	</body>
+</html>

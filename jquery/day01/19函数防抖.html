@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #div1{width: 200px; height: 200px; background-color: orange; font-size: 30px; line-height: 200px; text-align: center;}
+        </style>
+        <script>
+            window.onload = function(){
+                var oDiv = document.getElementById("div1");
+                var i = 0;
+
+                //触发的频率太高了
+                oDiv.onmousemove = function(){
+                    this.innerHTML = i++;
+                }
+
+                //让函数调用的频率降下来
+
+                var show = (function(){
+                    var timer = null;
+                    var i = 0;
+                    return function(){
+                        if(timer){
+                            return;
+                        }
+                        timer = setInterval(function(){
+                            oDiv.innerHTML = i++;
+                            clearInterval(timer);
+                            timer = null;
+                        }, 500);
+                    }
+                })();
+
+                oDiv.onmousemove = show;
+
+
+            }
+        </script>
+    </head>
+    <body>
+        <div id = 'div1'></div>
+    </body>
+</html>

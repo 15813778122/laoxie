@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			#small img{width: 250px; height: 364px;}
+			#small{width: 250px; height: 364px; position: absolute; left: 50px; top: 50px; border: 1px solid black}
+			#big img{width: 1000px; height: 1458px; position: absolute;}
+			#big{width: 400px; height: 398px; position: absolute; left: 500px; top: 50px; border: 1px solid black; overflow: hidden;}
+			#mark{width: 100px; height: 100px; background-color: white; opacity: 0.5; filter: alpha(opacity=50); position: absolute; left: 0px;top: 0px; display: none}
+		</style>
+		<script src = 'jquery-1.10.1.min.js'></script>
+		<script>
+			/*
+				mouseover
+				mouseout  这两个事件如果经过子节点，会重复触发
+
+				mouseenter
+				mouseleave 这两个事件经过子节点的时候，不会重复触发
+
+			 */
+			$(function(){
+				$("#small").mouseenter(function(){
+					$("#mark").show();
+				}).mouseleave(function(){
+					$("#mark").hide();
+				}).mousemove(function(ev){
+					var l = ev.clientX - $("#small").offset().left - 50;
+					var t = ev.clientY - $("#small").offset().top - 50;
+
+					//限制出界
+					if(l <= 0){
+						l = 0;
+					}
+					if(l >= 150){
+						l = 150
+					}
+
+					if(t <= 0){
+						t = 0;
+					}
+					if(t >= 265){
+						t = 265;
+					}
+
+					//改变遮罩层的位置
+					$("#mark").css({
+						left: l,
+						top: t
+					})
+					//同时移动大图片的位置，反向四倍的距离
+					$("#big img").css({
+						left: -l * 4,
+						top: - t * 4
+					})
+				})
+
+				//鼠标移动事件
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div id = 'small'>
+			<img src="1.jpg" alt="">
+			<div id = 'mark'></div>
+		</div>
+		<div id = 'big'>
+			<img src="1.jpg" alt="">
+		</div>
+	</body>
+</html>

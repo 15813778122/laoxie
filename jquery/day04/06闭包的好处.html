@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            /*
+                闭包的好处
+                    1、避免全局变量污染
+                    2、希望变量可以常驻内存
+                    3、可以声明私有成员
+            */
+
+            /*
+            function aaa(){
+                var a = 2;
+                function bbb(){
+                    a++;
+                    console.log(a);
+                }
+                return bbb;
+            }
+
+            var ccc = aaa();
+            ccc();
+            ccc();
+            console.log(a);
+            */
+
+            
+            /*
+            var ccc = (function(){
+                var a = 2;
+                return function(){
+                    a++;
+                    console.log(a);
+                };
+            })();
+
+            ccc();
+            ccc();
+            console.log(a);
+            */
+
+
+            var ccc = (function(){
+                var a = 2;
+                return function(){
+                    a++;
+                    console.log(a);
+                }
+            })();
+
+            ccc();
+            ccc();
+
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

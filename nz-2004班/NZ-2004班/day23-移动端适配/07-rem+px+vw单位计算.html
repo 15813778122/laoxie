@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html{
+				font-size: 100px;
+			}
+			.box{
+				width: 1rem;
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<!--
+			使用vw是为了让元素的大小能受到屏幕的大小变化而控制
+			让整体使用rem的单位,跟随html中font-size的设置
+			
+			640设计图:
+			100vw = 满屏 = 320px
+				1vw = 3.2px
+				?vw = 100px
+				100/3.2 = 31.25vw
+				得出 31.25vw = 100px
+			
+			750设计图
+			100vw = 满屏 = 375px
+				100vw = 375px
+				1vw = 3.75px
+				?vw = 100px
+				100/3.75 ~ 26.6666666.....
+				得出26.67vw = 100px
+				
+				假设1rem = 120px
+				1vw = 3.75px
+				?vw = 120px
+				120/3.75 = 32vw
+				得出 32vw = 120px
+				
+		记住:
+			如果使用vw + rem实现页面布局适配
+				设计图是750px html{font-size:26.67vw;}
+				设计图是640px html{font-size:31.25vw;}
+		-->
+	</body>
+</html>

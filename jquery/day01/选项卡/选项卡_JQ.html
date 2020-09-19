@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            #div1 button{width: 100px; height: 30px; background-color: gray; color: white;font-size: 18px;}
+            #div1 div{width: 360px; height: 360px; border: 1px solid black; background-color: gray; color: white;display: none;}
+            #div1 .active{background-color: orange;}
+        </style>
+        <script src = '../jquery-1.10.1.min.js'></script>
+        <script>
+            //this document window JS对象，如果想要后面JQ的方法，需要转成JQ对象 $(this) $(document) $(window);
+
+            $(function(){
+                var aBtns = $("#div1").find("button");
+                var aDivs = $("#div1").find("div");
+
+                aBtns.click(function(){
+                    aBtns.attr("class", "");
+                    aDivs.css("display", 'none');
+                    $(this).attr("class", "active");
+                    aDivs.eq($(this).index()).css("display", 'block');
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div id = 'div1'>
+            <button class = 'active'>卡卡罗特</button>
+            <button>贝吉塔</button>
+            <button>特兰克斯</button>
+            <div style = 'display: block;'>孙悟空，本名卡卡罗特，日本漫画及改编动画《龙珠》系列的主角，是来自贝吉塔行星的赛亚人。小时候以“下级战士”的身份被送到地球。被武道家孙悟饭收养并取名为“孙悟空”。小时候失控变成大猩猩踩死悟饭后独自生活在深山。有一天结识少女</div>
+            <div>贝吉塔，日本漫画及改编动画《龙珠》系列中的主要角色。是战斗民族赛亚人的王子，拥有极高的自尊心。过去贝吉塔行星被弗利萨毁灭后（不知情，一直以为是被陨石撞击而毁灭。）在弗利萨军团那儿做事。初登场时是个侵略地球的反派角色，后被孙...</div>
+            <div>特兰克斯，日本漫画《龙珠》系列的重要角色之一。赛亚人王子贝吉塔和地球科学家布尔玛之子，保卫地球的Z战士之一。龙珠系列中总共出现了4个特兰克斯，其实是属于4个平行时间线的同一个人：时空1（主时空）的特兰克斯以婴儿的身份初登场于《龙珠Z》人造人篇。少年时期性格任性、顽皮，剧情集中在《龙珠Z...</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				font-size: 30px;
+				color: blue;
+			}
+			#wrap{
+				font-size: 60px;
+				color: pink;
+			}
+			.box{
+				font-size: 40px;
+				color: gold;
+			}
+			div{
+				font-size: 20px;
+				color: red;
+			}
+			#box1 .txt span{color: red;font-size: 30px00;}
+			.box .txt .spa{color:yellow;font-size: 40px;}
+		
+			
+			#box3 .box4 p .spa{color: red;font-size: 30px;}
+			#box3 div .txt span{color:yellow;font-size: 40px;}
+			
+			.main{
+				color: green !important;
+				font-size: 30px;
+				color: skyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+        	选择器权重对比
+        		id > class > 类型选择器
+        		100	   10	     1
+        		
+        		内联样式选择器权重值 1000
+        		
+        		包含选择器权重值为各个选择器权重之和
+        		
+        		css层叠性:
+        			指的就是css优先加载权重高的
+        -->
+		<div class="box" id="wrap">选择器权重对比</div>
+		
+		<div id="box1" class="box2">
+			<p class="txt">
+				<span class="spa">包含选择器权重计算</span>
+			</p>
+		</div>
+		
+		<div id="box3">
+			<div class="box4" id="box4">
+				<p class="txt">
+					<span class="spa" style="color: blue;">文本内容</span>
+				</p>
+			</div>
+		</div>
+		
+		<div class="main" style="color: red;">文本内容</div>
+	</body>
+</html>

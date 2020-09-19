@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.txt{
+				width: 200px;
+				height: 100px;
+				background: red;
+				font-size: 20px;
+				color: #FFFF00;
+				
+			}
+			/*鼠标移入.txt元素,改变.txt背景和文本颜色
+			 	自己打自己，自己疼
+			 * */
+			.txt:hover{
+				background: yellow;
+				color: red;
+			}
+			.box1{
+				width:400px;
+				height:200px;
+				color:red;
+			}
+			.box1 .txt1{
+				width:200px;
+				height:100px;
+				color:yellow;
+			}
+			/*.txt1:hover{
+				background:pink;
+			}*/
+			/*鼠标移入.box1,改变后代.txt1
+			 自己打自己，后代疼
+			 */
+			.box1:hover .txt1{
+				background: skyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="txt">伪类选择器测试</p>
+		<div class="box1">
+			<p class="txt1">伪类选择器测试</p>
+		</div>
+	</body>
+</html>

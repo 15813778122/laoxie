@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			/*方式一*/
+			.box{
+				width: 500px;
+				height: 400px;
+				background: red;
+				margin: 200px;
+				position: relative;/*作为参考物 给父级元素*/
+			}
+			.con{
+				width: 100px;
+				height: 100px;
+				background: pink;
+				position: absolute;/*子元素改变自己得位置*/
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;/*自适应*/
+			}
+			
+			/*方式二*/
+			.box1{
+				width: 500px;
+				height: 400px;
+				background: red;
+				margin: 200px;
+				position: relative;/*父级作为参考物*/
+			}
+			.con1{
+				width: 100px;
+				height: 100px;
+				background: pink;
+				position: absolute;/*子级作为被参考物*/
+				top:50%;
+				left: 50%;
+				margin-left: -50px;
+				margin-top: -50px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--方式一-->
+		<!--<div class="box">
+			<div class="con"></div>
+		</div>-->
+		
+		<!--方式二-->
+		<!--<div class="box1">
+			<div class="con1"></div>
+		</div>-->
+		
+		
+		<div class="con"></div>
+	</body>
+</html>

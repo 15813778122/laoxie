@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+				color: #000;
+			}
+			.list{
+				width: 600px;
+				height: 50px;
+				background: pink;
+				margin: 100px;
+			}
+			.list li{
+				float: left;
+				width: 100px;
+				height: 50px;
+				background: blue;
+				margin-right: 2px;
+				line-height: 50px;
+				text-align: center;
+				position: relative;
+			}
+			a{
+				color: #f00;
+				font-weight: bold;
+				background:yellow;
+				display: block;
+				width: 100px;
+				height: 50px;
+			}
+			.txt{
+				width: 100px;
+				background: gold;
+				position: absolute;
+				top: 50px;
+				left: 0;
+				display: none;/*初始状态是隐藏*/
+			}
+			li:hover .txt{
+				display: block;
+			}
+			.txt p:hover{
+				background: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="list">
+			<li><a href="">首页</a></li>
+			<li><a href="">首页</a></li>
+			<li><a href="">首页</a></li>
+			<li><a href="">首页</a></li>
+			<li>
+				<a href="">更多</a>
+				<div class="txt">
+					<p>哈哈1</p>
+					<p>哈哈2</p>
+					<p>哈哈3</p>
+					<p>哈哈4</p>
+					<p>哈哈5</p>
+					<p>哈哈6</p>
+				</div>
+			</li>
+		</ul>
+	</body>
+</html>

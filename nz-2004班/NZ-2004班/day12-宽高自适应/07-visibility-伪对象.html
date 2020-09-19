@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box1{
+				width: 400px;
+				height: 100px;
+				background: red;
+			}
+			.box2{
+				width: 300px;
+				height: 50px;
+				background: skyblue;
+				visibility: hidden;/*隐藏 占据位置*/
+			}
+			.box1:hover .box2{
+				visibility: visible;/*显示 占据位置*/
+			}
+			.con1{
+				width: 400px;
+				height: 100px;
+				background: red;
+			}
+			.con2{
+				width: 300px;
+				height: 50px;
+				background: skyblue;
+				display: none;/*隐藏 不占据位置*/
+			}
+			.con1:hover .con2{
+				display: block;/*显示 占据位置*/
+			}
+			.txt{
+				height: 30px;
+				background: gold;
+			}
+			
+			/*伪对象*/
+			.box3{
+				width: 400px;
+				height: 200px;
+				margin: 100px;
+				background: pink;
+				font-size: 20px;
+			}
+			/*在.box3的内容之后添加*/
+			.box3:after{
+				content: "呵呵呵呵呵";/*添加了内容*/
+				width: 200px;
+				height: 50px;
+				background: skyblue;
+				display: inline-block;/*块级元素*/
+			}
+			/*在.box3的内容之后添加*/
+			/*.box3:before{
+				content: "hhhh";/*添加了内容
+				width: 200px;
+				height: 50px;
+				background: skyblue;
+				display:inline-block;/*块级元素
+			}*/
+			.box3:first-letter{
+				font-size: 30px;
+				color: red;
+			}
+			.box3:first-line{
+				color: yellow;
+				background: orange;
+			}
+			/*对行级元素和行块级元素无效*/
+			span:first-letter{
+				font-size: 20px;
+				color: red;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			visibility:显示隐藏;
+				hidden	隐藏
+				visible	显示
+				
+			visibility 和 display 的区别
+				1:都可以显示隐藏元素
+				2:
+					visibility:hidden;	占据文档流
+					display:none;		脱离文档流
+					
+			伪对象:
+				:after{content:"";}在...之后，伪装一个元素，可以添加样式
+				:before{content:"";}在...之前，伪装一个元素，可以添加样式
+				:first-letter{}针对第一个字设置样式，只应用于与块级元素
+				:first-line{}针对第一行字设置样式，只应用于与块级元素
+		-->
+		<div class="box1">
+			<div class="box2"></div>
+			<p class="txt">辅助看效果</p>
+		</div>
+		==========
+		<div class="con1">
+			<div class="con2"></div>
+			<p class="txt">辅助看效果</p>
+		</div>
+		
+		<div class="box3">我是哈哈哈哈</div>
+	</body>
+</html>

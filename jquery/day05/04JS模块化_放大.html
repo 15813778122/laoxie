@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- moduleA.js 多花了些时间才加载成功呢？  -->
+       
+        <script src = 'moduleA_plus.js'></script>
+        <script src = 'moduleA.js'></script> 
+        
+        <script>
+            moduleA.aaa();
+            moduleA.bbb();
+            moduleA.ccc();
+
+            /*
+                解决：
+                    1、全局变量污染
+                    2、所有的内容都私有化
+
+                解决：
+                    如果想要对原有的代码进行二次修改，是非常困难。
+
+                问题：加载顺序，必须按照我们编写代码的顺序加载。
+                【注】我们希望我们编写完的代码，可以通过任何的顺序加载成功。
+            */
+            /*
+                A同学
+           
+            var moduleA = (function(){
+                var _count = 10;   //私有变量
+
+                function showA(){  //私有函数
+                    _count += 20;
+                    console.log(_count);
+                }
+
+                function showB(){
+                    _count *= 10;
+                    console.log(_count);
+                }
+
+                return {
+                    aaa: showA,
+                    bbb: showB
+                }
+            })();
+
+
+            //继续更改，增加一些方法
+            moduleA = (function(mod){
+                function showC(){
+                    console.log("我是新增的函数showC");
+                }
+                mod.ccc = showC;
+                return mod;
+            })(moduleA);
+
+            moduleA.aaa();
+            moduleA.bbb();
+            moduleA.ccc();
+             */
+           
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

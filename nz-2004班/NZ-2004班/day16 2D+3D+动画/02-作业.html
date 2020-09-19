@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 500px;
+				height: 500px;
+				border-bottom: 6px solid red;
+				margin: 100px auto;
+				position: relative;
+			}
+			.box div{
+				width: 40px;
+				height: 200px;
+				position: absolute;
+				bottom: 50px;
+				left: 50%;
+				margin-left: -20px;
+				transition: 1s;
+				transform-origin: center bottom;/*设置元素的旋转基点*/
+				box-shadow: 2px 1px 10px 4px #ccc;
+			}
+			.box .box1{
+				background: pink;
+			}
+			.box .box2{
+				background: skyblue;
+			}
+			.box .box3{
+				background: yellow;
+			}
+			.box .box4{
+				background: red;
+			}
+			.box .box5{
+				background: green;
+			}
+			.box .box6{
+				background: purple;
+			}
+			.box .box7{
+				background: gold;
+			}
+			.box .box8{
+				background: palegoldenrod;
+			}
+			.box .box9{
+				background: palevioletred;
+			}
+			.box .box10{
+				background: aqua;
+			}
+			.box .box11{
+				background: orange;
+			}
+			.box .box12{
+				background: darkolivegreen;
+			}
+			.box .box13{
+				background: teal;
+			}
+			.box:hover .box1{
+				transform: rotate(90deg);
+			}
+			.box:hover .box2{
+				transform: rotate(75deg);
+			}
+			.box:hover .box3{
+				transform: rotate(60deg);
+			}
+			.box:hover .box4{
+				transform: rotate(45deg);
+			}
+			.box:hover .box5{
+				transform: rotate(30deg);
+			}
+			.box:hover .box6{
+				transform: rotate(15deg);
+			}
+			.box:hover .box7{
+				transform: rotate(0deg);
+			}
+			.box:hover .box8{
+				transform: rotate(-15deg);
+			}
+			.box:hover .box9{
+				transform: rotate(-30deg);
+			}
+			.box:hover .box10{
+				transform: rotate(-45deg);
+			}
+			.box:hover .box11{
+				transform: rotate(-60deg);
+			}
+			.box:hover .box12{
+				transform: rotate(-75deg);
+			}
+			.box:hover .box13{
+				transform: rotate(-90deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box1">1</div>
+			<div class="box2">2</div>
+			<div class="box3">3</div>
+			<div class="box4">4</div>
+			<div class="box5">5</div>
+			<div class="box6">6</div>
+			<div class="box7">7</div>
+			<div class="box8">8</div>
+			<div class="box9">9</div>
+			<div class="box10">10</div>
+			<div class="box11">11</div>
+			<div class="box12">12</div>
+			<div class="box13">13</div>
+		</div>
+	</body>
+</html>

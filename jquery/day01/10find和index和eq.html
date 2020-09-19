@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+                find 方法是专门用来查找子节点的 
+
+                index()  获取当前节点的，在【兄弟节点】中的下标
+
+                eq() 通过下标获取符合条件的节点
+
+
+            */
+
+            $(function(){
+                // $("li").css("backgroundColor", 'red');
+
+                //获取ul下的li标签 （通过css选择器）
+                // $("ul li").css("backgroundColor", 'red')
+                // $("ul li.box").css("backgroundColor", 'pink');
+
+
+
+                //find方法获取
+                // $("ol").find("li").css("backgroundColor", 'red');
+                //获取ol class = 'box' 的节点
+                // $("ol").find("li.box").css("backgroundColor", 'yellow');
+
+
+                //获取被选中节点，在兄弟节点中的下标
+                // alert($("#li1").index());
+
+
+                // $("li:eq(1)").css("backgroundColor", 'orange');
+                // $("li").eq(1).css("backgroundColor", 'orange');
+
+            })
+
+        </script>
+    </head>
+    <body>
+        <ul>
+            <li class = 'box'></li>
+            <li title = 'world'></li>
+            <li></li>
+            <li class = 'box'></li>
+        </ul>
+        <ol>
+            <span>span文本</span>
+            <li title = 'world'></li>
+            <li id = 'li1' class = 'box'></li>
+            <li></li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>Document</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/buttons.css"/>
+        <script>
+            function download(data){
+                var oT1 = document.getElementById("t1");
+                var oInfo = document.getElementById("info");
+
+                oInfo.innerHTML = `城市：${data.city}， pm2.5：${data.pm25}`;
+                //1、天气情况取出
+                var arr = data.weather;
+                var str = ``;
+                for(var i = 0; i < arr.length; i++){
+                    str += `<tr>
+                                <td>${arr[i].date}</td>
+                                <td>${arr[i].weather}</td>
+                                <td>${arr[i].wind}</td>
+                                <td>${arr[i].temp}</td>
+                            </tr>`;
+                }
+                oT1.innerHTML = str;
+            }
+        </script>
+        <script>
+            window.onload = function(){
+                var oSearch = document.getElementById("search");
+                var oCity = document.getElementById("city");
+                oSearch.onclick = function(){
+                    if(!oCity.value){
+                        alert("请输入城市名字");
+                    }else{
+                        var oScript = document.createElement("script");
+                        oScript.src = `https://api.asilu.com/weather/?city=${oCity.value}&callback=download`;
+                        document.body.appendChild(oScript);
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class = 'container'>
+            <div class = 'panel panel-primary'>
+                <div class = 'panel-heading'>
+                    <h2>天气查询
+                        <span id = 'info'></span>
+                    </h2>
+                </div>
+                <div class = 'panel-body'>
+                    <div class = 'form-group'>
+                        <label for = "city">城市名字：</label>
+                        <input id = 'city' type="text" class = 'form-control'/>
+                    </div>
+                    <button id = 'search' class = 'button button-3d button-action button-pill form-control'>查询该城市天气</button>
+                </div>
+                <div class = 'panel-footer'>
+                    <table class = 'table table-bordered table-hover'>
+                        <thead>
+                            <tr>
+                                <th>日期</th>
+                                <th>天气</th>
+                                <th>风向</th>
+                                <th>气温</th>
+                            </tr>
+                        </thead>
+                        <tbody id = 't1'>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

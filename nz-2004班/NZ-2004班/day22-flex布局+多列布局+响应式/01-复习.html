@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			怪异盒模型 和 标准盒模型:
+				标准盒模型:
+					width+边框+内边距
+					height+边框+内边距
+					box-sizing:content-box;
+				
+				怪异盒模型:
+					width(包含了边框+内边距)
+					height(包含了边框+内边距)
+				怪异盒模型的触发方式:
+					1:丢失<!DOCTYPE html>	在ie678下触发
+					2:box-sizing:border-box;
+				
+			flex布局:
+				设置为flex布局对项目的影响(子元素)的影响:
+					子元素在主轴上排列
+					float,clear,vertical-align失效
+					所有的子元素都可以设置大小
+				容器(父元素)
+					默认存在两根轴,默认是水平主轴,垂直侧轴
+					首先设置为弹性布局 
+					display:flex; 					display:inline-flex;
+					相关属性:
+						flex-direction:;设置主轴方向
+							row		水平主轴
+							row-reverse	反向水平主轴
+							column	垂直主轴
+							column-reverse	反向垂直主轴
+							
+						flex-wrap:;项目是否换行(项目总宽度大于容器)
+							wrap	换行
+							nowrap	不换行
+							wrap-reverse	反向换行
+							
+						综合写法:	
+							flex-flow:主轴方向 是否换行;
+							
+						justify-content:;项目在主轴的排列方式
+							flex-start	起始位置
+							flex-end	结束位置
+							center		居中
+							space-around	平均分配
+							space-between	两端对齐
+							
+						align-items:;项目在侧轴上的排列方式(针对单行)
+							flex-start	起始位置
+							flex-end	结束位置
+							center		居中
+							baseline	基线对齐
+							stretch		默认值
+							
+						align-content:;项目在侧轴上的对齐方式(针对多行)	
+							flex-start	起始位置
+							flex-end	结束位置
+							center		居中
+							space-around	平均分配
+							space-between	两端对齐
+							stretch		默认值
+					
+				项目(子元素)
+					align-self:;指定的项目(子元素)在侧轴上的对齐方式
+						auto	默认值,可以继承容器的align-items属性
+						stretch	元素被拉伸(没有设置大小)
+						flex-start	起始位置
+						flex-end	结束位置
+						center		居中
+						
+					order:;项目的优先排列顺序,数字越大越靠后,可以有负值
+					
+					
+		-->
+	</body>
+</html>

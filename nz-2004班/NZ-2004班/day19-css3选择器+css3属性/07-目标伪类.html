@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			a{
+				display: inline-block;
+				width: 100px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+				color: red;
+				font-size: 20px;
+			}
+			div{
+				width: 300px;
+				height: 100px;
+				display: none;
+			}
+			.box1{
+				background: red;
+			}
+			.box2{
+				background: pink;
+			}
+			:target{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#box1">点击位置1</a>
+		<a href="#box2">点击位置1</a>
+		<div class="box1" id="box1"></div>
+		<div class="box2" id="box2"></div>
+	</body>
+</html>

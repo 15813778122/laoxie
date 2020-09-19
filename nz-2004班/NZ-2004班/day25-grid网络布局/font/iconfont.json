@@ -1,0 +1,30 @@
+{
+  "id": "1713790",
+  "name": "移动端",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1221421",
+      "name": "房子",
+      "font_class": "home",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "4770728",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "13209804",
+      "name": "相机",
+      "font_class": "xiangji",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    }
+  ]
+}

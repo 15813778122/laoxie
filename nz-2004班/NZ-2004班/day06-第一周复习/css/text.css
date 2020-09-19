@@ -1,0 +1,13 @@
+#box{
+	width: 255px;
+	height: 314px;
+	/*background: red;*/
+	border: 1px solid transparent;
+}
+#box img{
+	width: 255px;
+	height: 314px;
+}
+#box:hover{
+	border: 1px solid red;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src = 'jquery-1.10.1.min.js'></script>
+        <script>
+            /*
+            【注】以下所有的方法，都可以传参，参数部分，都是css选择器，可以对我们已经被选中的节点进行二次筛选。
+
+                • siblings()  找到当前节点所有的兄弟节点
+                • 
+                nextAll()   从当前节点开始往下所有的兄弟节点
+                prevAll()   从当前节点开始往上所有的兄弟节点
+
+
+
+                • parentsUntil() 
+                nextUntil()   从当前节点开始，往下直到某一个兄弟节点为止
+                prevUntil()   从当前节点开始，往上直到某一个兄弟节点为止
+            */
+
+            $(function(){
+                // $("#h4").siblings().css("backgroundColor", 'red');
+                // $("#h4").siblings("h1").css("backgroundColor", 'red');
+
+
+                // $("#h4").nextAll("h2").css("backgroundColor", 'blue');
+
+                // $("#h4").prevAll().css("backgroundColor", 'blue');
+
+
+                // $("#h4").nextUntil("h1").css("backgroundColor", 'orange');
+                // $("#h4").prevUntil("h1").css("backgroundColor", 'orange');
+
+
+
+                $("#h4").parentsUntil("body").css("backgroundColor", 'blue');
+            })
+
+        </script>
+    </head>
+    <body>
+        <div>div1</div>
+        <div>
+            <h1>h1</h1>
+            <h2>h2</h2>
+            <p>p段落</p>
+            <h4 id = 'h4'>h4</h4>
+            <strong>strong文本</strong>
+            <h2>h2</h2>
+            <h1>h1</h1>
+        </div>
+    </body>
+</html>

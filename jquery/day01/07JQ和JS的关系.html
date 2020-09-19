@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='jquery-1.10.1.min.js'></script>
+    <script>
+        /*
+            【注】JQ是JS封装的一个代码库。
+            【注】JQ中兼容JS所有的写法。
+
+            【注】JQ底层是用JS的面向对象封装的。JQ调用一些方法的时候，基本上都是通过JQ对象调用的。
+        */
+        // alert(typeof $); //function  构造函数
+        // alert($ === jQuery); //true   
+
+        /*
+        $(function(){
+            $("div")
+        })
+        //上下两个代码等价
+        jQuery(function(){
+            jQuery("div")
+        })
+        */
+
+
+        /*
+        function $(){
+            return new jQuery.apply(this, arguments)
+        }
+
+        //只有在 jQuery.prototype 添加过的方法，jq对象才可以调用
+        jQuery.prototype.click = function(){
+
+        }
+
+        $("div");
+        new jQuery("div");
+        new jQuery("div").click()
+
+        $("div").click()
+        */
+
+
+
+        /*
+            你要使用JQ方法，前面必须是JQ对象。
+            非JQ对象不能调用JQ的方法。
+
+            【注】JQ和JS 可以共存，但是不能混用。
+
+
+            【注】JS的常用对象：
+                window   document   this(存储是对象的地址)/实际情况分析
+
+                $("字符串") css选择器 获取元素节点，返回JQ对象
+
+                $(函数)  等价于 window.onload
+
+                $(对象)  将对象直接转成JQ对象。
+                $(document)   返回JQ对象
+                $(window)
+
+        */
+
+
+        $(function () {
+            $("#div1").click(function () {
+                //获取标签间内容
+
+                //JS的写法
+                var oDiv = document.getElementById("div1");
+                //innerHTML是 JS DOM对象(元素节点)的 属性
+                // alert(oDiv.innerHTML);
+
+
+                //JQ写法
+                // alert($("#div1").html())
+
+                // alert(oDiv.html()); //oDiv.html is not a function
+                // alert($("#div1").innerHTML); //undefined
+
+
+
+
+            })
+
+            /*
+            document.onclick = function () {
+                alert("我被点击了");
+            }
+            
+
+            document.click(function(){ //document.click is not a function
+                alert("我被点击了");
+            })*/
+
+            $(document).click(function(){
+                alert("我被点击了1");
+            })
+            $($($(document))).click(function(){
+                alert("我被点击了2");
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id='div1'>div文本</div>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			fieldset{
+				/*border:1px solid red;*/
+				border: none;
+				border-top: 1px solid red;
+				width: 500px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			action="提交地址"
+			method="提交方式"
+				get
+				post
+			
+			input
+				type="radio"	单选按钮
+				注意:同一组的name属性值必须一致，才可以达到互斥的效果
+				checked="checked"默认选中
+				
+				type="checkbox"	多选框
+				注意:name值不需要一致
+				disabled="disabled"	禁止选择
+				
+				type="file" 文件上传
+				
+			select > option 下拉列表 >下拉列表项
+				selected="selected"默认选中下拉项
+				
+			textarea 多行文本输入框
+				cols="" 改变元素宽
+				rows="" 改变元素高
+				
+				默认可以拖拽大小
+				resize:none;	禁止拖拽
+				
+				注意:不是px为单位，值的是容纳字符数，但是有偏差
+				可以通过设置样式修改大小
+				
+			fieldset > legend 表单字段集 > 表单字段子标题
+				注意:一个fieldset里面,只有一个直系legend
+				<fieldset>
+					<legend></legend>
+					<fieldset>
+						<legend></legend>
+					</fieldset>
+				</fieldset>
+				
+			label 绑定选中标签
+				例:
+				<input type="radio" id="name"/>
+				<label for="name">你猜</label>
+		-->
+		<form action="#" method="get" name="表单名称">
+			用户名:<input type="text" value="" name="user" placeholder="请输入手机号" />
+			<br><br>
+			密码:<input type="password" name="psd" id="psd" value="" />
+			<br><br>
+			<input type="radio" name="sex" value="man"  checked="checked" id="man"/>   <label for="man">男</label>
+			<input type="radio" name="sex" value="woman" id="woman"/><label for="woman">女</label>
+			<input type="radio" name="sex" value="nc" id="nc"/><label for="nc">你猜</label>
+			<br><br>
+			女朋友和老妈还有一颗球同时掉水里了，救谁
+			<br><br>
+			<input type="checkbox" name="mom" id="" value="mom" checked="checked"/>老妈
+			<input type="checkbox" name="girl" id="" value="girl" checked="checked"/>女朋友
+			<input type="checkbox" name="box" id="box" value="box" disabled="disabled"/>篮球
+			
+			<br /><br />
+			<select name="date" id="">
+				<option value="1" disabled="disabled">--请选择--</option>
+				<option value="2" name="n2">长沙</option>
+				<option value="3" name="n3">深圳</option>
+				<option value="4" name="n4">上海</option>
+				<option value="5" name="n5">北京</option>
+				<option value="6" name="n6">台北</option>
+			</select>
+			
+			<br /><br />
+			<select name="year" id="">
+				<option value="2000">2000年</option>
+				<option value="2001">2001年</option>
+				<option value="2002">2002年</option>
+				<option value="2003" selected="selected">2003年</option>
+			</select>
+			
+			<br /><br />
+			请夸夸老师:
+			<textarea name="" rows="50" cols="100" style="width: 400px;height: 100px;resize: none;"></textarea>
+			
+			<br /><br />
+			<input type="file" name="" id="" value="" />
+			
+			<br /><br />
+			<fieldset id="">
+				<legend align="justify" style="border: 1px solid red;padding: 0 10px;">星座测试</legend>
+				<input type="radio" value="aa" name="aa"/>天蝎座
+				<input type="radio" value="bb" name="aa"/>魔蝎座
+				<input type="radio" value="cc" name="aa"/>射手座
+			</fieldset>
+			
+			
+			<input type="submit" name="" id="" value="提交" />
+		</form>
+	</body>
+</html>

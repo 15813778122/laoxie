@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            //结构，最外层是数组，里面每一个元素是对象
+
+            //由于我们大量的数据是一样的，所以我们可以写一部分，然后剩下的直接复制就OK了。
+            var arr = [{
+                id: 101,
+                img: "//cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1560230039.28979252.jpg?thumb=1&w=400&h=400",
+                title: "小米小爱音箱 Play（白色）量产版 白色",
+                desc: "听音乐、语音遥控家电",
+                price: 99,
+                del: 169
+            }, {
+                id:103,
+                img:"//cdn.cnbj1.fds.api.mi-img.com/mi-mall/3e2a4f04bb369ba5668ab30eb336f722.jpg?thumb=1&w=400&h=400&f=webp&q=90",
+                title: "米家扫拖机器人 黑色",
+                desc: "扫得干净，拖得彻底",
+                price: 1699,
+                del: 1999
+            }, {
+                id:104,
+                img:"//cdn.cnbj1.fds.api.mi-img.com/mi-mall/3e2a4f04bb369ba5668ab30eb336f722.jpg?thumb=1&w=400&h=400&f=webp&q=90",
+                title: "米家扫拖机器人 黑色",
+                desc: "扫得干净，拖得彻底",
+                price: 1699,
+                del: 1999
+            }, {
+                id:105,
+                img:"//cdn.cnbj1.fds.api.mi-img.com/mi-mall/3e2a4f04bb369ba5668ab30eb336f722.jpg?thumb=1&w=400&h=400&f=webp&q=90",
+                title: "米家扫拖机器人 黑色",
+                desc: "扫得干净，拖得彻底",
+                price: 1699,
+                del: 1999
+            }];
+            // 编写数据的时候，一定不要直接写字符串，字符串写错了以后不给你报错。
+            // 一定要先写数据结构，然后通过JSON.stringify方法转成对应的json格式字符串
+            var str = JSON.stringify(arr);
+            console.log(str);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
